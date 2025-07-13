@@ -1,0 +1,13 @@
+/* 
+    custom-container-start
+*/
+@media (min-width: 1200px) {
+    .container{
+        &.nm-container-1 {
+            max-width: 1290px;
+        }
+    }
+}
+/* 
+    custom-container-end
+*/

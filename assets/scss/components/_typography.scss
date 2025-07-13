@@ -1,0 +1,219 @@
+/*
+    03. typography
+*/
+
+/* 
+    typography-start
+*/
+.kk-h-1 {
+    font-family: var(--kk-font-1);
+    line-height: 1.375;
+    font-weight: 700;
+    color: var(--kk-clr-h-1);
+    margin-bottom: 0;
+}
+
+
+.nm-p-1 {
+    font-family: var(--nm-font-2);
+    font-size: 18px;
+    line-height: 1.666;
+    font-weight: 400;
+    color: var(--nm-clr-p-1);
+    line-height: 30px;
+    margin-bottom: 0;
+
+    b {
+        color: #fff;
+    }
+}
+
+
+.kk-subtitle-1 {
+    font-family: var(--kk-font-1);
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: 0.1em;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--kk-clr-h-1);
+    line-height: 1.2;
+    margin-bottom: 17px;
+
+    @media #{$lg,$md,$xs} {
+        font-size: 16px;
+        letter-spacing: 0.01em;
+    }
+
+    .icon {
+        font-size: 21px;
+        color: var(--kk-clr-pr-1);
+        line-height: .7;
+    }
+
+
+
+}
+
+.kk-subtitle-2 {
+    font-family: var(--kk-font-1);
+    display: inline-flex;
+    align-items: center;
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: var(--kk-clr-pr-2);
+    gap: 7px;
+    margin-bottom: 0;
+    i {
+        font-size: 22px;
+    }
+
+    &-line {
+        width: 52px;
+        height: 2px;
+        background: linear-gradient(270deg, rgba(0, 90, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+
+        &:nth-child(3) {
+            background: linear-gradient(90deg, rgba(0, 90, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+        }
+    }
+
+    @media #{$xs} {
+        font-size: 18px;
+    }
+
+    @media #{$sm} {
+        font-size: 20px;
+    }
+}
+
+
+.kk-subtitle-3 {
+    font-family: var(--kk-font-1);
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--kk-clr-pr-2);
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 4px 22px;
+    padding-left: 11px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+
+    .text {
+        margin-left: 9px;
+        display: inline-block;
+    }
+    
+    i {
+        font-size: 20px;
+        color: #000;
+    }
+}
+
+.kk-sec-title-1 {
+    font-family: var(--kk-font-1);
+    font-weight: 700;
+    color: var(--kk-clr-pr-1);
+    font-size: 65px;
+    line-height: 1.107;
+    letter-spacing: -0.01em;
+    margin-bottom: 0;
+
+    @media #{$xl} {
+        font-size: 57px;
+    }
+
+    @media #{$lg} {
+        font-size: 47px;
+    }
+
+    @media #{$md} {
+        font-size: 42px;
+    }
+
+    @media #{$xs} {
+        font-size: 35px;
+    }
+
+    @media #{$sm} {
+        font-size: 40px;
+    }
+}
+
+.kk-sec-title-2 {
+    font-family: var(--kk-font-1);
+    font-weight: 700;
+    color: var(--kk-clr-h-1);
+    font-size: 65px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin-bottom: 0;
+
+    span {
+        color: #686868;
+    }
+
+    @media #{$xl} {
+        font-size: 57px;
+    }
+
+    @media #{$lg} {
+        font-size: 47px;
+    }
+
+    @media #{$md} {
+        font-size: 42px;
+    }
+
+    @media #{$xs} {
+        font-size: 35px;
+    }
+
+    @media #{$sm} {
+        font-size: 40px;
+    }
+}
+
+.kk-sec-title-3 {
+    font-family: var(--kk-font-1);
+    font-weight: 700;
+    color: var(--kk-clr-h-1);
+    font-size: 60px;
+    line-height: 1.083;
+    letter-spacing: -0.01em;
+    margin-bottom: 0;
+
+    span {
+        color: #686868;
+    }
+
+    @media #{$xl} {
+        font-size: 55px;
+    }
+
+    @media #{$lg} {
+        font-size: 45px;
+    }
+
+    @media #{$md} {
+        font-size: 40px;
+    }
+
+    @media #{$xs} {
+        font-size: 35px;
+    }
+
+    @media #{$sm} {
+        font-size: 38px;
+    }
+}
+
+
+/* 
+    typography-end
+*/
