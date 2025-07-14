@@ -1,0 +1,51 @@
+/* 
+    about-1-start
+*/
+.nm-Firefly-ani {
+    display: inline-block;
+    width: 290px;
+    height: 660px;
+    padding: 50px 20px;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    &::after {
+        content: "";
+        width: 100px;
+        height: 100px;
+        background: var(--nm-clr-pr-1);
+        position: absolute;
+        top: -30px;
+        left: -30px;
+        filter: blur(60px);
+
+        animation: nm-Firefly-ani-after 2s linear infinite;
+    }
+
+
+    &:is(.has-right-side) {
+        left: unset;
+        right: 0px;
+        transform: scaleX(-1);
+    }
+}
+
+@keyframes nm-Firefly-ani-after { 
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* 
+    about-1-end
+*/

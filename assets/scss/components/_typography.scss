@@ -5,11 +5,11 @@
 /* 
     typography-start
 */
-.kk-h-1 {
-    font-family: var(--kk-font-1);
-    line-height: 1.375;
-    font-weight: 700;
-    color: var(--kk-clr-h-1);
+.nm-h-1 {
+    font-family: var(--nm-font-2);
+    line-height: 1.5;
+    font-weight: 600;
+    color: #fff;
     margin-bottom: 0;
 }
 
@@ -29,179 +29,45 @@
 }
 
 
-.kk-subtitle-1 {
-    font-family: var(--kk-font-1);
-    font-weight: 700;
-    font-size: 19px;
-    letter-spacing: 0.1em;
+.nm-subtitle-1 {
+    font-family: var(--nm-font-2);
+    color: #838383;
+    font-size: 18px;
+    font-weight: 500;
     display: inline-flex;
+    gap: 13px;
     align-items: center;
-    gap: 10px;
-    color: var(--kk-clr-h-1);
-    line-height: 1.2;
-    margin-bottom: 17px;
-
-    @media #{$lg,$md,$xs} {
-        font-size: 16px;
-        letter-spacing: 0.01em;
-    }
-
-    .icon {
-        font-size: 21px;
-        color: var(--kk-clr-pr-1);
-        line-height: .7;
-    }
-
-
-
-}
-
-.kk-subtitle-2 {
-    font-family: var(--kk-font-1);
-    display: inline-flex;
-    align-items: center;
-    font-size: 24px;
     line-height: 1.5;
-    font-weight: 600;
-    color: var(--kk-clr-pr-2);
-    gap: 7px;
-    margin-bottom: 0;
-    i {
-        font-size: 22px;
-    }
+    margin-bottom: 20px;
 
-    &-line {
-        width: 52px;
-        height: 2px;
-        background: linear-gradient(270deg, rgba(0, 90, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-
-        &:nth-child(3) {
-            background: linear-gradient(90deg, rgba(0, 90, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-        }
-    }
-
-    @media #{$xs} {
-        font-size: 18px;
-    }
-
-    @media #{$sm} {
-        font-size: 20px;
+    .dot {
+        width: 11px;
+        height: 11px;
+        background: var(--nm-clr-pr-1);
+        border-radius: 50%;
+        flex: 0 0 auto;
+        box-shadow: 0px 3px 5.52px 0.48px rgba(214, 243, 69, 0.46);
     }
 }
 
 
-.kk-subtitle-3 {
-    font-family: var(--kk-font-1);
-    display: inline-flex;
-    align-items: center;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--kk-clr-pr-2);
-    background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    padding: 4px 22px;
-    padding-left: 11px;
-    border-radius: 100px;
-    margin-bottom: 10px;
-
-    .text {
-        margin-left: 9px;
-        display: inline-block;
-    }
-    
-    i {
-        font-size: 20px;
-        color: #000;
-    }
-}
-
-.kk-sec-title-1 {
-    font-family: var(--kk-font-1);
+.nm-sec-title-1 {
+    font-family: var(--nm-font-2);
+    color: #fff;
     font-weight: 700;
-    color: var(--kk-clr-pr-1);
-    font-size: 65px;
-    line-height: 1.107;
-    letter-spacing: -0.01em;
+    line-height: 1;
     margin-bottom: 0;
-
-    @media #{$xl} {
-        font-size: 57px;
-    }
-
-    @media #{$lg} {
-        font-size: 47px;
-    }
-
-    @media #{$md} {
-        font-size: 42px;
-    }
-
-    @media #{$xs} {
-        font-size: 35px;
-    }
-
-    @media #{$sm} {
-        font-size: 40px;
-    }
-}
-
-.kk-sec-title-2 {
-    font-family: var(--kk-font-1);
-    font-weight: 700;
-    color: var(--kk-clr-h-1);
-    font-size: 65px;
-    line-height: 1.25;
-    letter-spacing: -0.01em;
-    margin-bottom: 0;
-
-    span {
-        color: #686868;
-    }
-
-    @media #{$xl} {
-        font-size: 57px;
-    }
-
-    @media #{$lg} {
-        font-size: 47px;
-    }
-
-    @media #{$md} {
-        font-size: 42px;
-    }
-
-    @media #{$xs} {
-        font-size: 35px;
-    }
-
-    @media #{$sm} {
-        font-size: 40px;
-    }
-}
-
-.kk-sec-title-3 {
-    font-family: var(--kk-font-1);
-    font-weight: 700;
-    color: var(--kk-clr-h-1);
-    font-size: 60px;
-    line-height: 1.083;
-    letter-spacing: -0.01em;
-    margin-bottom: 0;
-
-    span {
-        color: #686868;
-    }
 
     @media #{$xl} {
         font-size: 55px;
     }
 
     @media #{$lg} {
-        font-size: 45px;
+        font-size: 50px;
     }
 
     @media #{$md} {
-        font-size: 40px;
+        font-size: 45px;
     }
 
     @media #{$xs} {
@@ -209,9 +75,10 @@
     }
 
     @media #{$sm} {
-        font-size: 38px;
+        font-size: 40px;
     }
 }
+
 
 
 /* 

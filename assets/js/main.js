@@ -509,6 +509,24 @@ document.addEventListener("DOMContentLoaded", function () {
 	})
 });
 
+
+
+const paths = document.querySelectorAll('.nm-Firefly-ani-svg path');
+
+	paths.forEach((path) => {
+		function animatePath() {
+				gsap.to(path, {
+				opacity: Math.random() > 0.5 ? 1 : 0, // 0 বা 1 randomly
+				duration: Math.random() * 0.6 + 0.2, // 0.2s - 0.8s
+				delay: Math.random() * 0.2, // 0 - 0.5s delay
+				onComplete: animatePath, // আবার চালাবে
+				ease: "power1.inOut"
+			});
+	}
+  	animatePath(); // শুরু করাও
+});
+
+
 /* 
 	button-animation
 */
