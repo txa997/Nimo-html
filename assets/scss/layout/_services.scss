@@ -1,0 +1,182 @@
+/* 
+    services-1-start
+*/
+.nm-services-1 {
+    &-container {
+        max-width: 1870px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    &-sec-title {
+        display: flex;
+        padding: 0 50px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+
+        @media #{$lg,$md,$xs} {
+            gap: 30px;
+            flex-wrap: wrap;
+            padding: 0 0px;
+        }
+
+        .nm-subtitle-1 {
+            flex: 0 0 auto;
+        }
+        .sec-disc {
+            max-width: 490px;
+        }
+
+        .nm-sec-title-1 {
+            max-width: 650px;
+        }
+        
+    }
+
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 2.1fr;
+        gap: 10px;
+
+        @media #{$lg} {
+            grid-template-columns: 1fr 1.3fr;
+        }
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+        }
+    }
+
+
+    
+    &-tabs {
+        &-btn-scrollbar {
+            height: 640px;
+            overflow: hidden;
+
+            .mCSB_container {
+                margin-right: 0;
+                margin-left: 20px;
+            }
+
+            .mCSB_scrollTools {
+                opacity: 1;
+                right: unset;
+                left: 0;
+                width: 3px;
+                background: #2a2a2a;
+            }
+
+            .mCSB_dragger_bar {
+                background: var(--nm-clr-pr-1) !important;
+                width: 3px !important;
+            }
+        }
+        &-btn {
+
+            .nav-link {
+                background: transparent;
+                border-radius: 20px;
+                font-size: 30px;
+                padding: 38px 44px;
+                width: 100%;
+                text-align: left;
+                transition: var(--nm-cube-1);
+
+                &:hover {
+                    background: #050505;
+                    color: #fff;
+                }
+
+                &:is(.active) {
+                    background: #050505;
+                    color: #fff;
+                }
+
+
+                @media #{$xxxl,$xxl,$xl,$lg,$md,$xs} {
+                    font-size: 22px;
+                    padding: 38px 20px;
+                }
+            }
+        }
+        
+        &-pane {
+            &-single {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+
+                @media #{$lg} {
+                    grid-template-columns: 1fr;
+                }
+                @media #{$xs} {
+                    grid-template-columns: 1fr;
+                }
+
+                .item-img {
+                    height: 640px;
+                    border-radius: 20px;
+                    filter: grayscale(1);
+
+                    @media #{$xs} {
+                        height: 350px;  
+                    }
+                    @media #{$sm} {
+                        height: 450px;  
+                    }
+                }
+
+                .content-wrap {
+                    background: #050505;
+                    border-radius: 20px;
+                    padding: 60px 45px;
+                    display: flex;
+                    flex-direction: column;
+
+                    @media #{$xl,$lg,$md,$xs} {
+                        padding: 60px 25px;
+                    }
+                }
+
+                
+                .item-icon {
+                    font-size: 80px;
+                    color: var(--nm-clr-p-1);
+                }
+
+                .disc {
+                    margin-top: 32px;
+                }
+
+                .features-list {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 12px 20px;
+                    margin-top: 33px;
+                    margin-bottom: 40px;
+                    li {
+                        font-size: 16px;
+                        display: flex;
+                        align-items: baseline;
+                        gap: 10px;
+                    }
+                }
+
+                .item-btn {
+                    margin-top: auto;
+                }
+                
+                
+            }
+        }
+    }
+    
+}
+
+
+/* 
+    services-1-end
+*/

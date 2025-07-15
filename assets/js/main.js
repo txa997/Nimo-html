@@ -527,6 +527,17 @@ const paths = document.querySelectorAll('.nm-Firefly-ani-svg path');
 });
 
 
+
+if($(".with-plugin").length) { 
+	$(".with-plugin").mCustomScrollbar({
+		theme: "dark-3",
+		scrollButtons: { enable: false }
+		// autoHideScrollbar: "true",
+		// alwaysShowScrollbar : 0
+	});
+}
+
+
 /* 
 	button-animation
 */
