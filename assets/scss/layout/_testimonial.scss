@@ -1,0 +1,214 @@
+/* 
+    testimonial-1-start
+*/
+.nm-testimonial-1 {
+
+    &-sec-title {
+        display: flex;
+        align-items: end;
+        gap: 40px;
+        justify-content: space-between;
+
+        @media #{$xs} {
+            flex-wrap: wrap;
+        }
+
+        .left {
+            max-width: 500px;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        .sec-disc {
+            margin-bottom: 19px;
+        }
+    }
+
+    &-wrap {
+        height: 540px;
+    }
+    
+
+    &-preview {
+        &-slider {
+            &-item {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                border: 8px solid rgb(255 255 255 / 10%);
+                transition: var(--nm-cube-1);
+                cursor: pointer;
+                &:hover {
+                    border-color: var(--nm-clr-pr-1);
+                }
+            }
+
+            .swiper-wrapper {
+                max-width: 1050px;
+                height: 1050px;
+                position: relative;
+                margin: 0 auto;
+
+                .swiper-slide {
+                    width: auto;
+                    position: absolute; 
+                    width: 100px;
+                    height: 100px;
+
+
+                    &:is(.swiper-slide-thumb-active) {
+                        .nm-testimonial-1-preview-slider-item {
+                            border-color: var(--nm-clr-pr-1);
+                            box-shadow: -1.526px 7.853px 59px 0px rgba(214, 243, 69, 0.6);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    &-main {
+        &-slider {
+            position: absolute;
+            top: 160px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            max-width: 430px;
+
+
+            @media #{$xs} {
+                max-width: 100%;
+            }
+
+            &-single {
+                text-align: center;
+
+
+                .icon {
+                    font-size: 70px;
+                    color: var(--nm-clr-pr-1);
+                }
+                .comment {
+                    color: #fff;
+                    font-weight: 500;
+                    line-height: 36px;
+                    margin-top: 10px;
+                }
+
+                .line {
+                    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 15%, rgb(255, 255, 255) 85%, rgba(255, 255, 255, 0) 100%);
+                    width: 90%;
+                    height: 1px;
+                    opacity: 0.2;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 28px;
+                }
+
+
+                .nm-choose-1-rating {
+                    margin-top: 28px;
+                    .rating-icon {
+                        gap: 7px;
+                        font-size: 18px;
+                    }
+                }
+
+                .author-name {
+                    font-size: 15px;
+                    margin-top: 10px;
+                }
+                
+            }
+
+
+            .swiper-wrapper {
+                .swiper-slide {
+                    .nm-testimonial-1-main-slider-single {
+                        .line {
+                            transform: scaleX(0);
+                            transition: 1s;
+                        }
+
+                        .rating-icon {
+                            i {
+                                opacity: 0;
+                                transition: .5s;
+                            }
+                        }
+                    }
+                    &:is(.swiper-slide-active) {
+                        .nm-testimonial-1-main-slider-single {
+                            .icon, .comment, .author-name {
+                                animation-name: fadeInUp;
+                                animation-duration: .5s;
+                                animation-timing-function: var(--nm-cube-1);
+                                animation-fill-mode: backwards;
+                            }
+
+                            .icon {
+                                animation-delay: .5s;
+                            }
+
+                            .comment {
+                                animation-delay: .7s;
+                            }
+
+                            .line {
+                                transform: scaleX(1);
+                                transition-delay: .7s;
+                            }
+
+                            .author-name {
+                                animation-delay: .9s;
+                            }
+
+                            .rating-icon {
+                                i {
+                                    opacity: 1;
+
+                                    &:nth-child(1) {
+                                        transition-delay: .4s;
+                                    }
+                                    &:nth-child(2) {
+                                        transition-delay: .5s;
+                                    }
+                                    &:nth-child(3) {
+                                        transition-delay: .6s;
+                                    }
+                                    &:nth-child(4) {
+                                        transition-delay: .7s;
+                                    }
+                                    &:nth-child(5) {
+                                        transition-delay: .8s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+    
+
+    &-bg-blur {
+        height: 70px;
+        width: 100%;
+        background: linear-gradient(0deg, rgb(255 255 255 / 0%) 0%, rgb(0 0 0 / 0%) 100%);
+        backdrop-filter: blur(3px);
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+    }
+}
+
+
+/* 
+    testimonial-1-start
+*/

@@ -20,6 +20,15 @@
         }
     }
 }
+
+
+.nm-bg-shadow {
+    width: 100px;
+    height: 100px;
+    background: var(--nm-clr-pr-1);
+    filter: blur(60px);
+    animation: nm-Firefly-ani-after 2s linear infinite;
+}
 /* 
     elements-end
 */
