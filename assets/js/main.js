@@ -14,7 +14,7 @@
 */
 
 const lenis = new Lenis({
-	duration: .6,
+	duration: 1,
 	easing: (t) => 1 - Math.pow(1 - t, 4),
 	direction: 'vertical', 
 	smooth: true, 
@@ -149,7 +149,7 @@ $(document).on('keydown', function(event) {
 document.addEventListener("DOMContentLoaded", function () {
 	window.addEventListener('load', function(){
 
-		CustomEase.create("ease1", "0.65, 0.05, 0.36, 1");
+		CustomEase.create("ease1", "0, 0, 0.2, 1");
 
 		/* 
 			preloader-function
@@ -323,193 +323,76 @@ document.addEventListener("DOMContentLoaded", function () {
 			wow.init();
 		};
 
-		var hero1ins = gsap.timeline({})
-		hero1ins.from(".kk-hero-1-img-shape-16", { x: 180, rotation: 180, opacity: 0, delay: 1, duration: .5, ease: "ease1",  });
-		hero1ins.from(".kk-hero-1-img-shape-17", { x: 180, rotation: 180, opacity: 0,  duration: .5, ease: "ease1",  },"<20%");
-		hero1ins.from(".kk-hero-1-img-shape-1", { x: 180, opacity: 0,  duration: .5, ease: "ease1",  },"<20%");
-		hero1ins.from(".kk-hero-1-img-shape-12", { x: 180, opacity: 0,  duration: .5, ease: "ease1",  },"<20%");
-		hero1ins.from(".kk-hero-1-img-shape-15", { x: 180, rotation: 180, opacity: 0,  duration: .5, ease: "ease1",  },"<20%");
-		hero1ins.from(".kk-hero-1-img-shape-14 ", { x: 180, rotation: 180, opacity: 0,  duration: .5, ease: "ease1",  },"<20%");
-		hero1ins.from(".kk-hero-1-img-shape-7 ", { x: 180,  opacity: 0,  duration: .5, ease: "ease1",  },"<20%");
-		hero1ins.from(".kk-hero-1-img-shape-13 ", { x: 180,  opacity: 0,  duration: .5, ease: "ease1",  },"<20%");
-		hero1ins.from(".kk-hero-1-img-shape-11 ", { x: 180,  opacity: 0,  duration: .5, ease: "ease1",  },"<20%");
-		hero1ins.from(".kk-hero-1-img ", { x: 180,  opacity: 0,  duration: .5, ease: "ease1",  },"<20%");
-		hero1ins.from(".kk-hero-1-img-shape ", { x: 180, rotation: 180, opacity: 0,  duration: .5, ease: "ease1",  },"<20%");
-		hero1ins.from(".kk-hero-1-img-shape-2 ", { x: 180, rotation: 180, opacity: 0,  duration: .5, ease: "ease1",  },"<20%");
-		hero1ins.from(".kk-hero-1-img-shape-5 ", { x: 180, rotation: 180, opacity: 0,  duration: .5, ease: "ease1",  },"<20%");
-		hero1ins.from(".kk-hero-1-img-shape-3", { x: 180, rotation: 180, opacity: 0,  duration: .5, ease: "ease1",  },"<20%");
-		hero1ins.from(".kk-hero-1-img-shape-4", { x: 180, rotation: 180, opacity: 0,  duration: .5, ease: "ease1",  },"<20%");
-		hero1ins.from(".kk-hero-1-img-shape-8", { x: 180, rotation: 180, opacity: 0,  duration: .5, ease: "ease1",  },"<20%");
-		hero1ins.from(".kk-hero-1-img-shape-6", { x: 180, rotation: 180, opacity: 0,  duration: .5, ease: "ease1",  },"<20%");
-		hero1ins.from(".kk-hero-1-img-shape-9", { x: 180, rotation: 180, opacity: 0,  duration: .5, ease: "ease1",  },"<20%");
-		hero1ins.from(".kk-hero-1-img-shape-10", { x: 180, rotation: 180, opacity: 0,  duration: .5, ease: "ease1",  },"<20%");
-		hero1ins.from(".kk-hero-1-right-btn", { x: 180, opacity: 0,  duration: .5, ease: "ease1",  },"<20%");
 		
-
-
-
-		
-		/* 
-			hero-2-slider-active
-		*/
-		if($('.kk_h2_slider_active').length) {
-
-			let kk_h2_preview_slider_active = new Swiper('.kk_h2_preview_slider_active', {
-				loop: true,
-				speed: 1000,
-				spaceBetween: 35,
-
-
-
-
-				breakpoints: {
-					0: {
-						slidesPerView: 1,
-					},
-					576: {
-						slidesPerView: 2,
-					},
-					768: {
-						slidesPerView: 2,
-					},
-					992: {
-						slidesPerView: 2,
-					},
-					1200: {
-						slidesPerView: 2,
-					},
-					1400: {
-						slidesPerView: 3,
-					},
-
-
-				},
-			});
-
-
-
-			let kk_h2_slider_active = new Swiper('.kk_h2_slider_active', {
-				loop: true,
-				speed: 800,
-				effect: "fade",
-				fadeEffect: {
-					crossFade: true
-				},
-
-				autoplay: {
-				    delay: 5000,
-				},
-
-				thumbs: {
-					swiper: kk_h2_preview_slider_active,
-				},
-
-
-				on: {
-					slideChangeTransitionStart: () => {
-						h2_split_text();
-					},
-				},
-
-			});
-
-
-			function h2_split_text() {
-				const currentSlide = document.querySelectorAll('.swiper-slide-active .h2_split_text');
-			
-
-				const split = new SplitText(currentSlide, { type: 'lines,chars' , linesClass: "split-line"  });
-				gsap.set(split.chars, { 
-					x: 50,
-					opacity: 0,
-				});
-			
-				gsap.to(split.chars, {
-					x: 0,
-					opacity: 1,
-					duration: 0.4,
-					ease: "ease1",
-					stagger: 0.02,
-					delay: .5,
-				});
-
-			}
-
-			h2_split_text();
-
-
-			
-
-		}
-		
-		/* 
-			hero-2-slider-active
-		*/
-		if($('.kk_h3_slider_active').length) {
-
-			let kk_h3_slider_active = new Swiper('.kk_h3_slider_active', {
-				loop: true,
-				speed: 1000,
-
-				effect: "fade",
-				fadeEffect: {
-					crossFade: true
-				},
-
-				autoplay: {
-				    delay: 6000,
-				},
-
-				on: {
-					slideChangeTransitionStart: () => {
-						h3_split_text();
-					},
-				},
-
-				pagination: {
-					el: ".kk_h3_pagination",
-					clickable: true,
-					renderBullet: function (index, className) {
-					  const number = (index + 1).toString().padStart(2, "0"); // adds leading zero
-					  return '<span class="' + className + '">' + number + '</span>';
-					},
-				},
-
-
-			});
-
-
-			function h3_split_text() {
-				const currentSlide = document.querySelectorAll('.swiper-slide-active .h3_split_text');
-			
-
-				const split = new SplitText(currentSlide, { type: 'lines,chars' , linesClass: "split-line"  });
-				gsap.set(split.chars, { 
-					x: 50,
-					opacity: 0,
-				});
-			
-				gsap.to(split.chars, {
-					x: 0,
-					opacity: 1,
-					duration: 0.4,
-					ease: "ease1",
-					stagger: 0.02,
-					delay: .7,
-				});
-
-			}
-
-			h3_split_text();
-			
-
-		}
 
 
 	})
 });
 
 
+
+/* 
+	menu-link-animation
+*/
+if ($(".btn-split-right").length) {
+    var splitButton1 = $(".btn-split-right li a");
+    gsap.registerPlugin(SplitText);
+
+    splitButton1.each(function (index, el) {
+        el.split = new SplitText(el, {
+            type: "words,chars",
+        });
+
+        $(el).on("mouseenter", function () {
+            el.split.chars.forEach((char, i) => {
+                let yValue = i % 2 === 0 ? -180 : 180;
+
+                gsap.fromTo(
+                    char,
+                    { rotateY: yValue, },
+                    {
+                        rotateY: 0,
+                        opacity: 1,
+                        duration: .7,
+                        ease: "case1",
+                    }
+                );
+            });
+        });
+    });
+}
+
+
+  const btn = document.querySelector('.nm-pr-btn-1');
+  const icon = btn.querySelector('.icon');
+
+  // Save original position
+  const originalX = 20;
+  const originalY = btn.offsetHeight / 2;
+
+  btn.addEventListener('mousemove', (e) => {
+    const rect = btn.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    // Animate icon to follow cursor (centered)
+    gsap.to(icon, {
+      x: x,
+      y: y,
+      duration: 0.25,
+      ease: "power2.out"
+    });
+  });
+
+  btn.addEventListener('mouseleave', () => {
+    // Return to original position
+    gsap.to(icon, {
+      x: originalX,
+      y: originalY,
+      duration: 0.5,
+      ease: "power2.out"
+    });
+  });
 /* 
 	firefly-animation
 */
@@ -518,14 +401,14 @@ const paths = document.querySelectorAll('.nm-Firefly-ani-svg path');
 	paths.forEach((path) => {
 		function animatePath() {
 				gsap.to(path, {
-				opacity: Math.random() > 0.5 ? 1 : 0, // 0 বা 1 randomly
-				duration: Math.random() * 0.6 + 0.2, // 0.2s - 0.8s
-				delay: Math.random() * 0.2, // 0 - 0.5s delay
-				onComplete: animatePath, // আবার চালাবে
+				opacity: Math.random() > 0.5 ? 1 : 0,
+				duration: Math.random() * 0.6 + 0.2, 
+				delay: Math.random() * 0.2, 
+				onComplete: animatePath, 
 				ease: "power1.inOut"
 			});
 	}
-  	animatePath(); // শুরু করাও
+  	animatePath(); 
 });
 
 

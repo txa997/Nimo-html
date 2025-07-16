@@ -82,8 +82,8 @@
                 display: inline-flex;
                 align-items: center;
                 gap: 7px;
-                text-transform: capitalize;
-                transition: var(--nm-cube-1);
+                // text-transform: capitalize;
+                transition: .5s var(--nm-cube-1);
 
                 i {
                     color: var(--nm-clr-pr-1);
@@ -132,7 +132,7 @@
                 visibility: hidden;
                 transform: scaleY(0);
                 transform-origin: top;
-                transition: var(--nm-cube-1);
+                transition: .4s var(--nm-cube-1);
             
                 li {
                     display: block;

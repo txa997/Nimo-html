@@ -32,19 +32,25 @@
     padding-right: 30px;
     color: var(--nm-clr-black-1);
     font-size: 20px;
+    overflow: hidden;
+    position: relative;
 
-    .icon {
-        flex: 0 0 auto;
-        width: 53px;
-        height: 53px;
-        background: var(--nm-clr-black-1);
-        color: #fff;
-        font-size: 18px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-    }
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 20px; // মূল অবস্থান (যেখানে ফিরে আসবে)
+    width: 53px;
+    height: 53px;
+    background: var(--nm-clr-black-1);
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+  }
 
     &:is(.has-v2) {
         background: var(--nm-clr-black-3);
@@ -57,6 +63,8 @@
             background: var(--nm-clr-pr-1);
             color: var(--nm-clr-black-1);
             font-size: 16px;
+
+            
         }
     }
 }
