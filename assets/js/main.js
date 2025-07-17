@@ -442,67 +442,6 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 
 
 
-
-/* 
-	testimonial-1-slider-active
-*/
-if ($('.nm_t1_preview_slider_active').length) {
-
-	const nm_t1_preview_slider_active = new Swiper('.nm_t1_preview_slider_active', {
-	  speed: 500,
-	  slidesPerView: "auto",
-	  spaceBetween: 20,
-
-	});
-  
-	const nm_t1_main_slider_active = new Swiper('.nm_t1_main_slider_active', {
-	  speed: 500,
-	  slidesPerView: "auto",
-	  effect: "fade",
-	  fadeEffect: { crossFade: true },
-	  navigation: {
-		nextEl: ".kk_t1_next",
-		prevEl: ".kk_t1_prev",
-	  },
-	  thumbs: {
-		swiper: nm_t1_preview_slider_active,
-	  },
-	});
-  
-	let rotateAngle = 0;
-  
-	nm_t1_main_slider_active.on('slideChange', function () {
-	  rotateAngle += 10;
-  
-	  $('.nm-testimonial-1-preview-slider').css({
-		transform: `rotate(${rotateAngle}deg)`,
-		transition: 'transform 0.5s ease'
-	  });
-	});
-  }
-  
-
-if($('.nm-testimonial-1-preview-slider').length) { 
-	const slides = document.querySelectorAll(".nm-testimonial-1-preview-slider .swiper-slide");
-	const wrapper = document.querySelector(".nm-testimonial-1-preview-slider .swiper-wrapper");
-  
-	const radius = 450; 
-	const centerX = wrapper.clientWidth / 2;
-	const centerY = wrapper.clientHeight / 2;
-	const total = slides.length;
-	const angleStep = (2 * Math.PI) / total;
-  
-	slides.forEach((slide, index) => {
-	  const angle = index * angleStep;
-	  const x = centerX + radius * Math.cos(angle) - slide.clientWidth / 2;
-	  const y = centerY + radius * Math.sin(angle) - slide.clientHeight / 2;
-  
-	  slide.style.left = `${x}px`;
-	  slide.style.top = `${y}px`;
-	});
-
-}
-
   
 
 /* 
@@ -535,29 +474,6 @@ gsap.utils.toArray('.nm_steps1_ani_trigger').forEach(card => {
 	duration: 1,
   },"<=");    
 });
-
-
-if ($('.nm_t1_preview_slider_active').length) { 
-	$(document).on('click', '.nm-team-1-member .toggle-btn', function () {
-		const parent = $(this).closest('.nm-team-1-member');
-	  
-		if (parent.hasClass('active')) {
-		  parent.removeClass('active');
-		} else {
-		  $('.nm-team-1-member').removeClass('active');
-		  parent.addClass('active');
-		}
-	});
-}
-
-
-
-
-
-
-
-
-
 
 
 /* 
@@ -658,575 +574,129 @@ gsap.utils.toArray('.wa-parallax-item').forEach((item) => {
 
 
 
+
 /* 
-	wa-parallax-shape
+	testimonial-1-slider-active
 */
-gsap.utils.toArray('.wa_parallax_shape').forEach((item) => {
-	gsap.from(item, {
-	  y: 100,
-	  scrollTrigger: {
-		trigger: item,
-		end: "to 10%",
-		toggleActions: 'play none none reverse',
-        scrub: 2,    
-        markers: false,  
+if ($('.nm_t1_preview_slider_active').length) {
+
+	const nm_t1_preview_slider_active = new Swiper('.nm_t1_preview_slider_active', {
+	  speed: 500,
+	  slidesPerView: "auto",
+	  spaceBetween: 20,
+
+	});
+  
+	const nm_t1_main_slider_active = new Swiper('.nm_t1_main_slider_active', {
+	  speed: 500,
+	  slidesPerView: "auto",
+	  effect: "fade",
+	  fadeEffect: { crossFade: true },
+	  navigation: {
+		nextEl: ".kk_t1_next",
+		prevEl: ".kk_t1_prev",
+	  },
+	  thumbs: {
+		swiper: nm_t1_preview_slider_active,
 	  },
 	});
-});
-/* 
-	wa-parallax-shape-2
-*/
-gsap.utils.toArray('.wa_parallax_shape_2').forEach((item) => {
-	gsap.from(item, {
-	  y: -100,
-	  scrollTrigger: {
-		trigger: item,
-		end: "to 10%",
-		toggleActions: 'play none none reverse',
-        scrub: 2,    
-        markers: false,  
-	  },
+  
+	let rotateAngle = 0;
+  
+	nm_t1_main_slider_active.on('slideChange', function () {
+	  rotateAngle += 10;
+  
+	  $('.nm-testimonial-1-preview-slider').css({
+		transform: `rotate(${rotateAngle}deg)`,
+		transition: 'transform 0.5s ease'
+	  });
 	});
-});
-
-
-/* 
-	kk-choose-1-title
-*/
-var about1content= gsap.timeline({
-	scrollTrigger: {
-		trigger: ".kk-choose-1-title",
-        start: "top 80%",
-        end: "top 20%",
-		toggleActions: "play none none reverse",
-        scrub: true,
-		markers: false,
-	},
-
-})
-
-about1content.from(".kk-choose-1-title ", { yPercent: -100,});
-
-/* 
-	process-1-animation
-*/
-gsap.to(".kk-process-1-div", {
-	scrollTrigger: {
-		trigger: ".kk-process-1-div",
-		start: "top 80%",
-		end: "bottom bottom",
-		toggleActions: "play none none reverse",
-		toggleClass: "active",
-		once: true,
-		markers: false,
-	}
-});
-var about2shape = gsap.timeline({
-	scrollTrigger: {
-		trigger: ".kk-about-2-right",
-        start: "top 80%",
-        end: "top 0%",
-		toggleActions: "play none none reverse",
-        scrub: true,
-		markers: false,
-	},
-
-})
-
-about2shape.from(".kk-about-2-right-shape-1 ", { y: -400,});
-about2shape.from(".kk-about-2-right-shape-2 ", { y: -400,},"<50%");
-
-/* 
-	features-2-animation
-*/
-if (window.matchMedia("(min-width: 992px)").matches) {
-
-	var features2ani = gsap.timeline({
-		scrollTrigger: {
-			trigger: ".kk-features-2-wrap",
-			start: "top 90%",
-			end: "top 20%",
-			toggleActions: "play none none reverse",
-			scrub: true,
-			markers: false,
-		},
-
-	})
-	features2ani.from(".kk-features-2-left ", { rotate: 60, yPercent: -120, xPercent: 100,});
 }
-/* 
-	gallery-2-animation
-*/
-if (window.matchMedia("(min-width: 992px)").matches) {
+  
 
-	var gallery2ani = gsap.timeline({
-		scrollTrigger: {
-			trigger: ".kk-gallery-2-bg-img",
-			start: "top 50%",
-			toggleActions: "play none none reverse",
-			markers: false,
-		},
-
-	})
-	gallery2ani.from(".kk-gallery-2-bg-img-1 ", { transform: "translate(145%, 130%)", duration: 1, ease: "ease1" });
-	gallery2ani.from(".kk-gallery-2-bg-img-2 ", { transform: "translate(-35%, 190%)", duration: 1, ease: "ease1" },"<10%");
-	gallery2ani.from(".kk-gallery-2-bg-img-3 ", { transform: "translate(-215%, 70%)", duration: 1, ease: "ease1" },"<10%");
-	gallery2ani.from(".kk-gallery-2-bg-img-4 ", { transform: "translate(325%, 30%)", duration: 1, ease: "ease1" },"<10%");
-	gallery2ani.from(".kk-gallery-2-bg-img-5 ", { transform: "translate(195%, -80%)", duration: 1, ease: "ease1" },"<10%");
-	gallery2ani.from(".kk-gallery-2-bg-img-6 ", { transform: "translate(100%, -175%)", duration: 1, ease: "ease1" },"<10%");
-	gallery2ani.from(".kk-gallery-2-bg-img-7 ", { transform: "translate(-255%, -165%)", duration: 1, ease: "ease1" },"<10%");
-	gallery2ani.from(".kk-gallery-2-content ", { scale: 0.8, opacity: 0, duration: 1, ease: "ease1" },"<10%");
-}
-
-/* 
-	cta-2-animation	
-*/
-if (window.matchMedia("(min-width: 992px)").matches) {
-	var cta2ani = gsap.timeline({
-		scrollTrigger: {
-			trigger: ".kk-cta-2-area",
-			start: "top 80%",
-			end: "top 20%",
-			toggleActions: "play none none reverse",
-			scrub: true,
-			markers: false,
-		},
-	})
-	cta2ani.from(".kk-cta-2-area", { scale: 0.8,  });
+if($('.nm-testimonial-1-preview-slider').length) { 
+	const slides = document.querySelectorAll(".nm-testimonial-1-preview-slider .swiper-slide");
+	const wrapper = document.querySelector(".nm-testimonial-1-preview-slider .swiper-wrapper");
+  
+	const radius = 450; 
+	const centerX = wrapper.clientWidth / 2;
+	const centerY = wrapper.clientHeight / 2;
+	const total = slides.length;
+	const angleStep = (2 * Math.PI) / total;
+  
+	slides.forEach((slide, index) => {
+	  const angle = index * angleStep;
+	  const x = centerX + radius * Math.cos(angle) - slide.clientWidth / 2;
+	  const y = centerY + radius * Math.sin(angle) - slide.clientHeight / 2;
+  
+	  slide.style.left = `${x}px`;
+	  slide.style.top = `${y}px`;
+	});
 }
 
 
-/* 
-	about-3-animation	
-*/
-if (window.matchMedia("(min-width: 992px)").matches) {
-	var about3ani = gsap.timeline({
-		scrollTrigger: {
-			trigger: ".about3_ani_trigger",
-			start: "top 30%",
-			end: "top -30%",
-			toggleActions: "play none none reverse",
-			scrub: true,
-			markers: false,
-		},
-	})
-	about3ani.from(".about3_ani_elm_1", { rotate: -50, transformOrigin:"right bottom",  });
-	about3ani.from(".about3_ani_elm_2", { rotate: 50, transformOrigin:"left bottom",  },"<=");
-	about3ani.from(".about3_ani_elm_3", { rotate: -50, transformOrigin:"right bottom",  },"<=");
-	about3ani.from(".about3_ani_elm_4", { rotate: 50, transformOrigin:"left bottom",  },"<=");
-}
-
-/* 
-	process-3-animation	
-*/
-if (window.matchMedia("(min-width: 992px)").matches) {
-	var process3ani = gsap.timeline({
-		scrollTrigger: {
-			trigger: ".process3_ani_trigger",
-			start: "top 90%",
-			toggleActions: "play none none reverse",
-			// scrub: true,
-			markers: false,
-		},
-	})
-	process3ani.from(".process3_ani_elm_0", { x: -500, opacity: 0, duration: 1, ease: "ease1", stagger: -0.3 });
-	process3ani.fromTo(".process3_ani_elm_1 .shape-1", { clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)" }, { clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 1, ease: "ease1" });
-	process3ani.fromTo(".process3_ani_elm_1 .shape-2", { clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)" }, { clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 1, ease: "ease1" },"<");
-}
 
 
 /* 
-	features-3-animation
+	team-1-slider-active
 */
-if (window.matchMedia("(min-width: 992px)").matches) {
-	var features3ani = gsap.timeline({
-		scrollTrigger: {
-			trigger: ".features3_ani_trigger",
-			start: "top 90%",
-			end: "top 20%",
-			toggleActions: "play none none reverse",
-			scrub: true,
-			markers: false,
-		},
-	})
-	features3ani.from(".features3_ani_trigger", { scale: 0.8,  }, "<");
-}
+if ($('.nm_t1_slider_active').length) {
+	if (window.matchMedia("(min-width: 992px)").matches) {
 
+		const observer = new IntersectionObserver((entries, observer) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
 
-/* 
-	contact-3-animation	
-*/
-if (window.matchMedia("(min-width: 992px)").matches) {
-	var contact3ani = gsap.timeline({
-		scrollTrigger: {
-			trigger: ".contact3_ani_trigger",
-			start: "top 50%",
-			end: "top 0%",
-			toggleActions: "play none none reverse",
-			scrub: true,
-			markers: false,
-		},
-	})
-	contact3ani.from(".contact3_ani_elm_1", { rotate: -50, transformOrigin:"right bottom",  });
-	contact3ani.from(".contact3_ani_elm_2", { rotate: 50, transformOrigin:"left bottom",  },"<=");
-	contact3ani.from(".contact3_ani_elm_3", { rotate: -50, transformOrigin:"right bottom",  },"<=");
-	contact3ani.from(".contact3_ani_elm_4", { rotate: 50, transformOrigin:"left bottom",  },"<=");
-}
+					const nm_t1_slider_active = new Swiper('.nm_t1_slider_active', {
+						loop: true,
+						speed: 1500,
+						effect: "fade",
+						fadeEffect: {
+							crossFade: true
+						},
+						navigation: {
+							nextEl: ".team1_slider_next",
+							prevEl: ".team1_slider_prev",
+						},
+					});
 
-
-/* 
-	cta-3-animation	
-*/
-if (window.matchMedia("(min-width: 992px)").matches) {
-	var cta2ani = gsap.timeline({
-		scrollTrigger: {
-			trigger: ".contactCta_ani_trigger",
-			start: "top bottom",
-			end: "top 50%",
-			toggleActions: "play none none reverse",
-			scrub: true,
-			markers: false,
-		},
-	})
-	cta2ani.from(".contactCta_ani_trigger", { scale: 0.6,  });
-}
-
-/* 
-	stikcy-card-animation
-*/
-if (window.matchMedia("(min-width: 992px)").matches) { 
-
-	if($(".wa_sticky_card_wrapper").length) {
-		const waCardsWrappers = gsap.utils.toArray(".wa_sticky_card");
-		const waCards = gsap.utils.toArray(".wa_sticky_card");
-	
-		waCardsWrappers.forEach((waWrapper, waIndex) => {
-		const waCard = waCards[waIndex];
-		let waScale = 1,
-			waRotation = 0;
-	
-		if (waIndex !== waCards.length - 1) {
-			waScale = 0.9 + 0.025 * waIndex;
-			waRotation = -10;
-		}
-	
-			gsap.to(waCard, {
-				scale: waScale,
-				rotationX: waRotation,
-				transformOrigin: "top center",
-				ease: "none",
-				scrollTrigger: {
-				trigger: waWrapper,
-				start: "top " + (60 + 10 * waIndex),
-				end: "bottom 550",
-				endTrigger: ".wa_sticky_card_wrapper",
-				scrub: true,
-				pin: waWrapper,
-				pinSpacing: false,
-				markers: false,
-				// id: waIndex + 1
+					observer.unobserve(entry.target);
 				}
 			});
+		}, {
+			threshold: 0.3, 
 		});
-	}
-	
 
-}
-
-
-
-/* 
-	about-1-features-slider-active
-*/
-if ($('.kk_a1f_slider_active').length) {
-	var kk_a1f_slider_active = new Swiper(".kk_a1f_slider_active", {
-		grabCursor: true,
-		effect: "creative",
-		slidesPerView: "auto",
-		creativeEffect: {
-			// prev: {
-			// 	shadow: false,
-			// 	translate: ["0%", 0, -1],
-			// },
-			next: {
-				shadow: false,
-				translate: ["10%", 0, 0],
-			},
-			limitProgress: 3,
-		},
-
-	});
-}
-
-
-
-
-/* 
-	testimonial-1-active
-*/
-if($('.kk_t1_preview_slider_active').length) {
-
-	let kk_t1_preview_slider_active = new Swiper('.kk_t1_preview_slider_active', {
-		// loop: true,
-		speed: 1000,
-		slidesPerView: "auto",
-		spaceBetween: 10,
-        // autoplay: {
-        //     delay: 5000,
-        // },
-
-
-	});
-
-
-
-	let kk_t1_main_slider_active = new Swiper('.kk_t1_main_slider_active', {
-		// loop: true,
-		speed: 1000,
-
-		effect: "creative",
-		creativeEffect: {
-			prev: {
-				shadow: false,
-				translate: [0, 0, -400],
-			},
-			next: {
-				translate: ["100%", 0, 0],
-			},
-		},
-
-		navigation: {
-			nextEl: ".kk_t1_next",
-			prevEl: ".kk_t1_prev",
-		},
-
-		thumbs: {
-			swiper: kk_t1_preview_slider_active,
-		},
-
-	});
-
-
-	
-
-}
-
-/* 
-	blog-1-active
-*/
-if($('.kk_b1_slider_active').length) {
-
-	let kk_b1_slider_active = new Swiper('.kk_b1_slider_active', {
-		loop: true,
-		speed: 1000,
-		slidesPerView: "auto",
-		spaceBetween: 30,
-
-		navigation: {
-			nextEl: ".kk_b1_next",
-			prevEl: ".kk_b1_prev",
-		},
-	});
-	
-
-}
-
-/* 
-	services-2-slider-active
-*/
-if($('.kk_s2_slider_active').length) {
-
-	let kk_s2_slider_active = new Swiper('.kk_s2_slider_active', {
-		loop: true,
-		speed: 600,
-		spaceBetween: 30,
-		// autoplay: {
-		//     delay: 5000,
-		// },
-
-		navigation: {
-			nextEl: ".kk_s2_next",
-			prevEl: ".kk_s2_prev",
-		},
-
-		breakpoints: {
-			0: {
-				slidesPerView: 1,
-			},
-			576: {
-				slidesPerView: 1,
-			},
-			768: {
-				slidesPerView: 2,
-			},
-			992: {
-				slidesPerView: 3,
-			},
-			1200: {
-				slidesPerView: 3,
-			},
-
-
-		},
-	});
-
-}
-/* 
-	testimonial-2-slider-active
-*/
-if($('.kk_t2_slider_active').length) {
-
-	let kk_t2_slider_active = new Swiper('.kk_t2_slider_active', {
-		loop: true,
-		speed: 600,
-		slidesPerView: "auto",
-		spaceBetween: 40,
-
-		navigation: {
-			nextEl: ".kk_t2_next",
-			prevEl: ".kk_t2_prev",
-		},
-
-	});
-
-}
-
-
-/* 
-	testimonial-3-active
-*/
-if ($('.kk_t3_preview_slider_active').length) {
-
-	let kk_t3_preview_slider_active = new Swiper('.kk_t3_preview_slider_active', {
-		speed: 1000,
-		slidesPerView: "auto",
-		spaceBetween: 0,
-	});
-
-	let kk_t3_slider_active = new Swiper('.kk_t3_slider_active', {
-		speed: 1000,
-		navigation: {
-			nextEl: ".kk_t3_next",
-			prevEl: ".kk_t3_prev",
-		},
-
-		autoplay: {
-			delay: 5000,
-		},
-
-		thumbs: {
-			swiper: kk_t3_preview_slider_active,
-		},
-	});
-
-	let rotateAngle = 0;
-	let previousIndex = 0;
-
-	kk_t3_slider_active.on('slideChange', function () {
-		const currentIndex = kk_t3_slider_active.activeIndex;
-
-		if (currentIndex > previousIndex) {
-			rotateAngle += 90;
-		} else if (currentIndex < previousIndex) {
-			rotateAngle -= 90;
+		const target = document.querySelector('.nm_t1_slider_active');
+		if (target) {
+			observer.observe(target);
 		}
+	}
+}
 
-		previousIndex = currentIndex;
 
-		$('.kk-testimonial-3-fan-shape img').css({
-			'transform': `rotate(${rotateAngle}deg)`,
-			'transition': 'transform 0.5s ease'
-		});
+if ($('.nm_t1_preview_slider_active').length) { 
+	$(document).on('click', '.nm-team-1-member .toggle-btn', function () {
+		const parent = $(this).closest('.nm-team-1-member');
+	  
+		if (parent.hasClass('active')) {
+		  parent.removeClass('active');
+		} else {
+		  $('.nm-team-1-member').removeClass('active');
+		  parent.addClass('active');
+		}
 	});
 }
 
 
 /* 
-	projects-3-active
+	blog-1-hover-active-class
 */
-if ($('.kk_p3_preview_slider_active').length) {
+$(document).on("mouseenter", ".nm-blog-1-item", function () {
+    $(".nm-blog-1-item").removeClass("active");
 
-	let kk_p3_preview_slider_active = new Swiper('.kk_p3_preview_slider_active', {
-		speed: 1000,
-		slidesPerView: "auto",
-		spaceBetween: 20,
-	});
-
-	let kk_p3_main_slider_active = new Swiper('.kk_p3_main_slider_active', {
-		speed: 1000,
-		effect: "creative",
-		creativeEffect: {
-		  prev: {
-			shadow: true,
-			translate: [0, 0, -800],
-			rotate: [180, 0, 0],
-		  },
-		  next: {
-			shadow: true,
-			translate: [0, 0, -800],
-			rotate: [-180, 0, 0],
-		  },
-		},
-
-		autoplay: {
-			delay: 5000,
-		},
-
-		navigation: {
-			nextEl: ".kk_p3_next",
-			prevEl: ".kk_p3_prev",
-		},
-		thumbs: {
-			swiper: kk_p3_preview_slider_active,
-		},
-	});
-
-
-}
-
-/* 
-	contact-form-1
-*/
-if($(".form_step_2_btn").length) {
-    $(".form_step_2_btn").on("click", function (e) {
-        e.preventDefault();
-        $(".multi_form_1").removeClass("active").addClass("d-none");
-        $(".multi_form_2").removeClass("d-none").addClass("active");
-
-        $(".step_number_1").addClass("active");
-    });
-
-    $(".form_prev_btn").on("click", function (e) {
-        e.preventDefault();
-        $(".multi_form_2").removeClass("active").addClass("d-none");
-        $(".multi_form_1").removeClass("d-none").addClass("active");
-
-        $(".step_number_1").removeClass("active");
-
-    });
-
-    $(".form_submit_btn").on("click", function (e) {
-        e.preventDefault();
-        $(".multi_form_2").removeClass("active").addClass("d-none");
-        $(".multi_form_3").removeClass("d-none").addClass("active");
-
-        $(".step_number_1").addClass("active");
-        $(".step_number_2").addClass("active");
-        $(".step_number_3").addClass("active");
-    });
-};
-
-
-/* 
-	price-3-toggle-class
-*/
-if($(".kk-price-3-toggle").length) {
-	$('.kk-price-3-toggle').on('click', function () {
-		$(".kk-price-3-toggle-btn").toggleClass('is-active');
-		$('.price-wrap').toggleClass('is-active');
-		$('.kk-price-3-toggle').toggleClass('is-active');
-	});
-}
+    $(this).addClass("active");
+});
 
 
 $('.wa_marquee_left').marquee({
@@ -1336,8 +806,8 @@ if ($(".wa-magnetic").length) {
 /* 
 	magnetic-button-animation
 */
-if ($(".wa-magnetic-btn").length) {
-    var waMagnets = document.querySelectorAll('.wa-magnetic-btn');
+if ($(".wa_magnetic_btn").length) {
+    var waMagnets = document.querySelectorAll('.wa_magnetic_btn');
     var waStrength = 30;
 
     waMagnets.forEach((magnet) => {
@@ -1453,7 +923,7 @@ if($('.popup_img').length) {
 /* 
 	faqs-8-active-class
 */
-$(document).on('click', '.tn-accordion-item', function(){
+$(document).on('click', '.wa_accordion_item', function(){
 	$(this).addClass('active').siblings().removeClass('active')
 })
 

@@ -1,0 +1,197 @@
+/* 
+    blog-1-start
+*/
+
+.nm-blog-1 {
+    &-area {
+        background-color: #050505;
+
+        .nm-about-1-line:is(.has-v2) {
+            bottom: -8px;
+        }
+    }
+    &-sec-title {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        @media #{$md,$xs} {
+            flex-wrap: wrap;
+        }
+
+        .left {
+            max-width: 610px;
+            width: 90%;
+        }
+
+        .sec-disc {
+            max-width: 570px;
+        }
+    }
+
+    &-wrap-height {
+        margin-left: -200px;
+        margin-right: -200px;
+
+        @media #{$xxxl} {
+            margin-left: -100px;
+            margin-right: -100px;
+        }
+        @media #{$xxl,$xl,$lg,$md,$xs} {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    }
+
+    &-wrap {
+        display: flex;
+        gap: 40px;
+
+        @media #{$md} {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        @media #{$xs} {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        
+        @media #{$sm} {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &-item {
+        transition: var(--nm-cube-1);
+        flex-grow: 1;
+        width: 100%;
+        
+        .item-img {
+            border-radius: 30px;
+            margin-bottom: 30px;
+            width: 100%;
+            height: 305px;
+            transition: var(--nm-cube-1);
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: #000;
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0%;
+                transition: var(--nm-cube-1);
+            }
+    
+            .card-categories {
+                position: absolute;
+                top: 20px;
+                right: 25px;
+                z-index: 1;
+    
+                .link-elm {
+                    background: #000;
+                    border-radius: 100px;
+                    font-size: 15px;
+                    padding: 5px 16px;
+                    border: 1px solid rgb(255 255 255 / 15%);
+                    transition: var(--nm-cube-1);
+    
+                    &:hover {
+                        color: #000;
+                        background: var(--nm-clr-pr-1);
+                    }
+                }
+            }
+    
+            .card-btn {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0);
+                z-index: 1;
+                background: #fff;
+                width: 100px;
+                height: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 50px;
+                border-radius: 50%;
+                transition: var(--nm-cube-1);
+            }
+    
+
+    
+        }
+
+        .item-date {
+            font-size: 15px;
+            letter-spacing: -0.025em;
+            color: #616161;
+        }
+
+        .item-title {
+            font-size: 24px;
+            margin-top: 5px;
+            transition: var(--nm-cube-1);
+
+            &:hover {
+                color: var(--nm-clr-pr-1);
+            }
+
+            @media #{$xxxl,$xxl,$xl,$lg,$md,$xs} {
+                font-size: 22px;
+            }
+        }
+
+
+        &:nth-child(1) {
+            transform-origin: top right;
+        }
+
+
+        @media #{$over,$xxxl,$xxl,$xl} {
+            &:is(.active) {
+                width: 835px;
+                flex: 0 0 auto;
+    
+                @media #{$xxxl} {
+                    width: 735px;
+                }
+                @media #{$xxl} {
+                    width: 635px;
+                }            
+                @media #{$xl} {
+                    width: 535px;
+                }
+                .item-img {
+                    height: 495px;
+    
+                    @media #{$xxl,$xl,$lg,$md,$xs} {
+                        height: 400px;
+                    }
+                    &::after {
+                        opacity: 39%;
+        
+                    }
+                    .card-btn {
+                        transform: translate(-50%, -50%) scale(1);
+                    }
+                }
+            }
+        }
+
+
+
+    }
+}
+
+
+/* 
+    blog-1-end
+*/

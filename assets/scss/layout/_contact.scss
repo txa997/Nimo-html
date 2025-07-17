@@ -1,0 +1,118 @@
+/* 
+    contact-1-start
+*/
+.nm-contact-1 {
+
+    &-area {
+        background-color: #000;
+    }
+
+    
+    &-sec-title {
+        display: flex;
+        gap: 40px 100px;
+        max-width: 860px;
+        align-items: start;
+        margin-left: auto;
+
+        .nm-subtitle-1 {flex: 0 0 auto;}
+    }
+
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        align-items: start;
+        gap: 50px;
+    }
+
+    &-social {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        .link-elm {
+            background: linear-gradient(180deg, rgb(45, 45, 45) 0%, rgb(0, 0, 0) 100%);
+            border-radius: 10px;
+            font-size: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 42px;
+            padding: 13px 20px;
+            position: relative;
+            z-index: 1;
+            transition: var(--nm-cube-1);
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: var(--nm-clr-pr-1);
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                border-radius: 10px;
+                z-index: -1;
+                transform: scaleY(0);
+                transform-origin: bottom;
+                transition: var(--nm-cube-1);
+            }
+
+            .icon {
+                width: 36px;
+                height: 36px;
+                background: var(--nm-clr-pr-1);
+                flex: 0 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 18px;
+                border-radius: 50%;
+                color: #000;
+                transition: var(--nm-cube-1);
+            }
+
+            &:hover {
+                color: #000;
+                &::after {
+                    transform: scaleY(1);
+                }
+                .icon {
+                    background: #000;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+
+    &-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px 60px;
+
+        &-single {
+            .icon {
+                width: 42px;
+                height: 42px;
+                background: linear-gradient(-33deg, rgb(46, 46, 46) 0%, rgb(16, 16, 16) 100%);
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                font-size: 18px;
+                color: #636363;
+            }
+
+            .title {
+                font-size: 24px;
+                margin-top: 17px;
+            }
+        }
+    }
+    
+}
+
+
+/* 
+    contact-1-start
+*/
