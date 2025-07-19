@@ -28,6 +28,28 @@
 }
 
 
+@keyframes slideInUp2 {
+  0% {
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.slideInUp2 {
+  -webkit-animation-name: slideInUp2;
+  animation-name: slideInUp2;
+  animation-duration: 500ms;
+  animation-timing-function: var(--nm-cube-1);
+}
+
+
 @keyframes   waRotateX {
     0% {
       transform: rotateX(-90deg) translateZ(20px);

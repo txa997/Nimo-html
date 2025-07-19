@@ -93,6 +93,22 @@
 }
 
 
+.wa_bg_position {
+    div {
+        background-size: 200% 100%;
+        background-position-x: 100%;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(to right, rgb(255, 255, 255) 50%, rgba(104, 104, 104, 0.50) 50%);
+        padding-bottom: 7px;
+
+        &:not(:first-child) {
+            margin-top: -7px;
+        }
+    }
+
+}
 
 /* 
     typography-end

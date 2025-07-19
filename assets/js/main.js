@@ -203,6 +203,24 @@ document.addEventListener("DOMContentLoaded", function () {
 			});
 		}
 
+		/* 
+			section-title-1
+		*/
+		const wa_bg_position = new SplitText(".wa_bg_position", { type: "lines" });
+		wa_bg_position.lines.forEach((target) => {
+			gsap.to(target, {
+				backgroundPositionX: 0,
+				ease: "none",
+				scrollTrigger: {
+					trigger: target,
+					scrub: 1,
+					start: 'top 85%',
+					end: "bottom center"
+				}
+			});
+		});
+        
+
 
 		/* 
 			wa-split-right
@@ -468,6 +486,52 @@ if($(".with-plugin").length) {
 	});
 }
 
+
+
+/* 
+	sticky-card-animation
+*/
+if (window.matchMedia("(min-width: 992px)").matches) { 
+
+	if($(".wa_sticky_card_wrapper").length) {
+		const waCardsWrappers = gsap.utils.toArray(".wa_sticky_card");
+		const waCards = gsap.utils.toArray(".wa_sticky_card");
+	
+		waCardsWrappers.forEach((waWrapper, waIndex) => {
+		const waCard = waCards[waIndex];
+		let waScale = 1,
+			waRotation = 0;
+	
+		if (waIndex !== waCards.length - 1) {
+			waScale = 0.9 + 0.025 * waIndex;
+			waRotation = -10;
+		}
+	
+			gsap.to(waCard, {
+				scale: waScale,
+				// rotationX: waRotation,
+				transformOrigin: "top center",
+				ease: "none",
+				scrollTrigger: {
+				trigger: waWrapper,
+				start: "top " + (120 + 10 * waIndex),
+				end: "bottom 400",
+				endTrigger: ".wa_sticky_card_wrapper",
+				scrub: true,
+				pin: waWrapper,
+				pinSpacing: false,
+				markers: true,
+				// id: waIndex + 1
+				}
+			});
+		});
+	}
+	
+
+}
+
+
+
 /* 
 	portfolio-1-animation
 */
@@ -485,6 +549,23 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 }
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  const video = document.querySelector(".handshake-video video");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        video.play();
+      } else {
+        video.pause(); 
+      }
+    });
+  }, {
+    threshold: 0.5, 
+  });
+
+  observer.observe(video);
+});
 
   
 
