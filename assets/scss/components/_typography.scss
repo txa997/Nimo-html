@@ -38,6 +38,8 @@
     align-items: center;
     line-height: 1.5;
     margin-bottom: 20px;
+    perspective: 2000px;
+    transform-style: preserve-3d;
 
     .dot {
         width: 11px;
@@ -46,9 +48,21 @@
         border-radius: 50%;
         flex: 0 0 auto;
         box-shadow: 0px 3px 5.52px 0.48px rgba(214, 243, 69, 0.46);
+        animation: subtitleDot1kf 2s linear infinite;
     }
 }
 
+@keyframes subtitleDot1kf {
+    0% {
+        opacity: .3;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .3;
+    }
+}
 
 .nm-sec-title-1 {
     font-family: var(--nm-font-2);

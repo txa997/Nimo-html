@@ -1,0 +1,204 @@
+/* 
+    footer-1-start
+*/
+.nm-footer-1 {
+    &-area {
+        background-color: #000;
+    }
+
+    &-container {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: 1150px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &-main {
+        display: flex;
+        gap: 50px 60px;
+        justify-content: space-between;
+
+        @media #{$lg,$md,$xs} {
+            flex-wrap: wrap;
+        }
+    }
+
+    &-widget {
+        .widget-title {
+            font-family: var(--nm-font-1);
+            color: #fff;
+            font-weight: 700;
+            line-height: 1.2;
+            font-size: 24px;
+            margin-bottom: 17px;
+        }
+    }
+
+    &-disc {
+        max-width: 300px;
+        color: #fff;
+        margin-top: 20px;
+    }
+
+    &-hire {
+        margin-top: 69px;
+        .hire-mail {
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hire-title {
+            font-size: 30px;
+            display: inline-flex;
+            gap: 20px;
+            align-items: center;
+            margin-top: 25px;
+            
+            @media #{$md,$xs} {
+                font-size: 24px;
+            }
+
+            span {
+                width: 12px;
+                height: 12px;
+                background: var(--nm-clr-pr-1);
+                border-radius: 50%;
+                outline: 6px solid rgb(214 243 69 / 20%);
+                animation: hireSpan 2s linear infinite;
+            }
+
+            a {
+                transition: var(--nm-cube-1);
+            }
+
+            &:hover {
+                a {
+                    color: var(--nm-clr-pr-1);
+                }
+            }
+        }
+    }
+
+    &-menu {
+
+        li {
+            &:not(:last-child) {
+                margin-bottom: 7px;
+            }
+        }
+        
+        a {
+            font-size: 16px;
+            color: #a6a6a6;
+            transition: var(--nm-cube-1);
+
+            &:hover {
+                color: var(--nm-clr-pr-1);
+            }
+        }
+    }
+
+    &-social {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    
+        .link-elm {
+            width: 42px;
+            background: #17191b;
+            height: 42px;
+            border-radius: 50%;
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            transition: var(--nm-cube-1);
+
+            &:hover {
+                background: var(--nm-clr-pr-1);
+                color: #000;
+            }
+        }
+    }
+
+    &-bottom {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        padding: 40px 0;
+
+        @media #{$md,$xs} {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nm-about-1-line-border {
+            width: 110%;
+            opacity: 0.15;
+        }
+
+        &-copyright {
+            font-size: 16px;
+            color: #68696c;
+        }
+
+        &-make {
+            font-size: 16px;
+            color: #68696c;
+            border: 1px solid rgb(255 255 255 / 15%);
+            border-radius: 100px;
+            padding: 3px 16px;
+
+            i {
+                color: var(--nm-clr-pr-1);
+            }
+
+            a {
+                color: #fff;
+                transition: var(--nm-cube-1);
+
+                &:hover {
+                    color: var(--nm-clr-pr-1);
+                }
+            }
+        }
+
+        &-link {
+            a {
+                font-size: 16px;
+                transition: var(--nm-cube-1);
+                &:hover {
+                    color: var(--nm-clr-pr-1);
+                }
+            }
+        }
+    }
+    
+}
+
+@keyframes hireSpan {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+
+/* 
+    footer-1-end
+*/

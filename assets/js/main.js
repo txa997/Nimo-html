@@ -163,6 +163,47 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		}
 
+
+		
+		/* 
+			wa-split-hero
+		*/	
+		if ($(".wa_split_hero").length) {
+			var waSplitHero = $(".wa_split_hero");
+			if (waSplitHero.length == 0) return;
+
+			gsap.registerPlugin(SplitText);
+
+			waSplitHero.each(function (index, el) {
+				el.split = new SplitText(el, {
+					type: "lines,words,chars",
+					linesClass: "split-line",
+				});
+
+				gsap.set(el, { perspective: 400 });
+
+				let delayValue = $(el).attr("data-split-delay") || "0s";
+				delayValue = parseFloat(delayValue) || 0; 
+
+				if ($(el).hasClass("wa_split_hero")) {
+					gsap.set(el.split.chars, {
+						rotateY: 90,
+						opacity: 0,
+					});
+				}
+
+				el.anim = gsap.to(el.split.chars, {
+					rotateY: 0,
+					opacity: 1,
+					duration: 2,
+					ease: "elastic.out(1,0)",
+					stagger: 0.07,
+					delay: delayValue, 
+				});
+			});
+		}
+
+
 		/* 
 			wa-split-right
 		*/	
@@ -242,7 +283,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 
 
-
 		// wa-clip-left-right
 		gsap.utils.toArray(".wa_clip_left_right").forEach(element => {
 
@@ -316,7 +356,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			var wow = new WOW({
 				boxClass:     'wow',
 				animateClass: 'animated',
-				offset:       100,
+				offset:       50,
 				mobile:       true,
 				live:         true
 			});
@@ -330,12 +370,46 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// subtitle-1-plus
+gsap.utils.toArray(".nm-about-1-line-plus .plus").forEach(element => {
+	gsap.fromTo(
+		element,
+		{ rotation: 360 }, 
+		{ 
+			rotation: 0, 
+			ease: "none",
+			scrollTrigger: {
+				trigger: element,
+				scrub: 3,    
+				markers: false,     
+			},
+		}
+	);
+});
+
+// subtitle-1-line
+gsap.utils.toArray(".nm-about-1-line-border").forEach(element => {
+	gsap.from(
+		element,
+		{ 
+			scaleX: 0, 
+			ease: "none",
+			scrollTrigger: {
+				trigger: element,
+				end: "top 60%",
+				scrub: true,    
+				markers: false,     
+			},
+		}
+	);
+});
+
 
 /* 
 	menu-link-animation
 */
 if ($(".btn-split-right").length) {
-    var splitButton1 = $(".btn-split-right li a");
+    var splitButton1 = $(".btn-split-right a");
     gsap.registerPlugin(SplitText);
 
     splitButton1.each(function (index, el) {
@@ -363,36 +437,6 @@ if ($(".btn-split-right").length) {
 }
 
 
-  const btn = document.querySelector('.nm-pr-btn-1');
-  const icon = btn.querySelector('.icon');
-
-  // Save original position
-  const originalX = 20;
-  const originalY = btn.offsetHeight / 2;
-
-  btn.addEventListener('mousemove', (e) => {
-    const rect = btn.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    // Animate icon to follow cursor (centered)
-    gsap.to(icon, {
-      x: x,
-      y: y,
-      duration: 0.25,
-      ease: "power2.out"
-    });
-  });
-
-  btn.addEventListener('mouseleave', () => {
-    // Return to original position
-    gsap.to(icon, {
-      x: originalX,
-      y: originalY,
-      duration: 0.5,
-      ease: "power2.out"
-    });
-  });
 /* 
 	firefly-animation
 */
@@ -774,7 +818,7 @@ if ($(".wa_height_set").length) {
 /* 
 	magnetic-item-animation
 */
-if ($(".wa-magnetic").length) {
+if ($(".wa_magnetic").length) {
     var waMagnets = document.querySelectorAll('.wa-magnetic');
     var waStrength = 100;
 
@@ -806,12 +850,15 @@ if ($(".wa-magnetic").length) {
 /* 
 	magnetic-button-animation
 */
+/* 
+	magnetic-1 (on full button)
+*/
 if ($(".wa_magnetic_btn").length) {
-    var waMagnets = document.querySelectorAll('.wa_magnetic_btn');
-    var waStrength = 30;
+    var waMagnets1 = document.querySelectorAll('.wa_magnetic_btn');
+    var waStrength1 = 30;
 
-    waMagnets.forEach((magnet) => {
-        magnet.addEventListener('mousemove', moveMagnet);
+    waMagnets1.forEach((magnet) => {
+        magnet.addEventListener('mousemove', moveMagnet1);
         magnet.addEventListener('mouseout', function(event) {
             gsap.to(event.currentTarget, {
                 x: 0,
@@ -822,19 +869,105 @@ if ($(".wa_magnetic_btn").length) {
         });
     });
 
-    function moveMagnet(event) {
+    function moveMagnet1(event) {
         var magnetButton = event.currentTarget;
         var bounding = magnetButton.getBoundingClientRect();
 
         gsap.to(magnetButton, {
-            x: (((event.clientX - bounding.left) / magnetButton.offsetWidth) - 0.5) * waStrength,
-            y: (((event.clientY - bounding.top) / magnetButton.offsetHeight) - 0.5) * waStrength,
+            x: (((event.clientX - bounding.left) / magnetButton.offsetWidth) - 0.5) * waStrength1,
+            y: (((event.clientY - bounding.top) / magnetButton.offsetHeight) - 0.5) * waStrength1,
             duration: 1,
             ease: "elastic.out(1,0.3)"
         });
     }
 }
 
+
+/* 
+	magnetic-2 (on inner elements only)
+*/
+if ($(".wa_magnetic_btn_2").length) {
+    var waMagnets2 = document.querySelectorAll('.wa_magnetic_btn_2');
+    var waStrength2 = 30;
+
+    waMagnets2.forEach((magnet) => {
+        magnet.addEventListener('mousemove', moveMagnet2);
+        magnet.addEventListener('mouseout', function(event) {
+            const innerElements = event.currentTarget.querySelectorAll('.wa_magnetic_btn_2_elm');
+            innerElements.forEach((elm) => {
+                gsap.to(elm, {
+                    x: 0,
+                    y: 0,
+                    duration: 1,
+                    ease: "elastic.out(1, 0.3)"
+                });
+            });
+        });
+    });
+
+    function moveMagnet2(event) {
+        var magnetButton = event.currentTarget;
+        var bounding = magnetButton.getBoundingClientRect();
+        const innerElements = magnetButton.querySelectorAll('.wa_magnetic_btn_2_elm');
+
+        const xMove = (((event.clientX - bounding.left) / magnetButton.offsetWidth) - 0.5) * waStrength2;
+        const yMove = (((event.clientY - bounding.top) / magnetButton.offsetHeight) - 0.5) * waStrength2;
+
+        innerElements.forEach((elm) => {
+            gsap.to(elm, {
+                x: xMove,
+                y: yMove,
+                duration: 1,
+                ease: "elastic.out(1, 0.3)"
+            });
+        });
+    }
+}
+
+
+/* 
+	magnetic-3 (on inner elements only)
+*/
+if (window.matchMedia("(min-width: 992px)").matches) { 
+	
+}
+if ($(".wa_magnetic_btn_3").length) {
+    var waMagnets3 = document.querySelectorAll('.wa_magnetic_btn_3');
+    var waStrength3 = 100;
+
+    waMagnets3.forEach((magnet) => {
+        magnet.addEventListener('mousemove', moveMagnet3);
+        magnet.addEventListener('mouseout', function(event) {
+            const innerElements = event.currentTarget.querySelectorAll('.wa_magnetic_btn_3_elm');
+            innerElements.forEach((elm) => {
+                gsap.to(elm, {
+                    x: 0,
+                    y: 0,
+                    duration: 1,
+                    ease: "elastic.out(1, 0.3)"
+                });
+            });
+        });
+    });
+
+    function moveMagnet3(event) {
+        var magnetButton = event.currentTarget;
+        var bounding = magnetButton.getBoundingClientRect();
+        const innerElements = magnetButton.querySelectorAll('.wa_magnetic_btn_3_elm');
+
+        const xMove = (((event.clientX - bounding.left) / magnetButton.offsetWidth) - 0.5) * waStrength3;
+        const yMove = (((event.clientY - bounding.top) / magnetButton.offsetHeight) - 0.5) * waStrength3;
+
+        innerElements.forEach((elm) => {
+            gsap.to(elm, {
+                x: xMove,
+                y: yMove,
+                duration: 1,
+                ease: "elastic.out(1, 0.3)"
+            });
+        });
+    }
+}
 
 
 /* 

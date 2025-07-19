@@ -68,6 +68,48 @@
             mask-size: 100% 100%;
             -webkit-mask-size: 100% 100%;
         }
+        
+    }
+
+    &-logo {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        align-items: center;
+        overflow: hidden;
+
+        img {
+            transition:  var(--nm-cube-1);
+            &:nth-child(1) {
+                position: relative;
+            } 
+            &:nth-child(2) {
+                position: absolute;
+                transform: translateY(102%);
+                filter: brightness(0) saturate(100%) invert(89%) sepia(33%) saturate(1188%) hue-rotate(26deg) brightness(98%) contrast(89%);
+            }            
+            &:nth-child(3) {
+                position: absolute;
+                transform: translateY(300%);
+            }
+        }
+
+        &:hover {
+            img {
+                &:nth-child(1) {
+                    transform: translateY(-300%);
+                } 
+                &:nth-child(2) {
+                    transform: translateY(-100%);
+                }            
+                &:nth-child(3) {
+                    transform: translateY(0%);
+                }
+            }
+
+        }
+
     }
 }
 

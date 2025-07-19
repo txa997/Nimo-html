@@ -119,6 +119,16 @@
         }
     }
 
+    &-left {
+        &-bg-shape {
+            width: 61%;
+            position: absolute;
+            bottom: 10%;
+            right: 12%;
+            z-index: -1;
+        }
+    }
+
     &-contact {
         background: #000;
         border-radius: 30px;

@@ -19,6 +19,7 @@
     background: var(--nm-clr-pr-1);
 }
 
+
 .nm-pr-btn-1 {
     font-family: var(--nm-font-2);
     background: var(--nm-clr-pr-1);
@@ -33,24 +34,91 @@
     color: var(--nm-clr-black-1);
     font-size: 20px;
     overflow: hidden;
-    position: relative;
+    transition: var(--nm-cube-1);
 
-  .icon {
-    position: absolute;
-    top: 50%;
-    left: 20px; // মূল অবস্থান (যেখানে ফিরে আসবে)
-    width: 53px;
-    height: 53px;
-    background: var(--nm-clr-black-1);
-    color: #fff;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-  }
+    .icon {
+        flex: 0 0 auto;
+        width: 53px;
+        height: 53px;
+        background: var(--nm-clr-black-1);
+        color: #fff;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        position: relative;
+        z-index: 1;
+        transition: var(--nm-cube-1);
+        overflow: hidden;
+
+        i {
+            transition: var(--nm-cube-1);
+            &:nth-child(1) {
+                position: absolute;
+                transform: translateX(-50px);
+            }
+            &:nth-child(2) {
+                position: relative;
+            }
+        }
+
+    }
+
+
+    .text {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+
+        &::after {
+            top: 0;
+            left: 0;
+            // opacity: 0;
+            width: 100%;
+            display: block;
+            transition: var(--nm-cube-1);
+            position: absolute;
+            content: attr(data-back);
+            transform: translateY(100%);
+        }
+    
+        &::before {
+            top: 0;
+            left: 0;
+            // opacity: 1;
+            display: block;
+            transition: var(--nm-cube-1);
+            position: relative;
+            content: attr(data-front);
+            transform: translateY(0);
+        }
+
+    }
+    
+
+    &:hover {
+        .icon {
+            i {
+                &:nth-child(1) {
+                    transform: translateX(0px);
+                }
+                &:nth-child(2) {
+                    transform: translateX(50px);
+                }
+            }  
+        }
+        .text {
+            &::after {
+                // opacity: 1;
+                transform: translateY(0%);
+            }
+            &::before {
+                // opacity: 0;
+                transform: translateY(-100%);
+            }
+        }
+    }
 
     &:is(.has-v2) {
         background: var(--nm-clr-black-3);
@@ -63,12 +131,19 @@
             background: var(--nm-clr-pr-1);
             color: var(--nm-clr-black-1);
             font-size: 16px;
+        }
 
+        &:hover {
+            background: var(--nm-clr-pr-1);
+            color: #000;
+            .icon {
+                background: #000;
+                color: var(--nm-clr-pr-1);
+            }
             
         }
     }
 }
-
 
 .nm-hero-1-plybtn {
     flex: 0 0 auto;
