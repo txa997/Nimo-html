@@ -145,6 +145,33 @@
     }
 }
 
+.nm-pr-btn-2 {
+    font-family: var(--nm-font-2);
+    font-weight: 700;
+    font-size: 16px;
+    color: #141414;
+    background: #fffbf5;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    padding: 2px;
+    padding-right: 16px;
+
+    .icon {
+        width: 42px;
+        height: 46px;
+        background: linear-gradient( -90deg, rgb(20,20,20) 0%, rgb(67,67,67) 100%);
+        flex: 0 0 auto;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        border-radius: 8px;
+    }
+    
+}
+
 .nm-hero-1-plybtn {
     flex: 0 0 auto;
     width: 115px;
