@@ -503,7 +503,7 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 			waRotation = 0;
 	
 		if (waIndex !== waCards.length - 1) {
-			waScale = 0.9 + 0.025 * waIndex;
+			waScale = 0.95 + 0.01 * waIndex;
 			waRotation = -10;
 		}
 	
@@ -514,7 +514,7 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 				ease: "none",
 				scrollTrigger: {
 				trigger: waWrapper,
-				start: "top " + (120 + 10 * waIndex),
+				start: "top " + (120 + 50 * waIndex),
 				end: "bottom 400",
 				endTrigger: ".wa_sticky_card_wrapper",
 				scrub: true,

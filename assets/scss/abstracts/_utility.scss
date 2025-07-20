@@ -147,3 +147,7 @@
 .wa-will-change {
     will-change: transform, opacity;
 }
+
+.wa-no-ani-tf {
+    transform: none !important;
+}
