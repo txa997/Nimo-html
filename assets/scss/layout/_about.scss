@@ -57,6 +57,12 @@
 
 .nm-about-1 {
 
+    &-area {
+        .nm-about-1-line:is(.has-v2) {
+            bottom: -9px;
+        }
+    }
+
     &-line {
         position: absolute;
         top: 0;
@@ -69,7 +75,7 @@
             background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 15%, rgb(255, 255, 255) 85%, rgba(255, 255, 255, 0) 100%);
             width: 90%;
             height: 1px;
-            opacity: 0.1;
+            opacity: 0.15;
             margin-left: auto;
             margin-right: auto;
         }

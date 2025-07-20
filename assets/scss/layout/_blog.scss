@@ -123,6 +123,11 @@
                 font-size: 50px;
                 border-radius: 50%;
                 transition: var(--nm-cube-1);
+
+                &:hover {
+                    background: var(--nm-clr-pr-1);
+                    color: #000;
+                }
             }
     
 

@@ -178,6 +178,16 @@
             font-size: 50px;
             border-radius: 50%;
             transition: var(--nm-cube-1);
+
+            i {
+                // transition: var(--nm-cube-1);
+                // transform: scaleY(0);
+            }
+
+            &:hover {
+                background: var(--nm-clr-pr-1);
+                color: #000;
+            }
         }
 
         &:hover {
@@ -226,6 +236,16 @@
                 top: 15px;
                 right: 11px;
                 opacity: .1;
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: 2s;
+            }
+
+            &:is(.active) {
+                &::after {
+                    transform: scaleX(1);  
+                }
+        
             }
         }
     }

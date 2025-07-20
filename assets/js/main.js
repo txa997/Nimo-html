@@ -520,16 +520,42 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 				scrub: true,
 				pin: waWrapper,
 				pinSpacing: false,
-				markers: true,
+				markers: false,
 				// id: waIndex + 1
 				}
 			});
 		});
 	}
 	
-
+	gsap.to(".nm-about-1-left-content", {
+		scrollTrigger: {
+			trigger: ".nm-about-1-area",
+			start: "top 20%", 
+			end: "bottom bottom", 
+			pin: ".nm-about-1-left-content", 
+			pinSpacing: false,
+			markers: false
+		}
+	});
+	
 }
 
+/* 
+	faqs-1-contact-form-sticky-
+*/
+if (window.matchMedia("(min-width: 1400px)").matches) { 
+
+	gsap.to(".nm-faqs-1-contact", {
+		scrollTrigger: {
+			trigger: ".nm-faqs-1-area",
+			start: "top 10%", 
+			end: "bottom bottom", 
+			pin: ".nm-faqs-1-contact", 
+			pinSpacing: false,
+			markers: false
+		}
+	});
+ }
 
 
 /* 
@@ -539,15 +565,39 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 	var portfolio1animation = gsap.timeline({
 		scrollTrigger: {
 			trigger: ".p1_ani_trigger",
-			start: "top 40%",
+			start: "top 20%",
+			end: "top -20%",
 			toggleActions: "play none none reverse",
 			scrub: true,
 			markers: false,
 		},
-	})
-	// portfolio1animation.from(".p1_ani_trigger_elm_1", { y: -500, });
-}
+	});
 
+	portfolio1animation.from(".p1_ani_trigger_elm_1", {
+		x: 710,
+		y: -790,
+		scale: 0.7,
+		rotate: 4,
+	});
+	portfolio1animation.from(".p1_ani_trigger_elm_2", {
+		x: -50,
+		y: -790,
+		scale: 0.7,
+		rotate: -4,
+	},"<=");
+	portfolio1animation.from(".p1_ani_trigger_elm_3", {
+		x: 730,
+		y: -1250,
+		scale: 0.7,
+		rotate: -7,
+	},"<=");
+	portfolio1animation.from(".p1_ani_trigger_elm_4", {
+		x: -30,
+		y: -1250,
+		scale: 0.7,
+		rotate: 5,
+	},"<=");
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   const video = document.querySelector(".handshake-video video");
@@ -855,7 +905,7 @@ $('.wa_marquee_right').marquee({
 
 
 // placeholder-typing
-document.querySelectorAll(".wa-placeholder").forEach(waPlaceholderInput => {
+document.querySelectorAll(".wa_placeholder").forEach(waPlaceholderInput => {
 	const waPlaceholderText = waPlaceholderInput.placeholder; 
 	const waStartDelay = waPlaceholderInput.dataset.startDelay ? parseInt(waPlaceholderInput.dataset.startDelay) : 0; 
 	let waPlaceholderIndex = 0;

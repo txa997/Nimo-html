@@ -142,6 +142,7 @@
         align-items: end;
         padding: 25px;
         height: 845px;
+        transition: background 1s;
 
         @media #{$xl} {
             height: 645px;
@@ -152,6 +153,22 @@
         @media #{$xs} {
             height: 585px;
         }
+
+
+        .bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            z-index: -1;
+
+            img {
+                transition: var(--nm-cube-1);
+            }
+        }
+
 
         .content-wrap {
             background: rgba(0, 0, 0, 0.3);
@@ -189,6 +206,14 @@
                 font-size: 25px;
             }
         }
+
+        &:hover {
+            .bg-img {
+                img {
+                    transform: scale(103%);
+                }
+            }
+        }
     }
 
     &-experience {
@@ -201,6 +226,22 @@
         z-index: 1;
         overflow: hidden;
         height: 845px;
+
+
+        .bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            z-index: -1;
+
+            img {
+                transition: var(--nm-cube-1);
+            }
+        }
+
 
         @media #{$xl} {
             height: 645px;
@@ -236,21 +277,55 @@
             font-weight: 500;
             margin-top: 32px;
         }
+
+
+        &:hover {
+            .bg-img {
+                img {
+                    transform: scale(103%);
+                }
+            }
+        }
     }
 
     &-author {
         display: inline-flex;
         flex-wrap: wrap;
+        perspective: 2000px;
+        transform-style: preserve-3d;
 
         .author-img {
             width: 106px;
             height: 106px;
             border-radius: 50%;
             border: 2px solid #fff;
-       
+            transform: rotateY(84deg);
+            transition: var(--nm-cube-1);
 
             &:not(:first-child) {
                 margin-left: -30px;
+            }
+        }
+
+        &:is(.active) {
+            .author-img {
+                transform: rotateY(0deg);
+                &:nth-child(1) {
+                    transition-delay: .1s;
+                }
+                &:nth-child(2) {
+                    transition-delay: .2s;
+                }
+                &:nth-child(3) {
+                    transition-delay: .3s;
+                }
+
+                &:nth-child(4) {
+                    transition-delay: .4s;
+                }
+                &:nth-child(5) {
+                    transition-delay: .5s;
+                }
             }
         }
     }
