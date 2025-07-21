@@ -467,3 +467,150 @@
 /* 
     choose-1-end
 */
+
+/* 
+    choose-2-start
+*/
+.nm-choose-2 {
+    &-sec {
+        &-title {
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1.045fr 1fr;
+        gap: 80px;
+        margin-left: -75px;
+        margin-right: -75px;
+    }
+
+    &-card {
+        background: linear-gradient(134deg, rgba(14, 14, 14, 1) 0%, rgba(46, 46, 46, 1) 100%);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        position: relative;
+        padding: 25px 30px;
+        box-shadow: -4.961px 25.522px 40px 0px rgba(0, 0, 0, 0.47);
+        max-width: 325px;
+        transition: var(--nm-cube-1);
+
+        &:not(:last-child) {
+            margin-bottom: 65px;
+        }
+
+        .number {
+            font-size: 48px;
+            color: #424142;
+            font-weight: 700;
+            line-height: 1;
+            position: absolute;
+            right: -17px;
+            top: -26px;
+            z-index: -1;
+            transition: var(--nm-cube-1);
+        }
+
+        .icon-x-title {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 10px;
+            color: #fff;
+            background: linear-gradient( 110deg, rgb(20,20,20) 0%, rgb(67,67,67) 100%);
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+
+            i {
+                background: linear-gradient(0deg, rgb(100, 100, 100) 0%, rgb(255, 255, 255) 100%);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        
+
+        .title {
+            font-size: 22px;
+        }
+
+        .disc {
+            color: #a2a2a2;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        &:hover {
+            outline: 3px solid #fff;
+
+            .number {
+                right: -60px;
+                color: #fff;
+            }
+        }
+        
+    }
+
+    &-left {
+        .nm-choose-2-card {
+            &:nth-child(odd) {
+                margin-left: 75px;
+            }
+        }
+    }
+
+    
+    &-right {
+        .nm-choose-2-card {
+            &:nth-child(even) {
+                margin-left: 75px;
+            }
+
+            .number {
+                right: unset;
+                left: -25px;
+            }
+
+            &:hover {
+                .number {
+                    left: -70px;
+                }
+
+            }
+        }
+    }
+
+
+    &-img {
+        &-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        &-single {
+            height: 300px;
+            border-radius: 10px;
+        }
+        
+    }
+}
+
+
+
+
+
+
+
+/* 
+    choose-2-end
+*/

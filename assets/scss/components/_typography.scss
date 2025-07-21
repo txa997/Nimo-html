@@ -13,6 +13,15 @@
     margin-bottom: 0;
 }
 
+.nm-h-2 {
+    font-family: var(--nm-font-1);
+    line-height: 1.176;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.025em;
+    margin-bottom: 0;
+}
+
 
 .nm-p-1 {
     font-family: var(--nm-font-2);
@@ -64,6 +73,33 @@
     }
 }
 
+
+.nm-subtitle-2 {
+    font-family: var(--nm-font-2);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 25px;
+
+    .icon {
+        line-height: .9;
+        background: linear-gradient(0deg, rgb(0 0 0 / 20%) 0%, rgba(255, 255, 255, 1) 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .line {
+        width: 175px;
+        height: 2px;
+        background: linear-gradient(90deg,rgba(255, 255, 255, 1) 87%, rgba(0, 0, 0, 0) 100%);
+        opacity: .4;
+    }
+}
+
+
 .nm-sec-title-1 {
     font-family: var(--nm-font-2);
     color: #fff;
@@ -92,6 +128,36 @@
     }
 }
 
+
+.nm-sec-title-2 {
+    font-family: var(--nm-font-1);
+    color: #fff;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    margin-bottom: 0;
+    font-size: 65px;
+
+    @media #{$xl} {
+        font-size: 60px;
+    }
+
+    @media #{$lg} {
+        font-size: 50px;
+    }
+
+    @media #{$md} {
+        font-size: 45px;
+    }
+
+    @media #{$xs} {
+        font-size: 35px;
+    }
+
+    @media #{$sm} {
+        font-size: 40px;
+    }
+}
 
 .wa_bg_position {
     div {

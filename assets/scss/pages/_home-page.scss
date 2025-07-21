@@ -4,6 +4,22 @@
 .nm-home-1 {
     background-color: var(--nm-clr-black-2);
 }
+.nm-home-2{
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #000000;
+        opacity: 0.8;
+        z-index: -1;
+    }
+}
 /* 
     home-css-end
 */
