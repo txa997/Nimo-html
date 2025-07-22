@@ -212,3 +212,198 @@
 /* 
     testimonial-1-start
 */
+/* 
+    testimonial-2-start
+*/
+.nm-testimonial-2 {
+    &-sec-title {
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 40px;
+
+        .left {
+            max-width: 520px;
+        }
+        .sec-disc {
+            margin-bottom: 20px;
+        }
+        .right {
+            padding-bottom: 10px;
+        }
+    }
+
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1.15fr;
+        background-color: #000000;
+        border-radius: 40px;
+        overflow: hidden;
+    }
+
+
+    &-img-slider {
+        &-single {
+            height: 580px;
+            position: relative;
+            z-index: 1;
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background: linear-gradient(0deg,rgba(0, 0, 0, 1) 27%, rgba(0, 0, 0, 0) 60%);
+            }
+
+
+
+
+            .content-wrap {
+                position: absolute;
+                inset: 0;
+                margin: auto;
+                border: 2px solid #fff;
+                width: 80%;
+                height: 80%;
+                z-index: 1;
+                border-radius: 30px;
+                display: flex;
+                align-items: end;
+                padding-bottom: 30px;
+
+                &-inner {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    padding-left: 25px;
+
+
+                }
+
+
+            }
+
+            .author-name {
+                font-size: 30px;
+            }
+
+            .author-dg {
+                font-weight: 500;
+                color: #fff;
+                opacity: .8;
+                margin-top: 5px;
+            }
+
+            .author-rating {
+                background: linear-gradient( 90deg, rgb(255,255,255) 0%, rgb(105,105,105) 100%);
+                font-size: 24px;
+                color: #000;
+                font-weight: 700;
+                padding: 6px 15px;
+                border-radius: 10px 0 0 10px;
+
+                i {
+                    font-size: 16px;
+                    transform: translateY(-11px);
+                }
+            }
+
+        }
+    }
+
+
+
+    &-right {
+        padding: 45px 45px;
+
+        &-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 45px;
+
+            .nm-slider-btn-1  {
+                width: 50px;
+                height: 50px;
+            }
+
+
+            &-line {
+                width: 100%;
+                height: 1px;
+                background: linear-gradient(90deg, rgba(0, 0, 0, 0) -10%, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0) 100%);
+                margin-top: 50px;
+                opacity: 0.3;
+            }
+        }
+    }
+
+    &-rating {
+        .rating-icon {
+            color: #C9C9C9;
+            font-size: 16px;
+            display: flex;
+            gap: 4px;
+        }
+        .rating-text {
+            font-size: 16px;
+            color: #636262;
+            margin-top: 14px;
+        }
+        
+        
+        .line {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0) -10%, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0) 100%);
+            margin-top: 18px;
+            opacity: .3;
+        }
+    }
+
+
+    &-preview-slider {
+
+        &-single {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            border: 2px solid #7F7F7F;
+        }
+    }
+    
+
+    &-content-slider {
+        margin-top: 37px;
+
+        &-single {
+            font-size: 24px;
+            font-weight: 500;
+            color: #fff;
+            text-align: center;
+        }
+    }
+
+    &-partner {
+        .partner-title {
+            font-size: 14px;
+            color: #747474;
+            margin-top: 22px;
+        }
+
+        .nm-partner-1-logo-mask {
+            margin-top: 20px;
+        }
+    }
+    
+}
+/* 
+    testimonial-2-start
+*/

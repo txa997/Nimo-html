@@ -472,6 +472,23 @@
     choose-2-start
 */
 .nm-choose-2 {
+
+    &-bg-shape-2 {
+        width: 28%;
+        position: absolute;
+        right: -250px;
+        top: 17%;
+        z-index: -1;
+    }
+    
+    &-bg-shape-1 {
+        width: 16%;
+        position: absolute;
+        left: -6%;
+        top: 38%;
+        z-index: -1;
+    }
+
     &-sec {
         &-title {
             max-width: 700px;
@@ -485,6 +502,24 @@
         gap: 80px;
         margin-left: -75px;
         margin-right: -75px;
+
+        @media #{$xxl,$xl} {
+            gap: 50px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        @media #{$lg} {
+            gap: 50px;
+            margin-left: 0;
+            margin-right: 0;
+            grid-template-columns: 1fr 1fr;
+        }
+        @media #{$md,$xs} {
+            gap: 50px;
+            margin-left: 0;
+            margin-right: 0;
+            grid-template-columns: 1fr;
+        }
     }
 
     &-card {
@@ -496,6 +531,11 @@
         box-shadow: -4.961px 25.522px 40px 0px rgba(0, 0, 0, 0.47);
         max-width: 325px;
         transition: var(--nm-cube-1);
+
+
+        @media #{$xl,$lg,$md,$xs} {
+            padding: 25px 20px;
+        }
 
         &:not(:last-child) {
             margin-bottom: 65px;
@@ -564,6 +604,13 @@
         .nm-choose-2-card {
             &:nth-child(odd) {
                 margin-left: 75px;
+                
+                @media #{$xs} {
+                    margin-left: 0px;
+                }
+                @media #{$sm} {
+                    margin-left: 75px;
+                }
             }
         }
     }
@@ -573,6 +620,13 @@
         .nm-choose-2-card {
             &:nth-child(even) {
                 margin-left: 75px;
+
+                @media #{$xs} {
+                    margin-left: 0px;
+                }
+                @media #{$sm} {
+                    margin-left: 75px;
+                }
             }
 
             .number {
@@ -595,11 +649,15 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 15px;
+            mask-image: url("../img/choose/c2-mask-img.png");
+            mask-size: 100% 100%;
+            height: 700px;
         }
 
         &-single {
             height: 300px;
             border-radius: 10px;
+            margin-bottom: 15px;
         }
         
     }

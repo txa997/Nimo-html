@@ -270,3 +270,213 @@
 /* 
     portfolio-1-end
 */
+
+/* 
+    portfolio-2-start
+*/
+.nm-portfolio-2 {
+
+    &-area {
+        background-color: rgba(10, 10, 10, 0.8);
+        border-radius: 80px 80px 0 0;
+        border-bottom: 1px solid rgb(255 255 255 / 20%);
+
+        @media #{$xs} {
+            border-radius: 30px 30px 0 0;
+        }
+    }
+
+    &-big-title {
+        font-size: 470px;
+        font-weight: 900;
+        line-height: 1;
+        background: linear-gradient(90deg, #00000033, #ffffff5e);
+        display: inline-block;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+
+        @media #{$xxxl} {
+            font-size: 440px;
+        }
+        @media #{$xxl} {
+            font-size: 410px;
+        }
+        @media #{$xl} {
+            font-size: 370px;
+        }
+        @media #{$lg} {
+            font-size: 310px;
+        }
+        @media #{$md} {
+            font-size: 260px;
+        }
+        @media #{$xs} {
+            font-size: 120px;
+        }
+        @media #{$sm} {
+            font-size: 180px;
+        }
+    }
+
+    &-bg-shape {
+        width: 22%;
+        position: absolute;
+        top: -14%;
+        left: 2%;
+        z-index: -1;
+    }
+
+    &-wrap {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: 1.05fr 1fr;
+        gap: 50px;
+
+        @media #{$md,$xs} {
+            grid-template-columns:  1fr;
+        }
+    }
+
+    &-content {
+        .sec-disc {
+            margin-top: 25px;
+        }
+        .btn-wrap {
+            margin-top: 42px;
+        }
+    }
+
+    &-card {
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
+        .card-img {
+            height: 315px;
+            border-radius: 30px 30px 0 0;
+            &::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background: linear-gradient(0deg, #000, 70%, transparent);
+            }
+
+        }
+
+
+        .card-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            z-index: 1;
+            background: linear-gradient( 180deg, rgb(20,20,20) 0%, rgb(67,67,67) 100%);
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            color: #fff;
+            border-radius: 50%;
+            transition: var(--nm-cube-1);
+
+
+            &:hover {
+                background: var(--nm-clr-pr-1);
+                color: #000;
+            }
+        }
+
+        .item-categories {
+            position: absolute;
+            right: 30px;
+            top: 20px;
+            font-size: 16px;
+            background: linear-gradient(0deg, #424342, #272626);
+            border-radius: 100px;
+            padding: 6px 18px;
+            z-index: 1;
+        }
+
+        .title {
+            font-size: 32px;
+
+            @media #{$lg,$md,$xs} {
+                font-size: 24px;
+            }
+        }
+
+        .disc {
+            font-size: 16px;
+            color: #848484;
+            margin-top: 8px;
+        }
+
+        .item-btn {
+            font-size: 15px;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            padding: 6px 13px;
+            position: relative;
+            z-index: 1;
+            margin-top: 20px;
+            transition: var(--nm-cube-1);
+            overflow: hidden;
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background: linear-gradient(180deg, rgb(50 50 50) 0%, rgb(67, 67, 67) 100%);
+                z-index: -1;
+                transform: scaleY(0);
+            }
+
+            &:hover {
+                border-color: transparent;
+                color: #fff;
+                &::after {
+                    transform: scaleY(1);
+                }
+            }
+        }
+
+        .card-content {
+            background-color: #1c1c1c;
+            box-shadow: -4.961px 25.522px 68px 0px rgba(0, 0, 0, 0.75);
+            border-radius: 0 0  30px 30px;
+            padding: 40px 35px;
+
+            @media #{$lg,$md,$xs} {
+                padding: 40px 20px;
+            }
+        }
+
+        &:hover {
+            .card-btn {
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+    }
+
+
+    
+    
+    
+}
+
+/* 
+    portfolio-2-end
+*/
