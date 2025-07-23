@@ -285,3 +285,49 @@
 /* 
     contact-1-start
 */
+
+/* 
+    contact-2-start
+*/
+.nm-contact-2 {
+    &-area {
+        background-color: rgba(10, 10, 10, 0.8);
+
+        @media #{$lg,$md,$xs} {
+            padding-bottom: 100px;
+        }
+
+        .nm-contact-1-img-location .dot-icon::after {
+            background: #24FF00;
+            box-shadow: 0px 0px 15.48px 2.52px rgba(36, 255, 0, 0.66);
+        }
+
+        .nm-contact-1-img-location .icon {
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .nm-contact-1-social .link-elm .icon {
+            background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(127, 127, 127) 100%);
+            border-radius: 8px;
+        }
+
+        .nm-contact-1-wrap::after {
+            border: 1px solid rgb(255 255 255 / 20%);
+            border-bottom: none;
+
+            @media #{$lg,$md,$xs} {
+                display: none;
+            }
+        }
+    }
+
+    &-sec-title {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 670px;
+    }
+}
+/* 
+    contact-2-end
+*/

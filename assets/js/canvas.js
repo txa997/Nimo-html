@@ -1,4 +1,7 @@
 // options in the bottom
+
+if(document.querySelectorAll("canvas").length) {
+    
 ;(function (z, F) {
   typeof exports == "object" && typeof module != "undefined"
       ? (module.exports = F())
@@ -4170,3 +4173,5 @@ window.addEventListener('load', () => {
 
  
 });
+
+}
