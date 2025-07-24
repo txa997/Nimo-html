@@ -218,7 +218,7 @@
 .nm-testimonial-2 {
 
     &-bg-shape-1 {
-        width: 22%;
+        width: 14%;
         position: absolute;
         right: 2%;
         top: -22%;
@@ -226,6 +226,10 @@
 
         @media #{$xl,$lg,$md,$xs} {
             top: -12%;
+        }
+
+        img {
+            filter: drop-shadow(-85px 0px 30px rgba(255, 255, 255, 0.10));
         }
     }
 

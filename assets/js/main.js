@@ -149,7 +149,7 @@ $(document).on('keydown', function(event) {
 document.addEventListener("DOMContentLoaded", function () {
 	window.addEventListener('load', function(){
 
-		CustomEase.create("ease1", "0, 0, 0.2, 1");
+		CustomEase.create("ease1", "0.55, 0.085, 0, 0.99");
 
 		/* 
 			preloader-function
@@ -445,7 +445,7 @@ if ($(".btn-split-right").length) {
                     {
                         rotateY: 0,
                         opacity: 1,
-                        duration: .7,
+                        duration: .6,
                         ease: "case1",
                     }
                 );
@@ -946,6 +946,28 @@ if ($('.nm_t2_preview_slider_active').length) {
 	  
 
 }
+
+
+
+// const section = document.querySelector('.nm-hero-2-area');
+// const marqueeWrap = document.querySelector('.nm-hero-2-marquee-wrap');
+
+// section.addEventListener('mousemove', (e) => {
+// 	const sectionHeight = section.offsetHeight;
+// 	const mouseY = e.clientY - section.getBoundingClientRect().top;
+
+// 	// Get percentage of mouseY within the section
+// 	const percent = (mouseY / sectionHeight - 0.5) * 2;
+
+// 	// Map percent to translateY range (-30px to +30px)
+// 	const translateY = percent * 30;
+
+// 	gsap.to(marqueeWrap, {
+// 		y: translateY,
+// 		duration: 0.6,
+// 		ease: "power2.out"
+// 	});
+// });
   
 
 

@@ -456,18 +456,99 @@
 
     &-wrap {
         height: 955px;
+        
+        perspective: 2000px;
+        transform-style: preserve-3d;
+    }
+
+    &-bg {
+        &-shadow-1 {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            right: -100px;
+            top: 0;
+            background: #909daf;
+            border-radius: 50%;
+            filter: blur(71px);
+            opacity: .8;
+            z-index: -5;
+        }
+        &-shadow-2 {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0px;
+            bottom: 0;
+            background: #909daf;
+            border-radius: 50%;
+            filter: blur(71px);
+            opacity: .8;
+            z-index: -5;
+        }
+    }
+
+    &-bg-line {
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        background: #000;
+        opacity: .05;
+        z-index: -4;
+
+        &.has-line-1 {
+            top: 0;
+            left: 11%;
+        }
+        &.has-line-2 {
+            top: 0;
+            left: 27.5%;
+        }
+        &.has-line-3 {
+            top: 0;
+            right: 27%;
+        }
+        &.has-line-4 {
+            top: 0;
+            right: 11%;
+        }
     }
 
     &-big-title {
         font-size: 715px;
-        color: #d2d1d1;
+        color: #d1d1d1;
         letter-spacing: -0.06em;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        // opacity: .5;
         z-index: -3;
+        line-height: 1;
+
+        span {
+            transform: translateY(100%);
+            transition: all .6s var(--nm-cube-1);
+        }
     }
+
+    &-bg-icon {
+        font-size: 100px;
+        line-height: 1;
+        color: #353434;
+        position: absolute;
+        top: 4%;
+        left: 25%;
+        z-index: -2;
+        transition: all .6s var(--nm-cube-1);
+        transform: translateY(100%);
+        opacity: 0;
+
+        i {
+            animation: waRotation360 15s linear infinite;
+        }
+    }
+
 
     &-bg-img {
         position: absolute;
@@ -477,7 +558,12 @@
         height: 100%;
         z-index: -2;
         text-align: center;
+        transition: all .6s var(--nm-cube-1);
+        transform: rotateX(60deg) translateY(140%);
     }
+
+
+
 
     &-img {
         width: 275px;
@@ -486,15 +572,18 @@
         border-radius: 30px;
         box-shadow: -1.717px 8.835px 18px 0px rgba(0, 0, 0, 0.39);
         position: absolute;
-        top: 10%;
-        right: 10%;
+        top: 190px;
+        right: 12%;
         z-index: 1;
+        transform: translateY(100%);
+        transition: all .6s var(--nm-cube-1);
+        opacity: 0;
     }
 
 
     &-content {
         position: absolute;
-        top: 10%;
+        top: 120px;
         left: 10%;
         z-index: 2;
 
@@ -505,28 +594,44 @@
             line-height: 1.636;
             max-width: 220px;
             letter-spacing: -0.05em;
+
+            span {
+                transform: translateY(100%);
+                transition: all .6s var(--nm-cube-1);
+            }
         }
 
         .btn-wrap {
             margin-top: 35px;
+
+            .nm-pr-btn-2 {
+                transform: translateY(100%);
+                transition: all .6s var(--nm-cube-1);
+            }
         }
     }
 
 
     &-writing-text {
         position: absolute;
-        top: 10%;
+        top: 20%;
         left: 50%;
         transform: translateX(-50%);
         background: rgb(0 0 0 / 60%);
         border-radius: 20px;
         border: 1px solid rgb(255 255 255 / 15%);
         padding: 17px 62px;
+        transition: all .6s var(--nm-cube-1);
+        opacity: 0;
 
         .title-1 {
             font-size: 30px;
             font-weight: 500;
             color: #f5f5f5;
+
+            b {
+                font-weight: inherit;
+            }
         }
     }
 
@@ -537,20 +642,41 @@
         left: 0;
         width: 100%;
         transform: translateY(-50%);
-        z-index: 1;
-        display: flex;
+        z-index: -3;
+        padding-bottom: 20px;
+        overflow: hidden;
+        // background-image: url(../img/hero/text-img.png);
+        // background-repeat: no-repeat;
+        // background-position: center;
+        // background-clip: text;
+        // -webkit-text-fill-color: transparent;
 
-        &-masking {
-            display: flex;
+        &-2 {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            transform: translateY(-50%);
+            z-index: 2;
+            padding-bottom: 20px;
+            overflow: hidden;
 
-
-
-            // mask-size: 120% 100%;
-            // -webkit-mask-size: 120% 100%;
-            // 
-            // transition: all .5s var(--agn-cube-1);
+            .nm-hero-2-marquee-text {
+                -webkit-text-stroke: 2px #fff;
+                -webkit-text-fill-color: transparent;
+            }
         }
-    
+
+
+        &-active {
+            transform: translateY(100%);
+        }
+
+        &-wrap {
+            display: flex;
+            gap: 50px;
+            margin-right: 50px;
+        }
 
         &-text {
             font-family: var(--nm-font-1);
@@ -559,12 +685,14 @@
             flex: 0 0 auto;
             font-weight: 700;
             letter-spacing: -0.075em;
+            margin-bottom: 0;
+            line-height: 1;
 
-            background-image: url("../img/hero/text-img.png");
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            // background-image: url("../img/hero/text-img.png");
+            // background-repeat: no-repeat;
+            // background-position: center center;
+            // background-clip: text;
+            // -webkit-text-fill-color: transparent;
 
 
             // mask-image: url("../img/hero/text-img.png");
@@ -581,7 +709,11 @@
 }
 
 
+.nm-hero-2-area {
+    &:is(.active) {
 
+    }
+}
 
 
 

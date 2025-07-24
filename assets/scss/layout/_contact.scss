@@ -292,6 +292,7 @@
 .nm-contact-2 {
     &-area {
         background-color: rgba(10, 10, 10, 0.8);
+        z-index: 2;
 
         @media #{$lg,$md,$xs} {
             padding-bottom: 100px;
@@ -326,6 +327,20 @@
         margin-left: auto;
         margin-right: auto;
         max-width: 670px;
+    }
+
+
+    &-bg-3d-shape {width: 24%;position: absolute;top: -20%;left: -11%;z-index: -1;}
+    &-bg-shape-2 {
+        width: 18%;
+        position: absolute;
+        right: -10%;
+        top: 0;
+        z-index: -1;
+
+        img {
+            filter: drop-shadow(-85px 0px 30px rgba(255, 255, 255, 0.1));
+        }
     }
 }
 /* 

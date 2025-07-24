@@ -323,11 +323,15 @@
     }
 
     &-bg-shape {
-        width: 22%;
+        width: 15%;
         position: absolute;
-        top: -14%;
+        top: -11%;
         left: 2%;
         z-index: -1;
+
+        img {
+            filter: drop-shadow(85px 0px 30px rgba(255, 255, 255, 0.15));
+        }
     }
 
     &-wrap {
