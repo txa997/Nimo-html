@@ -80,7 +80,7 @@
         overflow: hidden;
 
         img {
-            transition:  var(--nm-cube-1);
+            transition: all .6s var(--nm-cube-1);
             &:nth-child(1) {
                 position: relative;
             } 

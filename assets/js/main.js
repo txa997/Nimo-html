@@ -149,7 +149,7 @@ $(document).on('keydown', function(event) {
 document.addEventListener("DOMContentLoaded", function () {
 	window.addEventListener('load', function(){
 
-		CustomEase.create("ease1", "0.55, 0.085, 0, 0.99");
+		CustomEase.create("ease1", "0, 0, 0.2, 1");
 
 		/* 
 			preloader-function
@@ -366,6 +366,24 @@ document.addEventListener("DOMContentLoaded", function () {
 			});
 		});
 
+		/* 
+			remove-class
+		*/
+		gsap.utils.toArray('.wa_remove_class').forEach(item => {
+		item.classList.add("active");
+
+		ScrollTrigger.create({
+			trigger: item,
+			start: "top 90%",
+			end: "bottom bottom",
+			markers: false,
+			onEnter: () => {
+				item.classList.remove("active");
+			},
+		});
+		});
+
+
 
 		/* 
 			wow-activation
@@ -494,45 +512,45 @@ if($(".with-plugin").length) {
 */
 if (window.matchMedia("(min-width: 992px)").matches) { 
 
-	if($(".wa_sticky_card_wrapper").length) {
-		const waCardsWrappers = gsap.utils.toArray(".wa_sticky_card");
-		const waCards = gsap.utils.toArray(".wa_sticky_card");
+	// if($(".wa_sticky_card_wrapper").length) {
+	// 	const waCardsWrappers = gsap.utils.toArray(".wa_sticky_card");
+	// 	const waCards = gsap.utils.toArray(".wa_sticky_card");
 	
-		waCardsWrappers.forEach((waWrapper, waIndex) => {
-		const waCard = waCards[waIndex];
-		let waScale = 1,
-			waRotation = 0;
+	// 	waCardsWrappers.forEach((waWrapper, waIndex) => {
+	// 	const waCard = waCards[waIndex];
+	// 	let waScale = 1,
+	// 		waRotation = 0;
 	
-		if (waIndex !== waCards.length - 1) {
-			waScale = 0.95 + 0.01 * waIndex;
-			waRotation = -10;
-		}
+	// 	if (waIndex !== waCards.length - 1) {
+	// 		waScale = 0.95 + 0.01 * waIndex;
+	// 		waRotation = -10;
+	// 	}
 	
-			gsap.to(waCard, {
-				scale: waScale,
-				// rotationX: waRotation,
-				transformOrigin: "top center",
-				ease: "none",
-				scrollTrigger: {
-				trigger: waWrapper,
-				start: "top " + (120 + 50 * waIndex),
-				end: "bottom 400",
-				endTrigger: ".wa_sticky_card_wrapper",
-				scrub: true,
-				pin: waWrapper,
-				pinSpacing: false,
-				markers: false,
-				// id: waIndex + 1
-				}
-			});
-		});
-	}
+	// 		gsap.to(waCard, {
+	// 			scale: waScale,
+	// 			// rotationX: waRotation,
+	// 			transformOrigin: "top center",
+	// 			ease: "none",
+	// 			scrollTrigger: {
+	// 			trigger: waWrapper,
+	// 			start: "top " + (120 + 50 * waIndex),
+	// 			end: "bottom 400",
+	// 			endTrigger: ".wa_sticky_card_wrapper",
+	// 			scrub: true,
+	// 			pin: waWrapper,
+	// 			pinSpacing: false,
+	// 			markers: false,
+	// 			// id: waIndex + 1
+	// 			}
+	// 		});
+	// 	});
+	// }
 	
 	gsap.to(".nm-about-1-left-content", {
 		scrollTrigger: {
 			trigger: ".nm-about-1-area",
 			start: "top 20%", 
-			end: "bottom bottom", 
+			end: "bottom 95%", 
 			pin: ".nm-about-1-left-content", 
 			pinSpacing: false,
 			markers: false
@@ -601,23 +619,40 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 }
 
 
-if($(".handshake-video").length) { 
-	const video = document.querySelector(".handshake-video video");
+if ($(".handshake-video").length) { 
+  const video = document.querySelector(".handshake-video video");
 
-	const observer = new IntersectionObserver((entries) => {
-	  entries.forEach((entry) => {
-		if (entry.isIntersecting) {
-		  video.play();
-		} else {
-		  video.pause(); 
-		}
-	  });
-	}, {
-	  threshold: 0.5, 
-	});
-	
-	observer.observe(video);
+  video.playbackRate = 0.7;
+
+  video.addEventListener("loadedmetadata", () => {
+    video.currentTime = .5;
+    video.play();
+  });
+
+  video.addEventListener("timeupdate", () => {
+    if (video.currentTime >= 1) {
+      video.pause();
+    }
+  });
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      });
+    },
+    {
+      threshold: 0.5,
+    }
+  );
+
+  observer.observe(video);
 }
+
 
 
   
@@ -779,16 +814,16 @@ if ($('.nm_t1_preview_slider_active').length) {
 	  },
 	});
   
-	let rotateAngle = 0;
+	// let rotateAngle = 0;
   
-	nm_t1_main_slider_active.on('slideChange', function () {
-	  rotateAngle += 10;
+	// nm_t1_main_slider_active.on('slideChange', function () {
+	//   rotateAngle += 10;
   
-	  $('.nm-testimonial-1-preview-slider').css({
-		transform: `rotate(${rotateAngle}deg)`,
-		transition: 'transform 0.5s ease'
-	  });
-	});
+	//   $('.nm-testimonial-1-preview-slider').css({
+	// 	transform: `rotate(${rotateAngle}deg)`,
+	// 	transition: 'transform 0.5s ease'
+	//   });
+	// });
 }
   
 
@@ -812,44 +847,61 @@ if($('.nm-testimonial-1-preview-slider').length) {
 	});
 }
 
+var t1scrollAni = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".nm-testimonial-1-preview-slider",
+			toggleActions: "play none none reverse",
+			scrub: true,
+			markers: false,
+		},
+	});
 
+t1scrollAni.fromTo(".nm-testimonial-1-preview-slider .swiper-wrapper", {
+	rotation: 270,
+},{rotation: -90});
 
 
 /* 
 	team-1-slider-active
 */
 if ($('.nm_t1_slider_active').length) {
-	if (window.matchMedia("(min-width: 992px)").matches) {
+	const nm_t1_slider_active = new Swiper('.nm_t1_slider_active', {
+		loop: true,
+		speed: 800,
+		// effect: "fade",
+		// fadeEffect: {
+		// 	crossFade: true
+		// },
 
-		const observer = new IntersectionObserver((entries, observer) => {
-			entries.forEach(entry => {
-				if (entry.isIntersecting) {
+		spaceBetween: 0,
+		centeredSlides: true,
+		// centeredSlides: true,
+		// slideToClickedSlide: true,
 
-					const nm_t1_slider_active = new Swiper('.nm_t1_slider_active', {
-						loop: true,
-						speed: 1500,
-						effect: "fade",
-						fadeEffect: {
-							crossFade: true
-						},
-						navigation: {
-							nextEl: ".team1_slider_next",
-							prevEl: ".team1_slider_prev",
-						},
-					});
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 3,
+			},
+			768: {
+				slidesPerView: 5,
+			},
+			992: {
+				slidesPerView: 4,
+			},
+			1200: {
+				slidesPerView: 3,
+			},
 
-					observer.unobserve(entry.target);
-				}
-			});
-		}, {
-			threshold: 0.3, 
-		});
+		},
 
-		const target = document.querySelector('.nm_t1_slider_active');
-		if (target) {
-			observer.observe(target);
-		}
-	}
+		navigation: {
+			nextEl: ".team1_slider_next",
+			prevEl: ".team1_slider_prev",
+		},
+	});
 }
 
 
@@ -1241,6 +1293,63 @@ if($(".wa-counter").length) {
         element.style.width = innerWidth + "px";
     });
 }
+
+/* 
+	tilt-activation
+*/  
+//   $('.tilt_scale').tilt({
+//     maxTilt: 20,
+//     perspective: 1000,
+//     scale: 1.05,
+//     speed: 400,
+//     glare: true,
+//     maxGlare: 0.2
+//   });
+
+
+const $section = $('.header-x-hero');
+const $target = $('.tilt_scale');
+
+$section.on('mousemove', function (e) {
+  const offset = $section.offset();
+  const width = $section.outerWidth();
+  const height = $section.outerHeight();
+
+  const x = e.pageX - offset.left;
+  const y = e.pageY - offset.top;
+
+  const rotateY = ((x / width) - 0.5) * 20;
+  const rotateX = ((y / height) - 0.5) * -20;
+
+  $target.css({
+    'transform': `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) `,
+  });
+});
+
+$section.on('mouseleave', function () {
+  $target.css({
+    'transform': 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)',
+  });
+});
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const leftCol = document.querySelector(".has-left");
+    const clone = leftCol.cloneNode(true);
+    leftCol.parentNode.appendChild(clone);
+
+    const totalHeight = leftCol.offsetHeight;
+
+    gsap.to(".has-left", {
+      y: `-${totalHeight}px`,
+      ease: "none",
+      duration: 20,
+      repeat: -1,
+      modifiers: {
+        y: gsap.utils.unitize(y => parseFloat(y) % totalHeight)
+      }
+    });
+  });
 
 /* 
 	bootstrap-tooltip-activation

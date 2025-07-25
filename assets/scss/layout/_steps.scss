@@ -315,7 +315,7 @@
                     justify-content: center;
                     color: #000;
                     font-size: 20px;
-                    transition: var(--nm-cube-1);
+                        transition: all .5s var(--nm-cube-1);
 
                     &:hover {
                         background-color: #000;
@@ -400,7 +400,7 @@
             width: calc(100% - 36px);
             height: 100%;
             opacity: 0;
-            transition: var(--nm-cube-1);
+            transition: all .5s var(--nm-cube-1);
             
             img {
                 width: 100%;
@@ -441,7 +441,7 @@
             justify-content: center;
             color: #cfcfcf;
             font-size: 40px;
-            transition: var(--nm-cube-1);
+            transition: all .5s var(--nm-cube-1);
         }
 
         .steps-number {
@@ -489,7 +489,7 @@
             margin-top: 19px;
             margin-left: -20px;
             margin-right: -20px;
-            transition: var(--nm-cube-1);
+            transition: all .5s var(--nm-cube-1);
         }
 
         .disc {

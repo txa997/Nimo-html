@@ -71,7 +71,7 @@
             padding: 13px 20px;
             position: relative;
             z-index: 1;
-            transition: var(--nm-cube-1);
+            transition: all .5s var(--nm-cube-1);
 
             &::after {
                 content: "";
@@ -85,7 +85,7 @@
                 z-index: -1;
                 transform: scaleY(0);
                 transform-origin: bottom;
-                transition: var(--nm-cube-1);
+                transition: all .5s var(--nm-cube-1);
             }
 
             .icon {
@@ -99,7 +99,7 @@
                 font-size: 18px;
                 border-radius: 50%;
                 color: #000;
-                transition: var(--nm-cube-1);
+                   transition: all .5s var(--nm-cube-1);
             }
 
             &:hover {
@@ -154,7 +154,7 @@
                 display: flex;
                 font-size: 18px;
                 color: #636363;
-                transition: var(--nm-cube-1);
+                 transition: all .5s var(--nm-cube-1);
             }
 
             .title {
@@ -176,7 +176,7 @@
 
 
                 a {
-                    transition: var(--nm-cube-1);
+                 transition: all .5s var(--nm-cube-1);
 
                     &:hover {
                         color: var(--nm-clr-pr-1);

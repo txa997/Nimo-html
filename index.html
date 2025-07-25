@@ -164,7 +164,7 @@
             <!-- header-end -->
 
             <!-- hero-start -->
-            <section class="nm-hero-1-area wa-p-relative wa-fix wa_magnetic_btn_3">
+            <section class="nm-hero-1-area wa-p-relative wa-fix wa_magnetic_btn_3 wa_add_class">
 
                 <canvas></canvas>
 
@@ -176,26 +176,35 @@
                 <!-- content -->
                 <div class="nm-hero-1-container">
                     <div class="nm-hero-1-content">
-                        <h1 class="nm-hero-1-title has-title-1 wa_split_hero" data-split-delay="1s">Nimo</h1>
-                        <h5 class="nm-hero-1-subtitle nm-p-1 wa_split_hero" data-split-delay="1.2s">{ Best Award Winner 2025 }</h5>
-                        <h2 class="nm-hero-1-title has-title-2 wa_split_hero" data-split-delay="1.5s">Digital Agency</h2>
+                        <h1 class="nm-hero-1-title has-title-1 wa-fix " >
+                            <span>Nimo</span>
+                        </h1>
+                        <h5 class="nm-hero-1-subtitle nm-p-1 wa-fix" >
+                            <span>{ Best Award Winner 2025 }</span>
+                        </h5>
+                        <h2 class="nm-hero-1-title has-title-2 wa-fix" >
+                            <span>Digital Agency</span>
+                        </h2>
                     </div>
                 </div>
 
                 <!-- content-2 -->
                 <div class="nm-hero-1-content-2">
                     <div class="nm-hero-1-container">
-                        <div class="nm-hero-1-content-2-wrap">
-                            <a href="assets/img/hero/plybtn-video-1.mp4" aria-label="name" class=" nm-hero-1-plybtn popup_video wow fadeInRight2" data-wow-delay="1.7s" >
-                                <div class="bg-elm wa-img-cover wa-fix">
-                                    <video src="assets/img/hero/plybtn-video-1.mp4" autoplay muted loop playsinline></video>
-                                </div>
-                                <i class="fa-solid fa-play"></i>
-                            </a>
+                        <div class="nm-hero-1-content-2-wrap wa-fix">
+                            <div class="plybtn-wrap">
+                                <a href="assets/img/hero/plybtn-video-1.mp4" aria-label="name" class=" nm-hero-1-plybtn popup_video ">
+                                    <div class="bg-elm wa-img-cover wa-fix">
+                                        <video src="assets/img/hero/plybtn-video-1.mp4" autoplay muted loop playsinline></video>
+                                    </div>
+                                    <i class="fa-solid fa-play"></i>
+                                </a>
+                            </div>
 
-                            <p class="nm-p-1 nm-hero-1-disc wow fadeInRight2" data-wow-delay="1.8s">We design digital solutions that elevate your brand and boost conversions. Don’t settle for a site. Build a powerful platform.</p>
 
-                            <div class="nm-hero-1-btn wow fadeInRight2" data-wow-delay="1.9s">
+                            <p class="nm-p-1 nm-hero-1-disc " >We design digital solutions that elevate your brand and boost conversions. Don’t settle for a site. Build a powerful platform.</p>
+
+                            <div class="nm-hero-1-btn " >
                                 <a href="#" aria-label="name" class="nm-pr-btn-1 has-v2 wa_magnetic_btn_2">
                                     <span class="icon wa_magnetic_btn_2_elm">
                                         <i class="fa-solid fa-arrow-right-long"></i>
@@ -209,7 +218,7 @@
                 </div>
 
                 <!-- main-img -->
-                <div class="nm-hero-1-main-img wow slideInUp2" data-wow-delay="2.2s">
+                <div class="nm-hero-1-main-img " >
                     <img src="assets/img/hero/h1-img-1.png" alt="">
                     <img class="wa_magnetic_btn_3_elm" src="assets/img/hero/h1-img-1.png" alt="">
                 </div>
@@ -469,10 +478,10 @@
                         <!-- right -->
                         <div class="nm-about-1-right">
 
-                            <div class="nm-about-1-card-wrap wa_sticky_card_wrapper">
+                            <div class="nm-about-1-card-wrap ">
 
                                 <!-- single-card -->
-                                <div class="nm-about-1-card wa_sticky_card">
+                                <div class="nm-about-1-card ">
                                     <div class="icon">
                                         <i class="flaticon-mission-statement flaticon"></i>
                                     </div>
@@ -484,7 +493,7 @@
                                 </div>
 
                                 <!-- single-card -->
-                                <div class="nm-about-1-card wa_sticky_card">
+                                <div class="nm-about-1-card ">
                                     <div class="icon">
                                         <i class="flaticon-eye flaticon"></i>
                                     </div>
@@ -495,7 +504,7 @@
                                 </div>
 
                                 <!-- single-card -->
-                                <div class="nm-about-1-card wa_sticky_card">
+                                <div class="nm-about-1-card ">
                                     <div class="icon">
                                         <i class="flaticon-people flaticon"></i>
                                     </div>
@@ -1204,7 +1213,7 @@
                         <div class="nm-choose-1-item slideRightUp2 wow">
                             <div class="nm-choose-1-handshake wa-bg-default" data-background="assets/img/choose/c1-bg-shape-1.png">
                                 <div class="handshake-video">
-                                <video src="assets/img/choose/c1-handshake.webm" muted playsinline></video>
+                                    <video src="assets/img/choose/c1-handshake.webm" muted playsinline></video>
                                 </div>
                                 <div class="content">
                                     <h4 class="nm-h-1 title">Seamless Collaboration</h4>
@@ -2593,151 +2602,56 @@
 
 
                     <!-- slider -->
-                    <div class="nm-team-1-slider nm_t1_slider_active wa-p-relative">
-                        <div class="swiper-wrapper">
+                    <div class="nm-team-1-slider nm_t1_slider_active wa-p-relative wa_remove_class active ">
+                        <div class="swiper-wrapper ">
 
                             <!-- single-slider -->
                             <div class="swiper-slide">
-                                <div class="nm-team-1-slider-single">
-                                    <div class="nm-team-1-member wa-p-relative wa-fix wa-img-cover">
-                                        <img src="assets/img/team/t1-img-1.jpg" alt="">
-                                        
-                                        <div class="toggle-btn nm-h-1">
-                                            <i class="fa-solid fa-plus"></i>
-                                        </div>
-
-                                        <!-- content-1 -->
-                                        <div class="content-1">
-                                            <h5 class="nm-h-1 member-name">
-                                                <a href="team-details.html">Ava Wilson</a>
-                                            </h5>
-                                            <p class="nm-p-1 member-dg">Visual Designer</p>
-                                        </div>
-                                        <!-- content-2 -->
-                                        <div class="content-2">
-                                            <h5 class="nm-h-1 member-name">
-                                                <a href="team-details.html">Ava Wilson</a>
-                                            </h5>
-                                            <p class="nm-p-1 member-dg">Visual Designer</p>
-                                            <div class="social-link">
-                                                <a href="#" aria-label="name" class="link-elm">
-                                                    <i class="fa-brands fa-facebook-f"></i>
-                                                </a>
-                                                <a href="#" aria-label="name" class="link-elm">
-                                                    <i class="fa-brands fa-x-twitter"></i>
-                                                </a>
-                                                <a href="#" aria-label="name" class="link-elm">
-                                                    <i class="fa-brands fa-dribbble"></i>
-                                                </a>
-                                                <a href="#" aria-label="name" class="link-elm">
-                                                    <i class="fa-brands fa-behance"></i>
-                                                </a>
-                                            </div>
-                                            <div class="hr-line"></div>
-                                            <p class="nm-p-1 disc">Alfred helps brands find their voice and visual identity, crafting systems that are memorable, meaningful, and consistent.</p>
-                                            <div class="member-btn">
-                                                <a href="#" aria-label="name" class="nm-pr-btn-1 has-v2 wa_magnetic_btn_2">
-                                                    <span class="icon wa_magnetic_btn_2_elm">
-                                                        <i class="fa-solid fa-arrow-right-long"></i>
-                                                        <i class="fa-solid fa-arrow-right-long"></i>
-                                                    </span>
-                                                    <span class="text" data-back="Read more" data-front="Read more"></span>
-                                                </a>
-                                            </div>
-                                        </div>
+                                <div class="nm-team-1-member wa-p-relative wa-fix wa-img-cover">
+                                    <img src="assets/img/team/t1-img-1.jpg" alt="">
+                                
+                                    <div class="toggle-btn nm-h-1">
+                                        <i class="fa-solid fa-plus"></i>
                                     </div>
-                                    <div class="nm-team-1-member wa-p-relative wa-fix wa-img-cover active">
-                                        <img src="assets/img/team/t1-img-2.jpg" alt="">
-                                        
-                                        <div class="toggle-btn nm-h-1">
-                                            <i class="fa-solid fa-plus"></i>
-                                        </div>
-
-                                        <!-- content-1 -->
-                                        <div class="content-1">
-                                            <h5 class="nm-h-1 member-name">
-                                                <a href="team-details.html">Alfred Noble</a>
-                                            </h5>
-                                            <p class="nm-p-1 member-dg">Lead UI/UX Designer</p>
-                                        </div>
-                                        <!-- content-2 -->
-                                        <div class="content-2">
-                                            <h5 class="nm-h-1 member-name">
-                                                <a href="team-details.html">Alfred Noble</a>
-                                            </h5>
-                                            <p class="nm-p-1 member-dg">Lead UI/UX Designer</p>
-                                            <div class="social-link">
-                                                <a href="#" aria-label="name" class="link-elm">
-                                                    <i class="fa-brands fa-facebook-f"></i>
-                                                </a>
-                                                <a href="#" aria-label="name" class="link-elm">
-                                                    <i class="fa-brands fa-x-twitter"></i>
-                                                </a>
-                                                <a href="#" aria-label="name" class="link-elm">
-                                                    <i class="fa-brands fa-dribbble"></i>
-                                                </a>
-                                                <a href="#" aria-label="name" class="link-elm">
-                                                    <i class="fa-brands fa-behance"></i>
-                                                </a>
-                                            </div>
-                                            <div class="hr-line"></div>
-                                            <p class="nm-p-1 disc">Alfred helps brands find their voice and visual identity, crafting systems that are memorable, meaningful, and consistent.</p>
-                                            <div class="member-btn">
-                                                <a href="#" aria-label="name" class="nm-pr-btn-1 has-v2 wa_magnetic_btn_2">
-                                                    <span class="icon wa_magnetic_btn_2_elm">
-                                                        <i class="fa-solid fa-arrow-right-long"></i>
-                                                        <i class="fa-solid fa-arrow-right-long"></i>
-                                                    </span>
-                                                    <span class="text" data-back="Read more" data-front="Read more"></span>
-                                                </a>
-                                            </div>
-                                        </div>
+                                
+                                    <!-- content-1 -->
+                                    <div class="content-1">
+                                        <h5 class="nm-h-1 member-name">
+                                            <a href="team-details.html">Ava Wilson</a>
+                                        </h5>
+                                        <p class="nm-p-1 member-dg">Visual Designer</p>
                                     </div>
-                                    <div class="nm-team-1-member wa-p-relative wa-fix wa-img-cover">
-                                        <img src="assets/img/team/t1-img-3.jpg" alt="">
-                                        
-                                        <div class="toggle-btn nm-h-1">
-                                            <i class="fa-solid fa-plus"></i>
+                                    <!-- content-2 -->
+                                    <div class="content-2">
+                                        <h5 class="nm-h-1 member-name">
+                                            <a href="team-details.html">Ava Wilson</a>
+                                        </h5>
+                                        <p class="nm-p-1 member-dg">Visual Designer</p>
+                                        <div class="social-link">
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="fa-brands fa-facebook-f"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="fa-brands fa-x-twitter"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="fa-brands fa-dribbble"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="fa-brands fa-behance"></i>
+                                            </a>
                                         </div>
-
-                                        <!-- content-1 -->
-                                        <div class="content-1">
-                                            <h5 class="nm-h-1 member-name">
-                                                <a href="team-details.html">Sarah Noor</a>
-                                            </h5>
-                                            <p class="nm-p-1 member-dg">Full-Stack Developer</p>
-                                        </div>
-                                        <!-- content-2 -->
-                                        <div class="content-2">
-                                            <h5 class="nm-h-1 member-name">
-                                                <a href="team-details.html">Sarah Noor</a>
-                                            </h5>
-                                            <p class="nm-p-1 member-dg">Full-Stack Developer</p>
-                                            <div class="social-link">
-                                                <a href="#" aria-label="name" class="link-elm">
-                                                    <i class="fa-brands fa-facebook-f"></i>
-                                                </a>
-                                                <a href="#" aria-label="name" class="link-elm">
-                                                    <i class="fa-brands fa-x-twitter"></i>
-                                                </a>
-                                                <a href="#" aria-label="name" class="link-elm">
-                                                    <i class="fa-brands fa-dribbble"></i>
-                                                </a>
-                                                <a href="#" aria-label="name" class="link-elm">
-                                                    <i class="fa-brands fa-behance"></i>
-                                                </a>
-                                            </div>
-                                            <div class="hr-line"></div>
-                                            <p class="nm-p-1 disc">Alfred helps brands find their voice and visual identity, crafting systems that are memorable, meaningful, and consistent.</p>
-                                            <div class="member-btn">
-                                                <a href="#" aria-label="name" class="nm-pr-btn-1 has-v2 wa_magnetic_btn_2">
-                                                    <span class="icon wa_magnetic_btn_2_elm">
-                                                        <i class="fa-solid fa-arrow-right-long"></i>
-                                                        <i class="fa-solid fa-arrow-right-long"></i>
-                                                    </span>
-                                                    <span class="text" data-back="Read more" data-front="Read more"></span>
-                                                </a>
-                                            </div>
+                                        <div class="hr-line"></div>
+                                        <p class="nm-p-1 disc">Alfred helps brands find their voice and visual identity, crafting systems that are
+                                            memorable, meaningful, and consistent.</p>
+                                        <div class="member-btn">
+                                            <a href="#" aria-label="name" class="nm-pr-btn-1 has-v2 wa_magnetic_btn_2">
+                                                <span class="icon wa_magnetic_btn_2_elm">
+                                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                                </span>
+                                                <span class="text" data-back="Read more" data-front="Read more"></span>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -2745,14 +2659,222 @@
 
                             <!-- single-slider -->
                             <div class="swiper-slide">
+                                <div class="nm-team-1-member wa-p-relative wa-fix wa-img-cover">
+                                    <img src="assets/img/team/t1-img-2.jpg" alt="">
+                                
+                                    <div class="toggle-btn nm-h-1">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </div>
+                                
+                                    <!-- content-1 -->
+                                    <div class="content-1">
+                                        <h5 class="nm-h-1 member-name">
+                                            <a href="team-details.html">Alfred Noble</a>
+                                        </h5>
+                                        <p class="nm-p-1 member-dg">Lead UI/UX Designer</p>
+                                    </div>
+                                    <!-- content-2 -->
+                                    <div class="content-2">
+                                        <h5 class="nm-h-1 member-name">
+                                            <a href="team-details.html">Alfred Noble</a>
+                                        </h5>
+                                        <p class="nm-p-1 member-dg">Lead UI/UX Designer</p>
+                                        <div class="social-link">
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="fa-brands fa-facebook-f"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="fa-brands fa-x-twitter"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="fa-brands fa-dribbble"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="fa-brands fa-behance"></i>
+                                            </a>
+                                        </div>
+                                        <div class="hr-line"></div>
+                                        <p class="nm-p-1 disc">Alfred helps brands find their voice and visual identity, crafting systems that
+                                            are memorable, meaningful, and consistent.</p>
+                                        <div class="member-btn">
+                                            <a href="#" aria-label="name" class="nm-pr-btn-1 has-v2 wa_magnetic_btn_2">
+                                                <span class="icon wa_magnetic_btn_2_elm">
+                                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                                </span>
+                                                <span class="text" data-back="Read more" data-front="Read more"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- single-slider -->
+                            <div class="swiper-slide">
+                                <div class="nm-team-1-member wa-p-relative wa-fix wa-img-cover">
+                                    <img src="assets/img/team/t1-img-3.jpg" alt="">
+                                
+                                    <div class="toggle-btn nm-h-1">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </div>
+                                
+                                    <!-- content-1 -->
+                                    <div class="content-1">
+                                        <h5 class="nm-h-1 member-name">
+                                            <a href="team-details.html">Sarah Noor</a>
+                                        </h5>
+                                        <p class="nm-p-1 member-dg">Full-Stack Developer</p>
+                                    </div>
+                                    <!-- content-2 -->
+                                    <div class="content-2">
+                                        <h5 class="nm-h-1 member-name">
+                                            <a href="team-details.html">Sarah Noor</a>
+                                        </h5>
+                                        <p class="nm-p-1 member-dg">Full-Stack Developer</p>
+                                        <div class="social-link">
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="fa-brands fa-facebook-f"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="fa-brands fa-x-twitter"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="fa-brands fa-dribbble"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="fa-brands fa-behance"></i>
+                                            </a>
+                                        </div>
+                                        <div class="hr-line"></div>
+                                        <p class="nm-p-1 disc">Alfred helps brands find their voice and visual identity, crafting systems that
+                                            are memorable, meaningful, and consistent.</p>
+                                        <div class="member-btn">
+                                            <a href="#" aria-label="name" class="nm-pr-btn-1 has-v2 wa_magnetic_btn_2">
+                                                <span class="icon wa_magnetic_btn_2_elm">
+                                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                                </span>
+                                                <span class="text" data-back="Read more" data-front="Read more"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- single-slider -->
+                            <div class="swiper-slide">
+                                <div class="nm-team-1-member wa-p-relative wa-fix wa-img-cover ">
+                                    <img src="assets/img/team/t1-img-5.jpg" alt="">
+                                
+                                    <div class="toggle-btn nm-h-1">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </div>
+                                
+                                    <!-- content-1 -->
+                                    <div class="content-1">
+                                        <h5 class="nm-h-1 member-name">
+                                            <a href="team-details.html">Alfred Noble</a>
+                                        </h5>
+                                        <p class="nm-p-1 member-dg">Lead UI/UX Designer</p>
+                                    </div>
+                                    <!-- content-2 -->
+                                    <div class="content-2">
+                                        <h5 class="nm-h-1 member-name">
+                                            <a href="team-details.html">Alfred Noble</a>
+                                        </h5>
+                                        <p class="nm-p-1 member-dg">Lead UI/UX Designer</p>
+                                        <div class="social-link">
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="fa-brands fa-facebook-f"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="fa-brands fa-x-twitter"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="fa-brands fa-dribbble"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="fa-brands fa-behance"></i>
+                                            </a>
+                                        </div>
+                                        <div class="hr-line"></div>
+                                        <p class="nm-p-1 disc">Alfred helps brands find their voice and visual identity, crafting systems that are
+                                            memorable, meaningful, and consistent.</p>
+                                        <div class="member-btn">
+                                            <a href="#" aria-label="name" class="nm-pr-btn-1 has-v2 wa_magnetic_btn_2">
+                                                <span class="icon wa_magnetic_btn_2_elm">
+                                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                                </span>
+                                                <span class="text" data-back="Read more" data-front="Read more"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>         
+
+                            <!-- single-slider -->
+                            <div class="swiper-slide">
+                                <div class="nm-team-1-member wa-p-relative wa-fix wa-img-cover">
+                                    <img src="assets/img/team/t1-img-5.jpg" alt="">
+                                
+                                    <div class="toggle-btn nm-h-1">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </div>
+                                
+                                    <!-- content-1 -->
+                                    <div class="content-1">
+                                        <h5 class="nm-h-1 member-name">
+                                            <a href="team-details.html">Alfred Noble</a>
+                                        </h5>
+                                        <p class="nm-p-1 member-dg">Lead UI/UX Designer</p>
+                                    </div>
+                                    <!-- content-2 -->
+                                    <div class="content-2">
+                                        <h5 class="nm-h-1 member-name">
+                                            <a href="team-details.html">Alfred Noble</a>
+                                        </h5>
+                                        <p class="nm-p-1 member-dg">Lead UI/UX Designer</p>
+                                        <div class="social-link">
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="fa-brands fa-facebook-f"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="fa-brands fa-x-twitter"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="fa-brands fa-dribbble"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="fa-brands fa-behance"></i>
+                                            </a>
+                                        </div>
+                                        <div class="hr-line"></div>
+                                        <p class="nm-p-1 disc">Alfred helps brands find their voice and visual identity, crafting systems that
+                                            are memorable, meaningful, and consistent.</p>
+                                        <div class="member-btn">
+                                            <a href="#" aria-label="name" class="nm-pr-btn-1 has-v2 wa_magnetic_btn_2">
+                                                <span class="icon wa_magnetic_btn_2_elm">
+                                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                                </span>
+                                                <span class="text" data-back="Read more" data-front="Read more"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- single-slider -->
+                            <div class="swiper-slide">
                                 <div class="nm-team-1-slider-single">
                                     <div class="nm-team-1-member wa-p-relative wa-fix wa-img-cover">
                                         <img src="assets/img/team/t1-img-4.jpg" alt="">
-                                        
+                            
                                         <div class="toggle-btn nm-h-1">
                                             <i class="fa-solid fa-plus"></i>
                                         </div>
-
+                            
                                         <!-- content-1 -->
                                         <div class="content-1">
                                             <h5 class="nm-h-1 member-name">
@@ -2781,101 +2903,8 @@
                                                 </a>
                                             </div>
                                             <div class="hr-line"></div>
-                                            <p class="nm-p-1 disc">Alfred helps brands find their voice and visual identity, crafting systems that are memorable, meaningful, and consistent.</p>
-                                            <div class="member-btn">
-                                                <a href="#" aria-label="name" class="nm-pr-btn-1 has-v2 wa_magnetic_btn_2">
-                                                    <span class="icon wa_magnetic_btn_2_elm">
-                                                        <i class="fa-solid fa-arrow-right-long"></i>
-                                                        <i class="fa-solid fa-arrow-right-long"></i>
-                                                    </span>
-                                                    <span class="text" data-back="Read more" data-front="Read more"></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="nm-team-1-member wa-p-relative wa-fix wa-img-cover active">
-                                        <img src="assets/img/team/t1-img-5.jpg" alt="">
-                                        
-                                        <div class="toggle-btn nm-h-1">
-                                            <i class="fa-solid fa-plus"></i>
-                                        </div>
-
-                                        <!-- content-1 -->
-                                        <div class="content-1">
-                                            <h5 class="nm-h-1 member-name">
-                                                <a href="team-details.html">Alfred Noble</a>
-                                            </h5>
-                                            <p class="nm-p-1 member-dg">Lead UI/UX Designer</p>
-                                        </div>
-                                        <!-- content-2 -->
-                                        <div class="content-2">
-                                            <h5 class="nm-h-1 member-name">
-                                                <a href="team-details.html">Alfred Noble</a>
-                                            </h5>
-                                            <p class="nm-p-1 member-dg">Lead UI/UX Designer</p>
-                                            <div class="social-link">
-                                                <a href="#" aria-label="name" class="link-elm">
-                                                    <i class="fa-brands fa-facebook-f"></i>
-                                                </a>
-                                                <a href="#" aria-label="name" class="link-elm">
-                                                    <i class="fa-brands fa-x-twitter"></i>
-                                                </a>
-                                                <a href="#" aria-label="name" class="link-elm">
-                                                    <i class="fa-brands fa-dribbble"></i>
-                                                </a>
-                                                <a href="#" aria-label="name" class="link-elm">
-                                                    <i class="fa-brands fa-behance"></i>
-                                                </a>
-                                            </div>
-                                            <div class="hr-line"></div>
-                                            <p class="nm-p-1 disc">Alfred helps brands find their voice and visual identity, crafting systems that are memorable, meaningful, and consistent.</p>
-                                            <div class="member-btn">
-                                                <a href="#" aria-label="name" class="nm-pr-btn-1 has-v2 wa_magnetic_btn_2">
-                                                    <span class="icon wa_magnetic_btn_2_elm">
-                                                        <i class="fa-solid fa-arrow-right-long"></i>
-                                                        <i class="fa-solid fa-arrow-right-long"></i>
-                                                    </span>
-                                                    <span class="text" data-back="Read more" data-front="Read more"></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="nm-team-1-member wa-p-relative wa-fix wa-img-cover">
-                                        <img src="assets/img/team/t1-img-6.jpg" alt="">
-                                        
-                                        <div class="toggle-btn nm-h-1">
-                                            <i class="fa-solid fa-plus"></i>
-                                        </div>
-
-                                        <!-- content-1 -->
-                                        <div class="content-1">
-                                            <h5 class="nm-h-1 member-name">
-                                                <a href="team-details.html">Sarah Noor</a>
-                                            </h5>
-                                            <p class="nm-p-1 member-dg">Full-Stack Developer</p>
-                                        </div>
-                                        <!-- content-2 -->
-                                        <div class="content-2">
-                                            <h5 class="nm-h-1 member-name">
-                                                <a href="team-details.html">Sarah Noor</a>
-                                            </h5>
-                                            <p class="nm-p-1 member-dg">Full-Stack Developer</p>
-                                            <div class="social-link">
-                                                <a href="#" aria-label="name" class="link-elm">
-                                                    <i class="fa-brands fa-facebook-f"></i>
-                                                </a>
-                                                <a href="#" aria-label="name" class="link-elm">
-                                                    <i class="fa-brands fa-x-twitter"></i>
-                                                </a>
-                                                <a href="#" aria-label="name" class="link-elm">
-                                                    <i class="fa-brands fa-dribbble"></i>
-                                                </a>
-                                                <a href="#" aria-label="name" class="link-elm">
-                                                    <i class="fa-brands fa-behance"></i>
-                                                </a>
-                                            </div>
-                                            <div class="hr-line"></div>
-                                            <p class="nm-p-1 disc">Alfred helps brands find their voice and visual identity, crafting systems that are memorable, meaningful, and consistent.</p>
+                                            <p class="nm-p-1 disc">Alfred helps brands find their voice and visual identity, crafting systems that
+                                                are memorable, meaningful, and consistent.</p>
                                             <div class="member-btn">
                                                 <a href="#" aria-label="name" class="nm-pr-btn-1 has-v2 wa_magnetic_btn_2">
                                                     <span class="icon wa_magnetic_btn_2_elm">
@@ -2888,7 +2917,60 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>         
+                            </div>
+
+                            <!-- single-slider -->
+                            <div class="swiper-slide">
+                                <div class="nm-team-1-member wa-p-relative wa-fix wa-img-cover">
+                                    <img src="assets/img/team/t1-img-6.jpg" alt="">
+                                
+                                    <div class="toggle-btn nm-h-1">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </div>
+                                
+                                    <!-- content-1 -->
+                                    <div class="content-1">
+                                        <h5 class="nm-h-1 member-name">
+                                            <a href="team-details.html">Sarah Noor</a>
+                                        </h5>
+                                        <p class="nm-p-1 member-dg">Full-Stack Developer</p>
+                                    </div>
+                                    <!-- content-2 -->
+                                    <div class="content-2">
+                                        <h5 class="nm-h-1 member-name">
+                                            <a href="team-details.html">Sarah Noor</a>
+                                        </h5>
+                                        <p class="nm-p-1 member-dg">Full-Stack Developer</p>
+                                        <div class="social-link">
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="fa-brands fa-facebook-f"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="fa-brands fa-x-twitter"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="fa-brands fa-dribbble"></i>
+                                            </a>
+                                            <a href="#" aria-label="name" class="link-elm">
+                                                <i class="fa-brands fa-behance"></i>
+                                            </a>
+                                        </div>
+                                        <div class="hr-line"></div>
+                                        <p class="nm-p-1 disc">Alfred helps brands find their voice and visual identity, crafting systems that
+                                            are memorable, meaningful, and consistent.</p>
+                                        <div class="member-btn">
+                                            <a href="#" aria-label="name" class="nm-pr-btn-1 has-v2 wa_magnetic_btn_2">
+                                                <span class="icon wa_magnetic_btn_2_elm">
+                                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                                </span>
+                                                <span class="text" data-back="Read more" data-front="Read more"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
 
                         </div>
                         <!-- slider-btn -->
