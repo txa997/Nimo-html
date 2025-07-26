@@ -249,6 +249,12 @@
             }  
         }
     }
+
+    &:is(.has-v3) {
+        .icon {
+            background: var(--nm-clr-gd-3);
+        }
+    }
     
 }
 
