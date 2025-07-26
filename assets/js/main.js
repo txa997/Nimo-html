@@ -370,17 +370,17 @@ document.addEventListener("DOMContentLoaded", function () {
 			remove-class
 		*/
 		gsap.utils.toArray('.wa_remove_class').forEach(item => {
-		item.classList.add("active");
+			item.classList.add("active");
 
-		ScrollTrigger.create({
-			trigger: item,
-			start: "top 90%",
-			end: "bottom bottom",
-			markers: false,
-			onEnter: () => {
-				item.classList.remove("active");
-			},
-		});
+			ScrollTrigger.create({
+				trigger: item,
+				start: "top 90%",
+				end: "bottom bottom",
+				markers: false,
+				onEnter: () => {
+					item.classList.remove("active");
+				},
+			});
 		});
 
 
@@ -549,6 +549,31 @@ const paths = document.querySelectorAll('.nm-Firefly-ani-svg path');
   	animatePath(); 
 });
 
+
+/* 
+	about-1-card
+*/
+const a1card = gsap.utils.toArray(".a1card");
+
+a1card.forEach((item, index) => {
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: item,
+      start: "top top+=" + item.getAttribute("animation-item"),
+      endTrigger: ".container2",
+      end: "top 260",
+      pin: true,
+      pinSpacing: false,
+      scrub: true,
+      markers: true
+    }
+  });
+  tl.to(item, {
+    opacity: 0.4,
+    scale: 0.85 + 0.02 * index,
+    transformOrigin: "center center"
+  });
+});
 
 /* 
 	services-1-scrollbar

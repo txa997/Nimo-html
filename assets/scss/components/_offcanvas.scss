@@ -197,7 +197,7 @@
             }
 
             a {
-                font-family: var(--kk-font-1);
+                font-family: var(--nm-font-1);
                 text-transform: capitalize;
                 font-size: 18px;
                 font-weight: 500;
@@ -235,11 +235,11 @@
 
             &:hover {
                 > a {
-                    color: var(--kk-clr-pr-1);
+                    color: var(--nm-clr-pr-1);
                 }
 
                 > .dropdown-btn {
-                    color: var(--kk-clr-pr-1);
+                    color: var(--nm-clr-pr-1);
                 }
             }
     

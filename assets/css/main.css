@@ -1960,7 +1960,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .mobile-main-navigation ul li a {
-  font-family: var(--kk-font-1);
+  font-family: var(--nm-font-1);
   text-transform: capitalize;
   font-size: 18px;
   font-weight: 500;
@@ -1991,10 +1991,10 @@ input:focus::placeholder, textarea:focus::placeholder {
   transform: rotate(90deg);
 }
 .mobile-main-navigation ul li:hover > a {
-  color: var(--kk-clr-pr-1);
+  color: var(--nm-clr-pr-1);
 }
 .mobile-main-navigation ul li:hover > .dropdown-btn {
-  color: var(--kk-clr-pr-1);
+  color: var(--nm-clr-pr-1);
 }
 .mobile-main-navigation ul li .dropdown-menu {
   border-radius: 0;
@@ -7258,13 +7258,17 @@ input:focus::placeholder, textarea:focus::placeholder {
   transition-delay: 0.8s;
 }
 .nm-testimonial-1-bg-blur {
-  height: 70px;
+  height: 140px;
   width: 100%;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 100%);
-  backdrop-filter: blur(3px);
   position: absolute;
   bottom: 0;
   z-index: 1;
+  opacity: 1;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-mask-image: linear-gradient(to top, #000 10%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to top, #000 10%, rgba(0, 0, 0, 0) 100%);
 }
 
 /* 
