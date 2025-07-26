@@ -205,6 +205,10 @@
         left: 0;
         width: 100%;
         z-index: 3;
+
+        @media #{$xs} {
+            top: 530px;
+        }
     }
 
     &-wrap {
@@ -290,6 +294,61 @@
 }
 /* 
     header-2-end
+*/
+
+/* 
+    header-3-start
+*/
+.nm-header-3 {
+    &-area {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 100%;
+        z-index: 3;
+    }
+
+    &-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 0 65px;
+    }
+}
+
+
+.nm-main-navigation {
+    &:is(.has-header-3) {
+        .navbar-nav {
+            gap: 50px;
+            li {
+                a {
+                    font-size: 16px;
+                    padding: 41px 0;
+                    font-weight: 600;
+                    padding: 18px 0;
+
+                    i {
+                        color: inherit;
+                        font-size: 12px;
+                    }
+                }
+
+                &:hover {
+                    > a {
+                        color: #fff;
+                    }
+                }
+
+                
+            }
+        }
+    }
+}
+
+/* 
+    header-3-end
 */
 
 

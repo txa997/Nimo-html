@@ -4075,6 +4075,11 @@ input:focus::placeholder, textarea:focus::placeholder {
   width: 100%;
   z-index: 3;
 }
+@media (max-width: 767px) {
+  .nm-header-2-area {
+    top: 530px;
+  }
+}
 .nm-header-2-wrap {
   display: flex;
   align-items: center;
@@ -4140,6 +4145,44 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 /* 
     header-2-end
+*/
+/* 
+    header-3-start
+*/
+.nm-header-3-area {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+}
+.nm-header-3-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 0 65px;
+}
+
+.nm-main-navigation:is(.has-header-3) .navbar-nav {
+  gap: 50px;
+}
+.nm-main-navigation:is(.has-header-3) .navbar-nav li a {
+  font-size: 16px;
+  padding: 41px 0;
+  font-weight: 600;
+  padding: 18px 0;
+}
+.nm-main-navigation:is(.has-header-3) .navbar-nav li a i {
+  color: inherit;
+  font-size: 12px;
+}
+.nm-main-navigation:is(.has-header-3) .navbar-nav li:hover > a {
+  color: #fff;
+}
+
+/* 
+    header-3-end
 */
 /* 
     sticky-header-css-start
@@ -4664,6 +4707,11 @@ input:focus::placeholder, textarea:focus::placeholder {
 .nm-hero-2-wrap {
   height: 955px;
 }
+@media (max-width: 767px) {
+  .nm-hero-2-wrap {
+    height: 655px;
+  }
+}
 .nm-hero-2-bg-shadow-1 {
   width: 200px;
   height: 200px;
@@ -4725,6 +4773,41 @@ input:focus::placeholder, textarea:focus::placeholder {
   width: 100%;
   text-align: center;
 }
+@media only screen and (min-width: 1600px) and (max-width: 1799px) {
+  .nm-hero-2-big-title {
+    font-size: 600px;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+  .nm-hero-2-big-title {
+    font-size: 500px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .nm-hero-2-big-title {
+    font-size: 400px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .nm-hero-2-big-title {
+    font-size: 350px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .nm-hero-2-big-title {
+    font-size: 300px;
+  }
+}
+@media (max-width: 767px) {
+  .nm-hero-2-big-title {
+    font-size: 120px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .nm-hero-2-big-title {
+    font-size: 220px;
+  }
+}
 .nm-hero-2-big-title span {
   transform: translateY(100%);
   transition: all 1s var(--nm-cube-1);
@@ -4744,6 +4827,12 @@ input:focus::placeholder, textarea:focus::placeholder {
 .nm-hero-2-bg-icon i {
   animation: waRotation360 15s linear infinite;
 }
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .nm-hero-2-bg-icon {
+    top: 1%;
+    left: 1%;
+  }
+}
 .nm-hero-2-bg-img {
   position: absolute;
   top: 0;
@@ -4759,6 +4848,11 @@ input:focus::placeholder, textarea:focus::placeholder {
 .nm-hero-2-bg-img img {
   margin-top: -50px;
 }
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .nm-hero-2-bg-img {
+    display: none;
+  }
+}
 .nm-hero-2-img {
   width: 275px;
   height: 160px;
@@ -4773,6 +4867,12 @@ input:focus::placeholder, textarea:focus::placeholder {
   transition: all 1s var(--nm-cube-1);
   opacity: 0;
 }
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .nm-hero-2-img {
+    top: 10%;
+    right: 2%;
+  }
+}
 .nm-hero-2-img video {
   width: 100%;
   height: 100%;
@@ -4783,6 +4883,17 @@ input:focus::placeholder, textarea:focus::placeholder {
   top: 120px;
   left: 10%;
   z-index: 2;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
+  .nm-hero-2-content {
+    left: 2%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .nm-hero-2-content {
+    left: 2%;
+    top: 190px;
+  }
 }
 .nm-hero-2-content .disc {
   font-size: 22px;
@@ -4818,6 +4929,11 @@ input:focus::placeholder, textarea:focus::placeholder {
   font-weight: 500;
   color: #f5f5f5;
 }
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .nm-hero-2-writing-text .title-1 {
+    font-size: 22px;
+  }
+}
 .nm-hero-2-writing-text .title-1 b {
   font-weight: inherit;
 }
@@ -4831,6 +4947,11 @@ input:focus::placeholder, textarea:focus::placeholder {
   padding-bottom: 20px;
   overflow: hidden;
 }
+@media (max-width: 767px) {
+  .nm-hero-2-marquee {
+    top: 70%;
+  }
+}
 .nm-hero-2-marquee-2 {
   position: absolute;
   top: 50%;
@@ -4840,6 +4961,11 @@ input:focus::placeholder, textarea:focus::placeholder {
   z-index: 2;
   padding-bottom: 20px;
   overflow: hidden;
+}
+@media (max-width: 767px) {
+  .nm-hero-2-marquee-2 {
+    top: 70%;
+  }
 }
 .nm-hero-2-marquee-2 .nm-hero-2-marquee-text {
   -webkit-text-stroke: 2px #fff;
@@ -4863,6 +4989,41 @@ input:focus::placeholder, textarea:focus::placeholder {
   letter-spacing: -0.075em;
   margin-bottom: 0;
   line-height: 1;
+}
+@media only screen and (min-width: 1600px) and (max-width: 1799px) {
+  .nm-hero-2-marquee-text {
+    font-size: 260px;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+  .nm-hero-2-marquee-text {
+    font-size: 240px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .nm-hero-2-marquee-text {
+    font-size: 220px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .nm-hero-2-marquee-text {
+    font-size: 180px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .nm-hero-2-marquee-text {
+    font-size: 140px;
+  }
+}
+@media (max-width: 767px) {
+  .nm-hero-2-marquee-text {
+    font-size: 70px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .nm-hero-2-marquee-text {
+    font-size: 100px;
+  }
 }
 
 .nm-hero-2-area:is(.active) .nm-hero-2-big-title span {
@@ -4896,6 +5057,11 @@ input:focus::placeholder, textarea:focus::placeholder {
   transform: translateY(0%);
   opacity: 1;
   transition-delay: 1.2s;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .nm-hero-2-area:is(.active) .nm-hero-2-img {
+    display: none;
+  }
 }
 .nm-hero-2-area:is(.active) .nm-hero-2-marquee-active {
   transform: translateY(0);
