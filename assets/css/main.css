@@ -1747,7 +1747,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   color: rgba(255, 255, 255, 0.7);
   font-size: 25px;
   cursor: pointer;
-  transition: var(--nm-cube-1);
+  transition: all 0.6s var(--nm-cube-1);
   flex: 0 0 auto;
 }
 .nm-slider-btn-1 .icon {
@@ -1759,7 +1759,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   position: relative;
 }
 .nm-slider-btn-1 .icon i {
-  transition: var(--nm-cube-1);
+  transition: all 0.6s var(--nm-cube-1);
 }
 .nm-slider-btn-1 .icon i:nth-child(1) {
   position: absolute;
@@ -1779,7 +1779,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   transform: translateX(50px);
 }
 .nm-slider-btn-1:is(.has-left) .icon i {
-  transition: var(--nm-cube-1);
+  transition: all 0.6s var(--nm-cube-1);
 }
 .nm-slider-btn-1:is(.has-left) .icon i:nth-child(1) {
   transform: translateX(50px);

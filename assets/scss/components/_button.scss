@@ -314,7 +314,7 @@
     color: rgb(255 255 255 / 70%);
     font-size: 25px;
     cursor: pointer;
-    transition: var(--nm-cube-1);
+    transition: all .6s var(--nm-cube-1);
     flex: 0 0 auto;
 
     .icon {
@@ -326,7 +326,7 @@
         position: relative;
 
         i {
-            transition: var(--nm-cube-1);
+            transition: all .6s var(--nm-cube-1);
             &:nth-child(1) {
                 position: absolute;
                 transform: translateX(-50px);
@@ -355,7 +355,7 @@
         .icon {
     
             i {
-                transition: var(--nm-cube-1);
+                transition: all .6s var(--nm-cube-1);
                 &:nth-child(1) {
                     transform: translateX(50px);
                 }
