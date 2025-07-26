@@ -343,7 +343,12 @@
     }
 
 
-    &-bg-3d-shape {width: 24%;position: absolute;top: -20%;left: -11%;z-index: -1;}
+    &-bg-3d-shape {
+        width: 24%;position: absolute;top: -20%;left: -11%;z-index: -1;
+        img {
+            animation: waRotation360minus 40s linear infinite;
+        }
+    }
     &-bg-shape-2 {
         width: 18%;
         position: absolute;

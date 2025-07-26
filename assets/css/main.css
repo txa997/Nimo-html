@@ -9411,6 +9411,9 @@ input:focus::placeholder, textarea:focus::placeholder {
   left: -11%;
   z-index: -1;
 }
+.nm-contact-2-bg-3d-shape img {
+  animation: waRotation360minus 40s linear infinite;
+}
 .nm-contact-2-bg-shape-2 {
   width: 18%;
   position: absolute;
