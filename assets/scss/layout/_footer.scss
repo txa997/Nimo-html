@@ -221,6 +221,24 @@
         .nm-footer-1-bottom-make i {
             color: #9D9D9D;
         }
+
+        .nm-footer-1-menu a {
+            &:hover {
+                color: #a6a6a6;
+                transform: translateX(5px);
+            }
+        }
+
+        .nm-footer-1-social .link-elm {
+            background: #252525;
+            &:hover {
+                transform: scale(.95);
+                color: #fff;
+                i {
+                    animation: headShake 1s;
+                }
+            }
+        }
     }
 
     &-bg-shape-1 {

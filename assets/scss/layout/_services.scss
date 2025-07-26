@@ -221,8 +221,12 @@
         width: 27%;
         position: absolute;
         right: -10%;
-        bottom: 0;
+        bottom: 7%;
         z-index: -1;
+
+        img {
+            animation: waRotation360minus 40s linear infinite;
+        }
     }
 
     &-bg-shape-2 {
@@ -349,6 +353,24 @@
         .btn-wrap {
             margin-top: 52px;
         }
+
+        @media #{$over,$xxxl,$xxl,$xl,$lg} {
+            &:nth-child(1) {
+                transform: rotate(-3deg);
+            }
+            
+            &:nth-child(2) {
+                transform: rotate(2deg);
+                margin-top: -530px;
+            }
+            
+            &:nth-child(3) {
+                transform: rotate(-3deg);
+                margin-top: -520px;
+            }
+        }
+
+
     }
     
 }

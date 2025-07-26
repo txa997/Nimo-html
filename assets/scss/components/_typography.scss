@@ -84,6 +84,10 @@
     font-weight: 600;
     margin-bottom: 25px;
 
+    @media #{$xs} {
+        width: 100%;
+    }
+
     .icon {
         line-height: .9;
         background: linear-gradient(0deg, rgb(0 0 0 / 20%) 0%, rgba(255, 255, 255, 1) 100%);
@@ -91,11 +95,24 @@
         -webkit-text-fill-color: transparent;
     }
 
+    .text {
+        flex: 0 0 auto;
+    }
+
     .line {
-        width: 175px;
+        max-width: 175px;
         height: 2px;
         background: linear-gradient(90deg,rgba(255, 255, 255, 1) 87%, rgba(0, 0, 0, 0) 100%);
         opacity: .4;
+        flex: 0 0 auto;
+        width: 100%;
+        transform-origin: left;
+        
+        
+        @media #{$xs} {
+            max-width: 100%;
+            flex: unset;
+        }
     }
 }
 

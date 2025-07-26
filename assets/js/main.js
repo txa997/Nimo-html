@@ -440,6 +440,64 @@ gsap.utils.toArray(".nm-about-1-line-border").forEach(element => {
 	);
 });
 
+/* 
+	subtitle-2-ani
+*/
+gsap.utils.toArray('.nm-subtitle-2').forEach(card => {
+	const tl = gsap.timeline({
+	  scrollTrigger: {
+		trigger: card,      
+		start: "top 90%",
+		end: "top 20%", 
+		toggleActions: "play none none reverse",
+		scrub: true,
+		markers: false             
+	  }
+	});
+  
+	tl.from(card.querySelector('.nm-subtitle-2 .icon'), {
+		rotation: 360
+	})
+	.from(card.querySelector('.nm-subtitle-2 .line'), {
+		scaleX: 0
+	},"<=");    
+  });
+  
+
+/* 
+	wa-parallax-shape-2
+*/
+gsap.utils.toArray('.wa_parallax_shape_2').forEach((item) => {
+	gsap.from(item, {
+	  opacity: 0,
+	  scrollTrigger: {
+		trigger: item,
+		start: "to 80%",
+		end: "to 10%",
+		toggleActions: 'play none none reverse',
+        scrub: true,    
+        markers: false,  
+	  },
+	});
+});
+/* 
+	wa-parallax-shape-3
+*/
+gsap.utils.toArray('.wa_parallax_shape_3').forEach((item) => {
+	gsap.from(item, {
+	  yPercent: 70,
+      ease: "elastic.out(1,0.4)",
+	  duration: 2.5,
+	  scrollTrigger: {
+		trigger: item,
+		start: "to 100%",
+		end: "to 10%",
+		toggleActions: 'play none none reverse',
+        // scrub: true,    
+        markers: false,  
+	  },
+	});
+});
 
 /* 
 	menu-link-animation
@@ -558,6 +616,113 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 	});
 	
 }
+
+
+
+
+/* 
+	Services-2-card-sticky
+*/
+
+
+if (window.matchMedia("(min-width: 992px)").matches) {
+
+	const s2_card_ani_count = document.querySelectorAll(".s2_card_trigger_elm").length;
+	const s2_card_ani_area = document.querySelector(".nm-services-2-wrap-height");
+
+	if (s2_card_ani_area) {
+		s2_card_ani_area.style.height = `${s2_card_ani_count * 70}vh`; 
+	}
+
+	gsap.to(".nm-services-2-wrap-pin", {
+		scrollTrigger: {
+			trigger: ".nm-services-2-wrap-height",
+			start: "top 20%",
+			end: "bottom bottom",
+			pin: ".nm-services-2-wrap-pin", 
+		  	pinSpacing: true,
+			markers: false,
+		}
+	});
+
+	var s2_card_ani = gsap.timeline({
+		scrollTrigger: {
+		  trigger: '.s2_card_trigger',
+		  start: "top 60%",
+		  end: "bottom bottom",
+		  scrub: 1,
+		  toggleActions: 'play reverse play reverse',
+		  markers: false,
+		  pinSpacing: true,
+		}
+	});
+	
+	s2_card_ani.from(".s2_card_trigger_elm" ,  { yPercent: 100, opacity: 0 , stagger: 1, })
+	
+
+}
+
+
+
+/* 
+	projects-2-animation
+*/
+if (window.matchMedia("(min-width: 1200px)").matches) {
+	gsap.to(".tn-projects-2-wrap-pin", {
+		scrollTrigger: {
+			trigger: ".tn-projects-2-wrap-height",
+			start: "top top",
+			end: "bottom bottom",
+			pin: ".tn-projects-2-wrap-pin",
+			pinSpacing: true,
+			markers: false,
+		},
+	});
+
+
+
+
+}
+
+
+// if (window.matchMedia("(min-width: 992px)").matches) { 
+// 	if($(".wa_sticky_card_wrapper").length) {
+// 		const waCardsWrappers = gsap.utils.toArray(".wa_sticky_card");
+// 		const waCards = gsap.utils.toArray(".wa_sticky_card");
+	
+// 		waCardsWrappers.forEach((waWrapper, waIndex) => {
+// 		const waCard = waCards[waIndex];
+// 		let waScale = 1,
+// 			waRotation = 0;
+	
+// 		if (waIndex !== waCards.length - 1) {
+// 			waScale = 0.90 + 0.01 * waIndex;
+// 			waRotation = -10;
+// 		}
+	
+// 			gsap.to(waCard, {
+// 				scale: waScale,
+// 				rotationX: waRotation,
+// 				transformOrigin: "top center",
+// 				ease: "none",
+// 				scrollTrigger: {
+// 				trigger: waWrapper,
+// 				start: "top " + (120 + 10 * waIndex),
+// 				end: "bottom bottom",
+// 				endTrigger: ".wa_sticky_card_wrapper",
+// 				scrub: true,
+// 				pin: waWrapper,
+// 				pinSpacing: false,
+// 				markers: true,
+// 				// id: waIndex + 1
+// 				}
+// 			});
+// 		});
+// 	}
+	
+	
+// }
+
 
 /* 
 	faqs-1-contact-form-sticky-
@@ -741,7 +906,7 @@ gsap.utils.toArray(".wa-parallax-bg").forEach(element => {
 			ease: "none",
 			scrollTrigger: {
 				trigger: element,
-				scrub: 5,    
+				scrub: 3,    
                 delay: 1,
 				markers: false,  
 			},
@@ -857,8 +1022,32 @@ var t1scrollAni = gsap.timeline({
 	});
 
 t1scrollAni.fromTo(".nm-testimonial-1-preview-slider .swiper-wrapper", {
-	rotation: 270,
+	rotation: 90,
 },{rotation: -90});
+
+
+
+/* 
+	portfolio-2-pin
+*/
+
+/* 
+	sticky-card-animation
+*/
+if (window.matchMedia("(min-width: 992px)").matches) { 
+	
+	gsap.to(".nm-portfolio-2-content", {
+		scrollTrigger: {
+			trigger: ".nm-portfolio-2-area",
+			start: "top 20%", 
+			end: "bottom 95%", 
+			pin: ".nm-portfolio-2-content", 
+			pinSpacing: false,
+			markers: false
+		}
+	});
+	
+}
 
 
 /* 
@@ -936,7 +1125,7 @@ $(document).on("mouseenter", ".nm-blog-1-item", function () {
 /* 
 	testimonial-1-slider-active
 */
-if ($('.nm_t2_preview_slider_active').length) {
+if ($('.nm-testimonial-2-preview-slider').length) {
 
 	const imgSlider = new Swiper(".nm-testimonial-2-img-slider", {
 		slidesPerView: 1,
@@ -946,17 +1135,13 @@ if ($('.nm_t2_preview_slider_active').length) {
 		fadeEffect: {
 			crossFade: true
 		},
-	  });
-	  
-	  const previewSlider = new Swiper(".nm-testimonial-2-preview-slider", {
-		speed: 500,
+	});
 
+	const previewSlider = new Swiper(".nm-testimonial-2-preview-slider", {
+		speed: 800,
 		spaceBetween: 25,
 		centeredSlides: true,
 		loop: true,
-		// centeredSlides: true,
-		// slideToClickedSlide: true,
-
 		breakpoints: {
 			0: {
 				slidesPerView: 1,
@@ -973,11 +1158,10 @@ if ($('.nm_t2_preview_slider_active').length) {
 			1200: {
 				slidesPerView: 5,
 			},
-
 		},
-	  });
-	  
-	  const contentSlider = new Swiper(".nm-testimonial-2-content-slider", {
+	});
+
+	const contentSlider = new Swiper(".nm-testimonial-2-content-slider", {
 		slidesPerView: 1,
 		loop: true,
 		speed: 800,
@@ -985,18 +1169,24 @@ if ($('.nm_t2_preview_slider_active').length) {
 		fadeEffect: {
 			crossFade: true
 		},
-	  });
-	  
-	  previewSlider.controller.control = [imgSlider, contentSlider];
-	  
-	  document.querySelector(".t2_slider_next").addEventListener("click", () => {
-		previewSlider.slideNext();
-	  });
-	  document.querySelector(".t2_slider_prev").addEventListener("click", () => {
-		previewSlider.slidePrev();
-	  });
-	  
+	});
 
+
+	const nextBtn = document.querySelector(".t2_slider_next");
+	const prevBtn = document.querySelector(".t2_slider_prev");
+
+	if (nextBtn && prevBtn) {
+		nextBtn.addEventListener("click", () => {
+			imgSlider.slideNext();
+			previewSlider.slideNext();
+			contentSlider.slideNext();
+		});
+		prevBtn.addEventListener("click", () => {
+			imgSlider.slidePrev();
+			previewSlider.slidePrev();
+			contentSlider.slidePrev();
+		});
+	}
 }
 
 
@@ -1175,7 +1365,7 @@ if ($(".wa_magnetic_btn").length) {
 
 
 /* 
-	magnetic-2 (on inner elements only)
+	magnetic-2 
 */
 if ($(".wa_magnetic_btn_2").length) {
     var waMagnets2 = document.querySelectorAll('.wa_magnetic_btn_2');
@@ -1333,23 +1523,39 @@ $section.on('mouseleave', function () {
 });
 
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const leftCol = document.querySelector(".has-left");
-    const clone = leftCol.cloneNode(true);
-    leftCol.parentNode.appendChild(clone);
+const waMarqueeTop = document.querySelector(".wa_marquee_down_top");
+const waMarqueeClone = waMarqueeTop.cloneNode(true);
+waMarqueeTop.parentNode.appendChild(waMarqueeClone);
 
-    const totalHeight = leftCol.offsetHeight;
+const waMarqueeTotalHeight = waMarqueeTop.offsetHeight;
 
-    gsap.to(".has-left", {
-      y: `-${totalHeight}px`,
-      ease: "none",
-      duration: 20,
-      repeat: -1,
-      modifiers: {
-        y: gsap.utils.unitize(y => parseFloat(y) % totalHeight)
-      }
-    });
-  });
+gsap.to(".wa_marquee_down_top", {
+  y: `-${waMarqueeTotalHeight}px`,
+  ease: "none",
+  duration: 20,
+  repeat: -1,
+  modifiers: {
+    y: gsap.utils.unitize(waY => parseFloat(waY) % waMarqueeTotalHeight)
+  }
+});
+
+
+const waMarqueeTopDown = document.querySelector(".wa_marquee_top_down");
+const waMarqueeTopDownClone = waMarqueeTopDown.cloneNode(true);
+waMarqueeTopDown.parentNode.appendChild(waMarqueeTopDownClone);
+
+const waMarqueeTopDownHeight = waMarqueeTopDown.offsetHeight;
+
+gsap.to(".wa_marquee_top_down", {
+  y: `${waMarqueeTopDownHeight}px`, // Top to Bottom scroll
+  ease: "none",
+  duration: 20,
+  repeat: -1,
+  modifiers: {
+    y: gsap.utils.unitize(waY => parseFloat(waY) % waMarqueeTopDownHeight)
+  }
+});
+
 
 /* 
 	bootstrap-tooltip-activation

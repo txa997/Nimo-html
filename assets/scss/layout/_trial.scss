@@ -113,6 +113,11 @@
             position: absolute;
             right: 12px;
             top: 12px;
+            transition: all .5s var(--nm-cube-1);
+
+            &:hover {
+                transform: scale(.90);
+            }
         }
 
 

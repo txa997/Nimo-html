@@ -188,6 +188,10 @@
         top: 15%;
         left: -13%;
         z-index: -1;
+
+        img {
+            animation: waRotation360minus 40s linear infinite;
+        }
     }
 
     &-max-width {
