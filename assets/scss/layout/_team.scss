@@ -182,49 +182,61 @@
     &-slider {
      
         .swiper-wrapper {
-          
-            .swiper-slide {
-                opacity: 0;
-                transition: all .6s var(--nm-cube-1);
-                &.swiper-slide-prev {
-                    transform: translateX(50%) rotate(-12deg);
-                    transform-origin: 50% 99%;
-                     opacity: 1;
-                }
-                &.swiper-slide-active {
-                    opacity: 1;
-                    z-index: 2;
-                }
-                &.swiper-slide-next {
-                    transform: translateX(-50%) rotate(12deg);
-                    transform-origin: 50% 99%;
-                     opacity: 1;
-                }
+
+            @media #{$md,$xs} {
+                overflow: hidden;
             }
-        }
-
-
-        &:is(.active) {
-            .swiper-wrapper {
-            
+          
+            @media #{$over,$xxxl,$xxl,$xl} {
                 .swiper-slide {
+                    transition: all .6s var(--nm-cube-1);
+                    transform: translateY(200px)  rotate(-20deg);
+                    opacity: 0;
+    
                     &.swiper-slide-prev {
-                        transform: translateX(100%) rotate(0deg);
-                        opacity: 0;
+                        transform: translateX(52%) rotate(-12deg);
+                        transform-origin: 50% 99%;
+                         opacity: 1;
                     }
                     &.swiper-slide-active {
-                        transform: translateY(-100%);
-                        opacity: 0;
+                        opacity: 1;
+                        z-index: 2;
+                        transform: translateX(0%) translateY(0) rotate(0deg);
                     }
                     &.swiper-slide-next {
-                        transform: translateX(-100%) rotate(0deg);
-                        opacity: 0;
-                    
+                        transform: translateX(-52%) rotate(12deg);
+                        transform-origin: 50% 99%;
+                         opacity: 1;
                     }
-                    
+                }
+            }
+
+
+        }
+
+        @media #{$over,$xxxl,$xxl,$xl} { 
+            &:is(.active) {
+                .swiper-wrapper {
+                
+                    .swiper-slide {
+                        &.swiper-slide-prev {
+                            animation: t1prevItem .8s backwards;
+                            animation-delay: 1s;
+                        }
+                        &.swiper-slide-active {
+                            animation: t1activeItem 1s backwards;
+                        }
+                        &.swiper-slide-next {
+                            animation: t1NextItem .8s backwards;
+                            animation-delay: 1s;
+                        }
+                        
+                    }
                 }
             }
         }
+
+
         
 
         &-btn-1 {
@@ -331,6 +343,29 @@
     
     
 }
+
+@keyframes t1prevItem {
+    from {
+        transform: translateX(100%) rotate(0deg);
+        opacity: 0;
+    }
+}
+
+@keyframes t1activeItem {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes t1NextItem {
+    from {
+        transform: translateX(-100%) rotate(0deg);
+        opacity: 0;
+    }
+}
+
+
 
 
 /* 

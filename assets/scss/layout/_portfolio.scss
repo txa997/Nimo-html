@@ -487,12 +487,25 @@
                 }
             }
         }
+
+        &:is(.has-last-elm) {
+            position: relative;
+            .card-img {
+                height: 380px;
+            }
+        }
     }
 
 
     
     
     
+}
+
+.p2_sticky_trigger_pin {
+    &:not(:last-child) {
+        margin-bottom: 40px;
+    }
 }
 
 /* 

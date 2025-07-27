@@ -28,6 +28,10 @@
         }
         .sec-disc {
             max-width: 490px;
+
+            @media #{$xl} {
+                max-width: 300px;
+            }
         }
 
         .nm-sec-title-1 {
