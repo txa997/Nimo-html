@@ -11,6 +11,7 @@ if(document.querySelectorAll("canvas").length) {
         (z["webgl-fluid"] = F()))
 })(this, function () {
   "use strict"
+  
   var _t = Object.defineProperty
   var rt = Object.getOwnPropertySymbols
   var pt = Object.prototype.hasOwnProperty,
