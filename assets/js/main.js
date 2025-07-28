@@ -552,50 +552,112 @@ const paths = document.querySelectorAll('.nm-Firefly-ani-svg path');
 */
 if (window.matchMedia("(min-width: 1200px)").matches) { 
 
-	if($(".nm-about-1-card-wrap").length) {
-		const waCardsWrappers = gsap.utils.toArray(".nm-about-1-card");
-		const waCards = gsap.utils.toArray(".nm-about-1-card");
-	
-		waCardsWrappers.forEach((waWrapper, waIndex) => {
-		const waCard = waCards[waIndex];
-		let waScale = 1,
-			waRotation = 0;
-	
-		if (waIndex !== waCards.length - 1) {
-			waScale = 0.95 + 0.01 * waIndex;
-			waRotation = -10;
-		}
-	
-			gsap.to(waCard, {
-					scale: waScale,
-					// rotationX: waRotation,
-					transformOrigin: "top center",
-					ease: "none",
-					scrollTrigger: {
-					trigger: waWrapper,
-					start: "top " + (120 + 80 * waIndex),
-					end: "bottom 480",
-					endTrigger: ".nm-about-1-card-wrap",
-					scrub: true,
-					pin: waWrapper,
-					pinSpacing: false,
-					markers: false,
-					// id: waIndex + 1
-			}});
-		});
+	const a1_card_ani_count = document.querySelectorAll(".a1_card_trigger_elm").length;
+	const a1_card_ani_area = document.querySelector(".nm-about-1-right");
+
+	if (a1_card_ani_area) {
+		a1_card_ani_area.style.height = `${a1_card_ani_count * 50}vh`; 
 	}
+
+	gsap.to(".nm-about-1-right-pin", {
+		scrollTrigger: {
+			trigger: ".nm-about-1-right",
+			start: "top 15%", 
+			end: "bottom 80%", 
+			pin: ".nm-about-1-right-pin", 
+			pinSpacing: false,
+			markers: true
+		}
+	});
+
+	var a1cardScrolling = gsap.timeline({
+		scrollTrigger: {
+			trigger: ".nm-about-1-right",
+			start: "top 15%",
+			end: "bottom bottom",
+			toggleActions: "play none none reverse",
+			scrub: true,
+			markers: false,
+		},
+	});
+
+	a1cardScrolling.to(".a1_card_trigger_elm:nth-child(2)", {
+		marginTop: "-210px",
+	});		
+	a1cardScrolling.to(".a1_card_trigger_elm:nth-child(3)", {
+		marginTop: "-190px",
+	});	
+	a1cardScrolling.to(".a1_card_trigger_elm:nth-child(3)", {
+		marginTop: "-353px",
+	});		
+	a1cardScrolling.to(".a1_card_trigger_elm:nth-child(2)", {
+		marginTop: "-304px",
+	},"<20%");	
+
+	
+
+
+	// if($(".a1_card_trigger").length) {
+	// 	const waCardsWrappers = gsap.utils.toArray(".a1_card_trigger_elm");
+	// 	const waCards = gsap.utils.toArray(".nm-about-1-car");
+	
+	// 	waCardsWrappers.forEach((waWrapper, waIndex) => {
+	// 	const waCard = waCards[waIndex];
+	// 	let waScale = 1,
+	// 		waRotation = 0;
+	
+	// 	if (waIndex !== waCards.length - 1) {
+	// 		waScale = 0.95 + 0.01 * waIndex;
+	// 		waRotation = -10;
+	// 	}
+	
+	// 		gsap.to(waCard, {
+	// 				scale: waScale,
+	// 				// rotationX: waRotation,
+	// 				transformOrigin: "top center",
+	// 				ease: "none",
+	// 				scrollTrigger: {
+	// 				trigger: waWrapper,
+	// 				start: "top " + (120 + 80 * waIndex),
+	// 				end: "bottom 300",
+	// 				endTrigger: ".a1_card_trigger",
+	// 				scrub: true,
+	// 				pin: waWrapper,
+	// 				pinSpacing: false,
+	// 				markers: false,
+	// 				// id: waIndex + 1
+	// 		}});
+	// 	});
+	// }
 	
 	gsap.to(".nm-about-1-left-content", {
 		scrollTrigger: {
 			trigger: ".nm-about-1-area",
 			start: "top 0%", 
-			end: "bottom 75%", 
+			end: "bottom 82%", 
 			pin: ".nm-about-1-left-content", 
 			pinSpacing: false,
 			markers: false
 		}
 	});
 
+
+	// var a1cardScrolling = gsap.timeline({
+	// 	scrollTrigger: {
+	// 		trigger: ".a1_card_trigger_elm_last",
+	// 		start: "top 40%",
+	// 		toggleActions: "play none none reverse",
+	// 		scrub: true,
+	// 		markers: true,
+	// 	},
+	// });
+
+	// a1cardScrolling.to(".a1_card_trigger_elm", {
+	// 	position: "absolute",
+	// 	bottom: "0",
+	// 	left: "0",
+	// 	scrub: 1,
+	// });
 	
 }
 
@@ -891,40 +953,58 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 */
 if (window.matchMedia("(min-width: 992px)").matches) { 
 
-	if($(".p2_sticky_trigger").length) {
+	if ($(".p2_sticky_trigger").length) {
 		const waCardsWrappers = gsap.utils.toArray(".p2_sticky_trigger_pin");
 		const waCards = gsap.utils.toArray(".p2_sticky_trigger_elm");
 	
 		waCardsWrappers.forEach((waWrapper, waIndex) => {
-		const waCard = waCards[waIndex];
-		let waScale = 1,
-			waRotation = 0;
+			const waCard = waCards[waIndex];
+			let waScale = 1,
+				waRotation = 0;
 	
-		if (waIndex !== waCards.length - 1) {
-			waScale = 0.90 + 0.01 * waIndex;
-			waRotation = -10;
-		}
+			if (waIndex !== waCards.length - 1) {
+				waScale = 0.70 + 0.01 * waIndex;
+				waRotation = -10;
 	
-			gsap.to(waCard, {
+				const nextWrapper = waCardsWrappers[waIndex + 1];
+	
+				gsap.to(waCard, {
 					scale: waScale,
 					rotationX: waRotation,
-					transformOrigin: "top center",
+					opacity: 0,
+					filter: "blur(11px)",
 					ease: "none",
 					scrollTrigger: {
+						trigger: nextWrapper,
+						start: "top center", 
+						end: "top top", 
+						scrub: true,
+						markers: false,
+					},
+				});
+			}
+	
+			// Base pin animation
+			gsap.to(waCard, {
+				transformOrigin: "top center",
+				ease: "none",
+				scrollTrigger: {
 					trigger: waWrapper,
-					start: "top " + (100 + 20 * waIndex),
-					end: "bottom 75.5%",
+					start: "top " + (200 + 0 * waIndex),
+					end: "bottom 76.5%",
+					// anticipatePin: 1, 
+					// pinType: "transform",
 					endTrigger: ".p2_sticky_trigger",
-					anticipatePin: 1, // smooth pin effect
-					pinType: "transform", // smoother for modern layouts
 					scrub: true,
 					pin: waWrapper,
 					pinSpacing: false,
 					markers: false,
-					// id: waIndex + 1
-			}});
+				},
+			});
 		});
 	}
+	
+	
 	
 	gsap.to(".nm-portfolio-2-content", {
 		scrollTrigger: {
@@ -934,7 +1014,7 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 		  pin: ".nm-portfolio-2-content", 
 		  pinSpacing: false,
 		//   anticipatePin: .1, 
-		  pinType: "transform", 
+		//   pinType: "transform", 
 		  markers: false
 		}
 	  });
