@@ -180,13 +180,13 @@
     }
     
     &-slider {
-     
-        .swiper-wrapper {
-
-            @media #{$md,$xs} {
+            @media #{$lg,$md,$xs} {
                 overflow: hidden;
             }
           
+        .swiper-wrapper {
+
+
             @media #{$over,$xxxl,$xxl,$xl} {
                 .swiper-slide {
                     transition: all .6s var(--nm-cube-1);

@@ -58,6 +58,9 @@
 .nm-about-1 {
 
     &-area {
+        @media #{$lg,$md,$xs} {
+            padding-bottom: 100px;
+        }
         .nm-about-1-line:is(.has-v2) {
             bottom: -9px;
         }

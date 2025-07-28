@@ -146,6 +146,8 @@ $(document).on('keydown', function(event) {
 	windows-load-function
 */
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
 	window.addEventListener('load', function(){
 
@@ -154,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		/* 
 			preloader-function
 		*/
-		let preloader = document.querySelector(".tn-preloader");
+		let preloader = document.querySelector(".nm-preloader");
 		if (preloader) {
 			preloader.classList.add("preloaded");
 			setTimeout(function () {
@@ -566,7 +568,7 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 			end: "bottom 80%", 
 			pin: ".nm-about-1-right-pin", 
 			pinSpacing: false,
-			markers: true
+			markers: false
 		}
 	});
 
@@ -585,7 +587,7 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 		marginTop: "-210px",
 	});		
 	a1cardScrolling.to(".a1_card_trigger_elm:nth-child(3)", {
-		marginTop: "-190px",
+		marginTop: "-210px",
 	});	
 	a1cardScrolling.to(".a1_card_trigger_elm:nth-child(3)", {
 		marginTop: "-353px",
@@ -594,41 +596,6 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 		marginTop: "-304px",
 	},"<20%");	
 
-	
-
-
-	// if($(".a1_card_trigger").length) {
-	// 	const waCardsWrappers = gsap.utils.toArray(".a1_card_trigger_elm");
-	// 	const waCards = gsap.utils.toArray(".nm-about-1-car");
-	
-	// 	waCardsWrappers.forEach((waWrapper, waIndex) => {
-	// 	const waCard = waCards[waIndex];
-	// 	let waScale = 1,
-	// 		waRotation = 0;
-	
-	// 	if (waIndex !== waCards.length - 1) {
-	// 		waScale = 0.95 + 0.01 * waIndex;
-	// 		waRotation = -10;
-	// 	}
-	
-	// 		gsap.to(waCard, {
-	// 				scale: waScale,
-	// 				// rotationX: waRotation,
-	// 				transformOrigin: "top center",
-	// 				ease: "none",
-	// 				scrollTrigger: {
-	// 				trigger: waWrapper,
-	// 				start: "top " + (120 + 80 * waIndex),
-	// 				end: "bottom 300",
-	// 				endTrigger: ".a1_card_trigger",
-	// 				scrub: true,
-	// 				pin: waWrapper,
-	// 				pinSpacing: false,
-	// 				markers: false,
-	// 				// id: waIndex + 1
-	// 		}});
-	// 	});
-	// }
 	
 	gsap.to(".nm-about-1-left-content", {
 		scrollTrigger: {
@@ -642,22 +609,7 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 	});
 
 
-	// var a1cardScrolling = gsap.timeline({
-	// 	scrollTrigger: {
-	// 		trigger: ".a1_card_trigger_elm_last",
-	// 		start: "top 40%",
-	// 		toggleActions: "play none none reverse",
-	// 		scrub: true,
-	// 		markers: true,
-	// 	},
-	// });
 
-	// a1cardScrolling.to(".a1_card_trigger_elm", {
-	// 	position: "absolute",
-	// 	bottom: "0",
-	// 	left: "0",
-	// 	scrub: 1,
-	// });
 	
 }
 
@@ -991,7 +943,7 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 				scrollTrigger: {
 					trigger: waWrapper,
 					start: "top " + (200 + 0 * waIndex),
-					end: "bottom 76.5%",
+					end: "bottom 78.5%",
 					// anticipatePin: 1, 
 					// pinType: "transform",
 					endTrigger: ".p2_sticky_trigger",
@@ -1589,7 +1541,7 @@ if ($(".wa_marquee_top_down").length) {
 	const waMarqueeTopDownHeight = waMarqueeTopDown.offsetHeight;
 	
 	gsap.to(".wa_marquee_top_down", {
-	  y: `${waMarqueeTopDownHeight}px`, // Top to Bottom scroll
+	  y: `${waMarqueeTopDownHeight}px`, 
 	  ease: "none",
 	  duration: 20,
 	  repeat: -1,
