@@ -355,8 +355,9 @@
             left: 0;
             width: 100%;
             height: 3px;
-            background: var(--nm-clr-gd-3);
+            background-size: 300% 100%;
             border-radius: 10px;
+            background-image: var(--nm-clr-gd-3);
             animation: rotateGradient 3s linear infinite;
         }
 
@@ -377,8 +378,13 @@
 
                 &:hover {
                     > a {
-                        color: #fff;
+                        color: var(--nm-clr-pr-3);
                     }
+                }
+
+                .dropdown-menu {
+                    box-shadow: 1.782px 0.908px 32.2px 2.8px rgb(220 62 240 / 15%);
+                    border: 1px solid rgb(220 62 240 / 20%);
                 }
 
                 
@@ -391,40 +397,15 @@
 
 @keyframes rotateGradient {
     0% {
-        background: linear-gradient( 0deg, rgb(220,62,240) 0%, rgb(53,88,254) 51%, rgb(75,175,255) 100%);
-    }
-    10% {
-        background: linear-gradient( 36deg, rgb(220,62,240) 0%, rgb(53,88,254) 51%, rgb(75,175,255) 100%);
-    }
-    20% {
-        background: linear-gradient( 72deg, rgb(220,62,240) 0%, rgb(53,88,254) 51%, rgb(75,175,255) 100%);
-    }
-    30% {
-        background: linear-gradient( 108deg, rgb(220,62,240) 0%, rgb(53,88,254) 51%, rgb(75,175,255) 100%);
-    }
-    40% {
-        background: linear-gradient( 144deg, rgb(220,62,240) 0%, rgb(53,88,254) 51%, rgb(75,175,255) 100%);
+        background-position-x: 0%;
     }
     50% {
-        background: linear-gradient( 180deg, rgb(220,62,240) 0%, rgb(53,88,254) 51%, rgb(75,175,255) 100%);
-    }
-    60% {
-        background: linear-gradient( 216deg, rgb(220,62,240) 0%, rgb(53,88,254) 51%, rgb(75,175,255) 100%);
-    }
-    70% {
-        background: linear-gradient( 252deg, rgb(220,62,240) 0%, rgb(53,88,254) 51%, rgb(75,175,255) 100%);
-    }
-    80% {
-        background: linear-gradient( 288deg, rgb(220,62,240) 0%, rgb(53,88,254) 51%, rgb(75,175,255) 100%);
-    }
-    90% {
-        background: linear-gradient( 324deg, rgb(220,62,240) 0%, rgb(53,88,254) 51%, rgb(75,175,255) 100%);
+        background-position-x: 100%;
     }
     100% {
-        background: linear-gradient( 360deg, rgb(220,62,240) 0%, rgb(53,88,254) 51%, rgb(75,175,255) 100%);
+        background-position-x: 0%;
     }
-    
-  }
+}
   
 /* 
     header-3-end

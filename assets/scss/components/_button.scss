@@ -253,9 +253,51 @@
     &:is(.has-v3) {
         .icon {
             background: var(--nm-clr-gd-3);
+            
+            position: relative;
+            z-index: 1;
+
+            &::after {
+                content: "";
+                background: var(--nm-clr-gd-3);
+                background-size: 500% 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                opacity: 0;
+                transition: all .3s var(--nm-cube-1);
+                animation: prBtn3kf 3s linear infinite;
+            }
+        }
+
+        &:hover {
+            background: #fff;
+            color: #000;
+            .icon {
+                color:#fff;
+                &::after {
+                    opacity: 1;
+                }
+            }
         }
     }
     
+}
+
+
+@keyframes prBtn3kf {
+    0% {
+        background-position-x: 0%;
+    }
+    50% {
+        background-position-x: 100%;
+    }
+    100% {
+        background-position-x: 0%;
+    }
 }
 
 .nm-hero-1-plybtn {

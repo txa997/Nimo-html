@@ -807,6 +807,8 @@ ScrollTrigger.create({
 	onEnter: () => {
 	  const teamSlider = document.querySelector(".nm-team-1-slider");
   
+	  if (!teamSlider) return; 
+  
 	  teamSlider.classList.add("active");
   
 	  setTimeout(() => {
@@ -815,7 +817,7 @@ ScrollTrigger.create({
 	},
 	once: true
 });
-  
+
 if ($('.nm-team-1-member').length) { 
 	$(document).on('click', '.nm-team-1-member .toggle-btn', function () {
 		const parent = $(this).closest('.nm-team-1-member');
@@ -1007,8 +1009,33 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 		}
 	});
 }
+/* 
+	hero-3-pin
+*/
+if (window.matchMedia("(min-width: 1200px)").matches) { 
+
+	gsap.to(".nm-hero-3-area", {
+		scrollTrigger: {
+			trigger: ".nm-hero-3-area",
+			start: "top top", 
+			pin: ".nm-hero-3-area", 
+			pinSpacing: false,
+			markers: false
+		}
+	});
+}
 
 
+
+const wrapper = document.querySelector('.cd-words-wrapper');
+const title = document.querySelector('.nm-hero-3-title');
+
+if (wrapper && title) {
+  const hasWords = wrapper.querySelectorAll('b').length > 0;
+  if (!hasWords) {
+	title.classList.add('has-no-words');
+  }
+}
 
 /* 
 	button-animation
