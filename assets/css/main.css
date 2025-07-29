@@ -1304,7 +1304,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   transition: opacity 0.3s, color 0.4s;
 }
 .wa-cursor::before {
-  background: var(--kk-clr-pr-1);
+  background: var(--nm-clr-pr-1);
 }
 .wa-cursor:before {
   content: "";
@@ -1322,6 +1322,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
+  border: 1px solid var(--nm-clr-pr-1);
   -webkit-transition: opacity 0.1s, -webkit-transform 0.3s ease-in-out;
   transition: opacity 0.1s, -webkit-transform 0.3s ease-in-out;
   -o-transition: opacity 0.1s, -o-transform 0.3s ease-in-out;
@@ -1407,9 +1408,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   -ms-transform: scale(1);
   -o-transform: scale(1);
   transform: scale(1);
-  animation: waCursorKf 5s linear infinite;
   background: transparent;
-  border: 1px dashed var(--kk-clr-pr-1);
 }
 .wa-cursor:is(.-text):before {
   background: #000;
@@ -1477,14 +1476,6 @@ input:focus::placeholder, textarea:focus::placeholder {
 @supports (mix-blend-mode: exclusion) {
   .wa-cursor.-exclusion:before, .wa-cursor.-opaque:before {
     background: white;
-  }
-}
-@keyframes waCursorKf {
-  0% {
-    transform: scale(1) rotate(0deg);
-  }
-  100% {
-    transform: scale(1) rotate(360deg);
   }
 }
 /*
@@ -5772,6 +5763,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   border-radius: 20px;
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .nm-about-1-card {
@@ -10362,6 +10354,21 @@ input:focus::placeholder, textarea:focus::placeholder {
   background-color: #0e0e0e;
   opacity: 0.9;
   z-index: -1;
+}
+.nm-home-2 .wa-cursor::before {
+  background: #fff;
+  border-color: #fff;
+}
+.nm-home-2 .wa-cursor:is(.-pointer)::before {
+  background: transparent;
+}
+
+.nm-home-3 .wa-cursor::before {
+  background: var(--nm-clr-gd-3);
+  border-color: var(--nm-clr-pr-3);
+}
+.nm-home-3 .wa-cursor:is(.-pointer)::before {
+  background: transparent;
 }
 
 .home-3-bg {

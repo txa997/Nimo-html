@@ -19,6 +19,34 @@
         opacity: 0.9;
         z-index: -1;
     }
+
+    .wa-cursor {
+        &::before {
+            background: #fff;
+            border-color: #fff;
+        }
+
+        &:is(.-pointer) {
+            &::before {
+                background: transparent;
+            }
+        }
+    }
+}
+
+.nm-home-3 {
+    .wa-cursor {
+        &::before {
+            background: var(--nm-clr-gd-3);
+            border-color: var(--nm-clr-pr-3);
+        }
+
+        &:is(.-pointer) {
+            &::before {
+                background: transparent;
+            }
+        }
+    }
 }
 
 .home-3-bg {

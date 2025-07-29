@@ -16,7 +16,7 @@
 	transition: opacity 0.3s, color 0.4s;
 
 	&::before{
-		background: var(--kk-clr-pr-1);
+		background: var(--nm-clr-pr-1);
 	}
 
     &:before {
@@ -35,6 +35,7 @@
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
+        border: 1px solid var(--nm-clr-pr-1);
         -webkit-transition: opacity 0.1s, -webkit-transform 0.3s ease-in-out;
         transition: opacity 0.1s, -webkit-transform 0.3s ease-in-out;
         -o-transition: opacity 0.1s, -o-transform 0.3s ease-in-out;
@@ -134,9 +135,7 @@
             -ms-transform: scale(1);
             -o-transform: scale(1);
             transform: scale(1);
-            animation: waCursorKf 5s linear infinite;
             background: transparent;
-            border: 1px dashed var(--kk-clr-pr-1);
         }
     }
     
@@ -236,11 +235,3 @@
 	}
 }
 
-@keyframes waCursorKf {
-    0% {
-        transform: scale(1) rotate(0deg);
-    }
-    100% {
-        transform: scale(1) rotate(360deg);
-    }
-}
