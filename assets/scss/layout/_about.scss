@@ -223,6 +223,13 @@
     }
 
     &-left {
+        padding-bottom: 80px;
+        min-height: 1180px;
+
+        @media #{$xs} {
+            min-height: auto;
+        }
+
         &-bg-shape {
             width: 62%;
             position: absolute;
@@ -253,28 +260,29 @@
                 }
             }
         }
+
+        &-content {
+            position: sticky;
+            top: 80px;
+        }
     }
 
     &-card-wrap {
-        display: grid;
+        display: flex;
+        flex-direction: column;
         gap: 50px;
         width: 100%;
-        padding-top: 100px;
+        padding-top: 20px;
+        padding-bottom: 80px;
+        align-self: start;
 
         .a1_card_trigger_elm {
-            // position: absolute;
+            position: sticky;
+            top: 100px;
 
-            // &:nth-child(1) {
-
-            // }
-            // &:nth-child(2) {
-            //     top: 90px;
-            //     z-index: 2;
-            // }
-            // &:nth-child(3) {
-            //     top: 180px;
-            //     z-index: 2;
-            // }
+            &:nth-child(2) {
+                top: 190px;
+            }
         }
     }
 

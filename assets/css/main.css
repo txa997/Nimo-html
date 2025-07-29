@@ -5710,6 +5710,15 @@ input:focus::placeholder, textarea:focus::placeholder {
 .nm-about-1-author-content .author-social .link-elm:hover {
   color: var(--nm-clr-pr-1);
 }
+.nm-about-1-left {
+  padding-bottom: 80px;
+  min-height: 1180px;
+}
+@media (max-width: 767px) {
+  .nm-about-1-left {
+    min-height: auto;
+  }
+}
 .nm-about-1-left-bg-shape {
   width: 62%;
   position: absolute;
@@ -5736,11 +5745,25 @@ input:focus::placeholder, textarea:focus::placeholder {
 .nm-about-1-left .inner-div .nm-pr-btn-1 .text {
   color: #000;
 }
+.nm-about-1-left-content {
+  position: sticky;
+  top: 80px;
+}
 .nm-about-1-card-wrap {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 50px;
   width: 100%;
-  padding-top: 100px;
+  padding-top: 20px;
+  padding-bottom: 80px;
+  align-self: start;
+}
+.nm-about-1-card-wrap .a1_card_trigger_elm {
+  position: sticky;
+  top: 100px;
+}
+.nm-about-1-card-wrap .a1_card_trigger_elm:nth-child(2) {
+  top: 190px;
 }
 .nm-about-1-card {
   background: linear-gradient(180deg, rgb(45, 45, 45) 0%, rgb(0, 0, 0) 100%);

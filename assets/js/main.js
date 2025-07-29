@@ -552,66 +552,66 @@ const paths = document.querySelectorAll('.nm-Firefly-ani-svg path');
 /* 
 	about-1-sticky-card
 */
-if (window.matchMedia("(min-width: 1200px)").matches) { 
+// if (window.matchMedia("(min-width: 1200px)").matches) { 
 
-	const a1_card_ani_count = document.querySelectorAll(".a1_card_trigger_elm").length;
-	const a1_card_ani_area = document.querySelector(".nm-about-1-right");
+// 	const a1_card_ani_count = document.querySelectorAll(".a1_card_trigger_elm").length;
+// 	const a1_card_ani_area = document.querySelector(".nm-about-1-right");
 
-	if (a1_card_ani_area) {
-		a1_card_ani_area.style.height = `${a1_card_ani_count * 50}vh`; 
-	}
+// 	if (a1_card_ani_area) {
+// 		a1_card_ani_area.style.height = `${a1_card_ani_count * 50}vh`; 
+// 	}
 
-	gsap.to(".nm-about-1-right-pin", {
-		scrollTrigger: {
-			trigger: ".nm-about-1-right",
-			start: "top 15%", 
-			end: "bottom 80%", 
-			pin: ".nm-about-1-right-pin", 
-			pinSpacing: false,
-			markers: false
-		}
-	});
+// 	gsap.to(".nm-about-1-right-pin", {
+// 		scrollTrigger: {
+// 			trigger: ".nm-about-1-right",
+// 			start: "top 15%", 
+// 			end: "bottom 80%", 
+// 			pin: ".nm-about-1-right-pin", 
+// 			pinSpacing: false,
+// 			markers: false
+// 		}
+// 	});
 
-	var a1cardScrolling = gsap.timeline({
-		scrollTrigger: {
-			trigger: ".nm-about-1-right",
-			start: "top 15%",
-			end: "bottom bottom",
-			toggleActions: "play none none reverse",
-			scrub: true,
-			markers: false,
-		},
-	});
+// 	var a1cardScrolling = gsap.timeline({
+// 		scrollTrigger: {
+// 			trigger: ".nm-about-1-right",
+// 			start: "top 15%",
+// 			end: "bottom bottom",
+// 			toggleActions: "play none none reverse",
+// 			scrub: true,
+// 			markers: false,
+// 		},
+// 	});
 
-	a1cardScrolling.to(".a1_card_trigger_elm:nth-child(2)", {
-		marginTop: "-210px",
-	});		
-	a1cardScrolling.to(".a1_card_trigger_elm:nth-child(3)", {
-		marginTop: "-210px",
-	});	
-	a1cardScrolling.to(".a1_card_trigger_elm:nth-child(3)", {
-		marginTop: "-353px",
-	});		
-	a1cardScrolling.to(".a1_card_trigger_elm:nth-child(2)", {
-		marginTop: "-304px",
-	},"<20%");	
-
-	
-	gsap.to(".nm-about-1-left-content", {
-		scrollTrigger: {
-			trigger: ".nm-about-1-area",
-			start: "top 0%", 
-			end: "bottom 82%", 
-			pin: ".nm-about-1-left-content", 
-			pinSpacing: false,
-			markers: false
-		}
-	});
-
-
+// 	a1cardScrolling.to(".a1_card_trigger_elm:nth-child(2)", {
+// 		marginTop: "-210px",
+// 	});		
+// 	a1cardScrolling.to(".a1_card_trigger_elm:nth-child(3)", {
+// 		marginTop: "-210px",
+// 	});	
+// 	a1cardScrolling.to(".a1_card_trigger_elm:nth-child(3)", {
+// 		marginTop: "-353px",
+// 	});		
+// 	a1cardScrolling.to(".a1_card_trigger_elm:nth-child(2)", {
+// 		marginTop: "-304px",
+// 	},"<20%");	
 
 	
-}
+// 	gsap.to(".nm-about-1-left-content", {
+// 		scrollTrigger: {
+// 			trigger: ".nm-about-1-area",
+// 			start: "top 0%", 
+// 			end: "bottom 82%", 
+// 			pin: ".nm-about-1-left-content", 
+// 			pinSpacing: false,
+// 			markers: false
+// 		}
+// 	});
+
+
+
+	
+// }
 
 
 /* 
