@@ -2286,7 +2286,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   font-family: var(--nm-font-1);
   font-weight: 900;
   font-size: 60px;
-  background-image: linear-gradient(90deg, rgb(214, 243, 69) 0%, rgb(255, 255, 255) 50%, rgb(214, 243, 69) 100%);
+  background-image: linear-gradient(90deg, var(--nm-clr-pr-1) 0%, rgb(255, 255, 255) 50%, var(--nm-clr-pr-1) 100%);
   background-repeat: no-repeat;
   background-size: 600% 100%;
   background-clip: text;
@@ -7131,7 +7131,7 @@ input:focus::placeholder, textarea:focus::placeholder {
     portfolio-2-start
 */
 .nm-portfolio-2-area {
-  background-color: rgba(10, 10, 10, 0.8);
+  background-color: rgb(10, 10, 10);
   border-radius: 80px 80px 0 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -9091,7 +9091,7 @@ input:focus::placeholder, textarea:focus::placeholder {
     trial-2-start
 */
 .nm-trial-2-area {
-  background-color: rgba(10, 10, 10, 0.8);
+  background-color: rgb(10, 10, 10);
   border-radius: 80px 80px 0 0;
 }
 .nm-trial-2-area::after {
@@ -10228,8 +10228,8 @@ input:focus::placeholder, textarea:focus::placeholder {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #000000;
-  opacity: 0.8;
+  background-color: #0e0e0e;
+  opacity: 0.9;
   z-index: -1;
 }
 
@@ -10247,8 +10247,8 @@ input:focus::placeholder, textarea:focus::placeholder {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #000000;
-  opacity: 0.8;
+  background-color: #0e0e0e;
+  opacity: 0.9;
   z-index: -1;
 }
 

@@ -32,7 +32,7 @@
 		font-family: var(--nm-font-1);
 		font-weight: 900;
 		font-size: 60px;
-		background-image:  linear-gradient(90deg,rgba(214, 243, 69, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(214, 243, 69, 1) 100%);
+		background-image:  linear-gradient(90deg, var(--nm-clr-pr-1) 0%, rgba(255, 255, 255, 1) 50%, var(--nm-clr-pr-1) 100%);
 		background-repeat: no-repeat;
 		background-size: 600% 100%; // Initially 0%
 		background-clip: text;

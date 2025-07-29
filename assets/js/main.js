@@ -973,6 +973,42 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 	
 }
 
+/* 
+	choose-2-pin
+*/
+
+if (window.matchMedia("(min-width: 1200px)").matches) { 
+
+	gsap.to(".nm-choose-2-area", {
+		scrollTrigger: {
+			trigger: ".nm-portfolio-2-area",
+			start: "top 100%", 
+			end: "bottom bottom", 
+			pin: ".nm-choose-2-area", 
+			pinSpacing: false,
+			markers: false
+		}
+	});
+}
+
+/* 
+	pricing-2-pin
+*/
+if (window.matchMedia("(min-width: 1200px)").matches) { 
+
+	gsap.to(".nm-price-2-area", {
+		scrollTrigger: {
+			trigger: ".nm-trial-2-area",
+			start: "top 100%", 
+			end: "bottom bottom", 
+			pin: ".nm-price-2-area", 
+			pinSpacing: false,
+			markers: false
+		}
+	});
+}
+
+
 
 /* 
 	button-animation
