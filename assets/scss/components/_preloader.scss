@@ -66,6 +66,17 @@ background-position-x: 0;
 	}
 }
 
+
+.nm-home-3 {
+	.nm-preloader {
+		.nm-preloader-text {
+			background: var(--nm-clr-gd-3);
+			background-clip: text;
+			background-size: 600% 100%; // Initially 0%
+		}
+	}
+}
+
 /* 
 	preloader-css-end
 */

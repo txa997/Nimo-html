@@ -2348,6 +2348,12 @@ input:focus::placeholder, textarea:focus::placeholder {
     background-position-x: 0;
   }
 }
+.nm-home-3 .nm-preloader .nm-preloader-text {
+  background: var(--nm-clr-gd-3);
+  background-clip: text;
+  background-size: 600% 100%;
+}
+
 /* 
 	preloader-css-end
 */
@@ -7840,7 +7846,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   border: 2px solid #fff;
   width: 80%;
   height: 80%;
-  z-index: 1;
+  z-index: 3;
   border-radius: 30px;
   display: flex;
   align-items: end;
@@ -7985,18 +7991,20 @@ input:focus::placeholder, textarea:focus::placeholder {
     testimonial-3-start
 */
 .nm-testimonial-2-img-slider-single:is(.has-testimonial-3)::after {
-  display: none;
+  z-index: 1;
+  opacity: 0.8;
 }
 
 .nm-testimonial-3-img-masking {
-  mask-image: url("../img/testimonial/t3-mask-shape.png");
+  mask-image: url("../img/testimonial/t3-mask-shape-2.png");
   mask-size: 100% 100%;
   mask-repeat: no-repeat;
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 80%;
+  height: 90%;
+  z-index: 2;
 }
 
 .nm-testimonial-3-img-clr {
