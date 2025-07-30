@@ -180,8 +180,11 @@
             transition: all .5s var(--nm-cube-1);
 
             i {
-                // transition: var(--nm-cube-1);
-                // transform: scaleY(0);
+                 animation: blink 2.4s infinite;
+                 transform-origin: 50% 50%;
+            }
+            span {
+                transition: unset;
             }
 
             &:hover {
@@ -409,6 +412,14 @@
             border-radius: 50%;
             transition: all .5s var(--nm-cube-1);
 
+            span {
+                transition: unset;
+            } 
+
+            i {
+                 animation: blink 2.4s infinite;
+                 transform-origin: 50% 50%;
+            }
 
             &:hover {
                 // background: var(--nm-clr-pr-1);

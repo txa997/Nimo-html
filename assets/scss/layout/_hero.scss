@@ -1310,3 +1310,31 @@
 /* 
     hero-3-end
 */
+  
+/* 
+    hero-4-start
+*/
+.nm-hero-2-area {
+    &:is(.has-hero-4) {
+
+
+        .nm-hero-2-marquee-2 {
+            z-index: 1;
+
+            .nm-hero-2-marquee-wrap {
+                background: url("../img/hero/text-img-2.png");
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+
+            .nm-hero-2-marquee-text {
+
+            }
+        }
+    }
+}
+/* 
+    hero-4-end
+*/

@@ -211,7 +211,19 @@
   }
 }
 
+@keyframes blink {
 
+  90% {
+    transform: none;
+    animation-timing-function: ease-in;
+  }
+  93% {
+    transform: translateY(15px) scaleY(0)
+  }
+  100% {
+    animation-timing-function: ease-out;
+  }
+}
 /* 
     wow-plus-end
 */

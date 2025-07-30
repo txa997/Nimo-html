@@ -2536,6 +2536,18 @@ input:focus::placeholder, textarea:focus::placeholder {
     transform: rotate(0deg);
   }
 }
+@keyframes blink {
+  90% {
+    transform: none;
+    animation-timing-function: ease-in;
+  }
+  93% {
+    transform: translateY(15px) scaleY(0);
+  }
+  100% {
+    animation-timing-function: ease-out;
+  }
+}
 /* 
     wow-plus-end
 */
@@ -5434,6 +5446,22 @@ input:focus::placeholder, textarea:focus::placeholder {
     hero-3-end
 */
 /* 
+    hero-4-start
+*/
+.nm-hero-2-area:is(.has-hero-4) .nm-hero-2-marquee-2 {
+  z-index: 1;
+}
+.nm-hero-2-area:is(.has-hero-4) .nm-hero-2-marquee-2 .nm-hero-2-marquee-wrap {
+  background: url("../img/hero/text-img-2.png");
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+/* 
+    hero-4-end
+*/
+/* 
     partner-1-start
 */
 .nm-partner-1-area {
@@ -7302,6 +7330,13 @@ input:focus::placeholder, textarea:focus::placeholder {
   border-radius: 50%;
   transition: all 0.5s var(--nm-cube-1);
 }
+.nm-portfolio-1-card .card-btn i {
+  animation: blink 2.4s infinite;
+  transform-origin: 50% 50%;
+}
+.nm-portfolio-1-card .card-btn span {
+  transition: unset;
+}
 .nm-portfolio-1-card .card-btn:hover {
   background: var(--nm-clr-pr-1);
   color: #000;
@@ -7505,6 +7540,13 @@ input:focus::placeholder, textarea:focus::placeholder {
   color: #fff;
   border-radius: 50%;
   transition: all 0.5s var(--nm-cube-1);
+}
+.nm-portfolio-2-card .card-btn span {
+  transition: unset;
+}
+.nm-portfolio-2-card .card-btn i {
+  animation: blink 2.4s infinite;
+  transform-origin: 50% 50%;
 }
 .nm-portfolio-2-card .card-btn:hover {
   color: #fff;
@@ -9338,6 +9380,13 @@ input:focus::placeholder, textarea:focus::placeholder {
   font-size: 50px;
   border-radius: 50%;
   transition: all 0.5s var(--nm-cube-1);
+}
+.nm-blog-1-item .item-img .card-btn span {
+  transition: unset;
+}
+.nm-blog-1-item .item-img .card-btn i {
+  animation: blink 2.4s infinite;
+  transform-origin: 50% 50%;
 }
 .nm-blog-1-item .item-img .card-btn:hover {
   background: var(--nm-clr-pr-1);

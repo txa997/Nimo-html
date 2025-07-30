@@ -124,6 +124,15 @@
                 border-radius: 50%;
                 transition: all .5s var(--nm-cube-1);
 
+                span {
+                    transition: unset;
+                }
+
+                i {
+                    animation: blink 2.4s infinite;
+                    transform-origin: 50% 50%;
+                }
+
                 &:hover {
                     background: var(--nm-clr-pr-1);
                     color: #000;
