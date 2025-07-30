@@ -3,10 +3,37 @@
 */
 .nm-cta-2 {
     &-area {
+        margin-top: -10vh;
+    }
+
+    &-wrap-line-1 {
+        width: 100%;
+        height: 2px;
+        background: #494949;
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        transform: rotate(-.04deg);
+    }
+
+    &-wrap-line-2 {
+        width: 46%;
+        height: 2px;
+        background: #494949;
+        position: absolute;
+        bottom: 64px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+
+    &-wrap {
         padding-top: 145px;
         padding-bottom: 145px;
-        margin-top: -10vh;
-        
+        mask-image: url("../img/cta/cta-2-mask-shape.png");
+        mask-repeat: no-repeat;
+        mask-size: 100% 100%;
+
         &::after {
             content: "";
             position: absolute;

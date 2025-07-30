@@ -436,14 +436,10 @@
         }
     }
   
-    &:is(.kk-header-1-area) {
+    &:is(.nm-header-1-area) {
+        top: 55px;
         &:is(.wa_sticky_show) {
-            top: -39px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-
-            @media #{$xs} {
-                top: 0px;
-            }
+            top: 10px;
         }
     }  
     &:is(.kk-header-2-area) {

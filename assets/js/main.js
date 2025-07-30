@@ -467,6 +467,7 @@ gsap.utils.toArray('.nm-subtitle-2').forEach(card => {
 */
 gsap.utils.toArray('.wa_parallax_shape_2').forEach((item) => {
 	gsap.from(item, {
+	  y: 100,
 	  opacity: 0,
 	  scrollTrigger: {
 		trigger: item,
@@ -835,20 +836,31 @@ if ($('.nm-team-1-member').length) {
 
 /* 
 	faqs-1-contact-form-sticky
-*/
-if (window.matchMedia("(min-width: 1400px)").matches) { 
 
-	gsap.to(".nm-faqs-1-contact", {
-		scrollTrigger: {
-			trigger: ".nm-faqs-1-area",
-			start: "top 10%", 
-			end: "bottom bottom", 
-			pin: ".nm-faqs-1-contact", 
-			pinSpacing: false,
-			markers: false
-		}
-	});
+
+*/
+
+if ($(".nm-faqs-1-contact-pin").length) { 
+	if (window.matchMedia("(min-width: 1200px)").matches) { 
+
+		gsap.to(".nm-faqs-1-contact-pin", {
+			scrollTrigger: {
+				trigger: ".nm-faqs-1-wrap",
+				start: "top 10%", 
+				end: () => {
+					const rightHeight = document.querySelector(".nm-faqs-1-right").offsetHeight;
+					const leftHeight = document.querySelector(".nm-faqs-1-contact").offsetHeight;
+					return "+=" + (rightHeight - leftHeight);  
+				},
+				pin: ".nm-faqs-1-contact-pin", 
+				pinSpacing: false,
+				markers: false
+			}
+		});
+	}
 }
+
+
 
 /* 
 	blog-1-hover-active-class
@@ -993,6 +1005,10 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 	});
 }
 
+
+
+
+
 /* 
 	pricing-2-pin
 */
@@ -1002,13 +1018,29 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 		scrollTrigger: {
 			trigger: ".nm-trial-2-area",
 			start: "top 100%", 
-			end: "bottom bottom", 
+			end: "bottom 60%", 
 			pin: ".nm-price-2-area", 
 			pinSpacing: false,
 			markers: false
 		}
 	});
 }
+/* 
+	hero-2-pin
+*/
+if (window.matchMedia("(min-width: 1200px)").matches) { 
+
+	gsap.to(".header-x-hero", {
+		scrollTrigger: {
+			trigger: ".header-x-hero",
+			start: "top top", 
+			pin: ".header-x-hero", 
+			pinSpacing: false,
+			markers: false
+		}
+	});
+}
+
 /* 
 	hero-3-pin
 */

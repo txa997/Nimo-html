@@ -495,3 +495,99 @@
 /* 
     testimonial-2-start
 */
+
+/* 
+    testimonial-3-start
+*/
+
+.nm-testimonial-2-img-slider-single {
+    &:is(.has-testimonial-3) {
+        &::after {
+            display: none;
+        }
+    }
+}
+
+.nm-testimonial-3-img-masking {
+    mask-image: url("../img/testimonial/t3-mask-shape.png");
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+
+
+}
+
+
+.nm-testimonial-3-img-clr {
+    width: 100%;
+    height: 100%;
+    background: var(--nm-clr-gd-3);
+    animation: t3imgClrKf 5s linear infinite;
+}
+
+@keyframes t3imgClrKf {
+    0% {
+        transform: rotate(0deg) scale(1.6);
+    }
+    20% {
+        transform: rotate(180deg) scale(1.6);
+    }
+
+    50% {
+        transform: rotate(-50deg) scale(1.6);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1.6);
+    }
+
+}
+
+.has-testimonial-3 {
+    &:is(.nm-testimonial-2-preview-slider) {
+        .nm-testimonial-2-preview-slider-single {
+            border-color: transparent;
+            position: relative;
+            z-index: 1;
+            img {
+                transform: scale(95%);
+                border-radius: 50%;
+            }
+            
+            &::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: var(--nm-clr-gd-3);
+                position: absolute;
+                top: 0px;
+                left: 0;
+                z-index: -1;
+                border-radius: 12px;
+                transform: scaleX(100.6%) scaleY(104%);
+                background-size: 200% 100%;
+                animation: a3rightShadow 1s linear infinite;
+                transition: all 0.4s var(--nm-cube-1);
+                opacity: 0;
+            }
+        }
+
+        .swiper-slide {
+            &:is(.swiper-slide-active) {
+                .nm-testimonial-2-preview-slider-single {
+                    border-color: transparent;
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+/* 
+    testimonial-3-end
+*/

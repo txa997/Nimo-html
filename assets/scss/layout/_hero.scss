@@ -775,6 +775,10 @@
         transition: all 1s var(--nm-cube-1);
         opacity: 0;
 
+        @media #{$xs} {
+            padding: 17px 20px;
+        }
+
         .title-1 {
             font-size: 30px;
             font-weight: 500;
@@ -962,9 +966,17 @@
 
 .nm-hero-3 {
     &-area {
-        background-color: #000;
+        background-color: rgb(0 0 0 / 92%);
         padding-top: 185px;
         padding-bottom: 270px;
+
+        @media #{$xs} {
+            padding-bottom: 180px;
+        }
+
+        .home-2-bg-noise {
+            z-index: -1;
+        }
     }
 
     &-bg-img {
@@ -975,8 +987,7 @@
         height: 100%;
         z-index: -3;
         opacity: 12%;
-        transform-origin: 50% 100%;
-        transform: rotateX(30deg) translate3d(0px, 104px, 118px) scaleZ(1.83);
+
 
 
         img {
@@ -1010,10 +1021,12 @@
     
     &-bg-texture {
         position: absolute;
-        top: 0;
+        top: 5%;
         left: 0;
         z-index: -2;
-        opacity: .4;
+        opacity: 0.3;
+        width: 100%;
+        text-align: center;
     }
     &-bg-clr-masking {
 
@@ -1021,8 +1034,8 @@
         mask-size: 100% 100%;
         mask-repeat: no-repeat;
 
-        width: 750px;
-        height: 650px;
+        width: 810px;
+        height: 700px;
         position: absolute;
         right: 0;
         bottom: 0;

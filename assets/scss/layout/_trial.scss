@@ -3,7 +3,7 @@
 */
 .nm-trial-2 {
     &-area {
-        background-color: rgba(10, 10, 10, 1);
+        background-color: #000;
         border-radius: 80px 80px 0 0;
 
         &::after {
@@ -196,4 +196,19 @@
 
 /* 
     trial-2-end
+*/
+/* 
+    trial-3-start
+*/
+.has-trial-3 {
+    &:is(.nm-trial-2-counter-single) {
+        .number {
+            background: var(--nm-clr-gd-3);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+/* 
+    trial-3-end
 */

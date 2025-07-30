@@ -171,7 +171,7 @@
 .nm-steps-2 {
 
     &-area {
-        background-color: rgba(10, 10, 10, 0.8);
+        background-color: rgb(10, 10, 10);
     }
 
     &-bg-shape {
@@ -356,6 +356,7 @@
         .line {
             width: 100%;
             opacity: .1;
+            max-width: 100%;
         }
     }
 
@@ -550,4 +551,53 @@
 
 /* 
     steps-2-end
+*/
+
+/* 
+    steps-3-start
+*/
+.nm-steps-2-card {
+    &:is(.has-steps-3) {
+        .date {
+            i {
+                background: var(--nm-clr-gd-3);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        .steps-list {
+            position: relative;
+            z-index: 2;
+            li {
+                position: relative;
+    
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background: var(--nm-clr-gd-3);
+                    position: absolute;
+                    top: 0px;
+                    left: 0;
+                    z-index: -1;
+                    border-radius: 12px;
+                    transform: scaleX(100.6%) scaleY(104%);
+                    background-size: 200% 100%;
+                    animation: a3rightShadow 1s linear infinite;
+                    transition: all 0.4s var(--nm-cube-1);
+                    opacity: 0;
+                }
+    
+                &:hover {
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+/* 
+    steps-3-end
 */

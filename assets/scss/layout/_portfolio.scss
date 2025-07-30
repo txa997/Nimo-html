@@ -284,14 +284,21 @@
         @media #{$xs} {
             border-radius: 30px 30px 0 0;
         }
+
+        .home-2-bg-noise {
+            border-radius: 80px 80px 0 0;
+            @media #{$xs} {
+                border-radius: 30px 30px 0 0;
+            }
+        }
     }
 
     &-big-title {
         font-size: 470px;
         font-weight: 900;
-        line-height: 0.72;
+        line-height: 1;
         position: absolute;
-        bottom: 0px;
+        bottom: -70px;
         left: 0;
         z-index: -1;
 
@@ -404,8 +411,8 @@
 
 
             &:hover {
-                background: var(--nm-clr-pr-1);
-                color: #000;
+                // background: var(--nm-clr-pr-1);
+                color: #fff;
             }
         }
 
@@ -514,4 +521,22 @@
 
 /* 
     portfolio-2-end
+*/
+/* 
+    portfolio-3-start
+*/
+.has-portfolio-3 {
+    &:is(.nm-portfolio-2-big-title) {
+        mix-blend-mode: plus-lighter;
+        
+        span {
+            background: var(--nm-clr-gd-3);
+            background-clip: text;
+            
+        }
+
+    }
+}
+/* 
+    portfolio-3-end
 */
