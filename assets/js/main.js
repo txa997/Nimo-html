@@ -1,5 +1,5 @@
 /*
-	Template Name: Barsi - Architecture & Interior HTML Template
+	Template Name: Nimo - Digital Agency HTML Template
 	Author: https://themexriver.com/
 	Version: 1.0
 */
@@ -301,7 +301,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 
 
-		// wa-clip-left-right
+		/* 
+			wa-clip-left-right
+		*/
 		gsap.utils.toArray(".wa_clip_left_right").forEach(element => {
 
 			let delayValue = $(element).attr("data-split-duration") || "1s";
@@ -325,7 +327,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 
 
-		// wa_clip_right_left
+		/* 
+			wa_clip_right_left
+		*/
 		gsap.utils.toArray(".wa_clip_right_left").forEach(element => {
 
 			let delayValue = $(element).attr("data-split-duration") || ".8s";
@@ -404,7 +408,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// subtitle-1-plus
+/* 
+	subtitle-1-plus
+*/
 gsap.utils.toArray(".nm-about-1-line-plus .plus").forEach(element => {
 	gsap.fromTo(
 		element,
@@ -421,7 +427,9 @@ gsap.utils.toArray(".nm-about-1-line-plus .plus").forEach(element => {
 	);
 });
 
-// subtitle-1-line
+/* 
+	subtitle-1-line
+*/
 gsap.utils.toArray(".nm-about-1-line-border").forEach(element => {
 	gsap.from(
 		element,
@@ -550,70 +558,6 @@ const paths = document.querySelectorAll('.nm-Firefly-ani-svg path');
 });
 
 
-/* 
-	about-1-sticky-card
-*/
-// if (window.matchMedia("(min-width: 1200px)").matches) { 
-
-// 	const a1_card_ani_count = document.querySelectorAll(".a1_card_trigger_elm").length;
-// 	const a1_card_ani_area = document.querySelector(".nm-about-1-right");
-
-// 	if (a1_card_ani_area) {
-// 		a1_card_ani_area.style.height = `${a1_card_ani_count * 50}vh`; 
-// 	}
-
-// 	gsap.to(".nm-about-1-right-pin", {
-// 		scrollTrigger: {
-// 			trigger: ".nm-about-1-right",
-// 			start: "top 15%", 
-// 			end: "bottom 80%", 
-// 			pin: ".nm-about-1-right-pin", 
-// 			pinSpacing: false,
-// 			markers: false
-// 		}
-// 	});
-
-// 	var a1cardScrolling = gsap.timeline({
-// 		scrollTrigger: {
-// 			trigger: ".nm-about-1-right",
-// 			start: "top 15%",
-// 			end: "bottom bottom",
-// 			toggleActions: "play none none reverse",
-// 			scrub: true,
-// 			markers: false,
-// 		},
-// 	});
-
-// 	a1cardScrolling.to(".a1_card_trigger_elm:nth-child(2)", {
-// 		marginTop: "-210px",
-// 	});		
-// 	a1cardScrolling.to(".a1_card_trigger_elm:nth-child(3)", {
-// 		marginTop: "-210px",
-// 	});	
-// 	a1cardScrolling.to(".a1_card_trigger_elm:nth-child(3)", {
-// 		marginTop: "-353px",
-// 	});		
-// 	a1cardScrolling.to(".a1_card_trigger_elm:nth-child(2)", {
-// 		marginTop: "-304px",
-// 	},"<20%");	
-
-	
-// 	gsap.to(".nm-about-1-left-content", {
-// 		scrollTrigger: {
-// 			trigger: ".nm-about-1-area",
-// 			start: "top 0%", 
-// 			end: "bottom 82%", 
-// 			pin: ".nm-about-1-left-content", 
-// 			pinSpacing: false,
-// 			markers: false
-// 		}
-// 	});
-
-
-
-	
-// }
-
 
 /* 
 	services-1-scrollbar
@@ -657,7 +601,7 @@ if ($(".handshake-video").length) {
 	);
   
 	observer.observe(video);
-  }
+}
 
 
 /* 
@@ -1059,15 +1003,6 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 
 
 
-const wrapper = document.querySelector('.cd-words-wrapper');
-const title = document.querySelector('.nm-hero-3-title');
-
-if (wrapper && title) {
-  const hasWords = wrapper.querySelectorAll('b').length > 0;
-  if (!hasWords) {
-	title.classList.add('has-no-words');
-  }
-}
 
 /* 
 	button-animation
@@ -1562,19 +1497,11 @@ if($(".wa-counter").length) {
     });
 }
 
+
+
 /* 
-	tilt-activation
-*/  
-//   $('.tilt_scale').tilt({
-//     maxTilt: 20,
-//     perspective: 1000,
-//     scale: 1.05,
-//     speed: 400,
-//     glare: true,
-//     maxGlare: 0.2
-//   });
-
-
+	hero-2-animation
+*/
 const $section = $('.header-x-hero');
 const $target = $('.tilt_scale');
 
@@ -1719,8 +1646,6 @@ if($('.nice-select').length) {
 $("[data-background]").each(function(){
 	$(this).css("background-image","url("+$(this).attr("data-background") + ") ")
 })
-
-
 
 
 
