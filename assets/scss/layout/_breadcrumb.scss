@@ -1,0 +1,123 @@
+
+/* 
+    breadcrumb-start
+*/
+
+
+.nm-breadcrumb {
+    &-area {
+        padding-top: 280px;
+        padding-bottom: 135px;
+
+    }
+
+
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        position: relative;
+        z-index: 1;
+        align-items: start;
+
+    }
+
+
+
+    &-title {
+        font-family: var(--nm-font-1);
+        font-size: 64px;
+        line-height: 1.066;
+        letter-spacing: -0.02em;
+        color: #fff;
+        font-weight: 700;
+        margin-bottom: 0;
+    
+        @media #{$xxl} {
+            font-size: 60px;
+        }
+    
+        @media #{$xl} {
+            font-size: 55px;
+        }
+    
+        @media #{$lg} {
+            font-size: 50px;
+        }
+    
+        @media #{$md} {
+            font-size: 45px;
+        }
+    
+        @media #{$xs} {
+            font-size: 35px;
+        }
+    
+        @media #{$sm} {
+            font-size: 40px;
+        }
+
+    }
+
+    &-list {
+        display: inline-block;
+
+        & a,& span {
+            font-weight: 500;
+            font-size: 18px;
+            font-family: var(--nm-font-1);
+            line-height: 28px;
+            color: #fff;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        & a {
+            padding-right: 30px;
+            position: relative;
+            transition: 300ms ;
+            margin-right: 5px;
+
+            &:hover {
+                color: var(--nm-clr-pr-1);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: 3px;
+                top: 13px;
+                transform: translateY(-50%);
+                background-image: url(../img/breadcrumb/icon.svg);
+                width: 18px;
+                height: 18px;
+            }
+        }
+        & span {
+            opacity: 60%;
+        }
+
+        &-shape {
+            position: absolute;
+            bottom: 220%;
+            right: 113%;
+            z-index: -1;
+
+            @media #{$lg,$md,$xs} {
+                display: none;
+            }
+        }
+    }
+
+
+        
+
+
+}
+
+
+
+/* 
+    breadcrumb-end
+*/
+

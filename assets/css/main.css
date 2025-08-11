@@ -10171,6 +10171,109 @@ input:focus::placeholder, textarea:focus::placeholder {
     price-3-end
 */
 /* 
+    breadcrumb-start
+*/
+.nm-breadcrumb-area {
+  padding-top: 280px;
+  padding-bottom: 135px;
+}
+.nm-breadcrumb-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: relative;
+  z-index: 1;
+  align-items: start;
+}
+.nm-breadcrumb-title {
+  font-family: var(--nm-font-1);
+  font-size: 64px;
+  line-height: 1.066;
+  letter-spacing: -0.02em;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+  .nm-breadcrumb-title {
+    font-size: 60px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .nm-breadcrumb-title {
+    font-size: 55px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .nm-breadcrumb-title {
+    font-size: 50px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .nm-breadcrumb-title {
+    font-size: 45px;
+  }
+}
+@media (max-width: 767px) {
+  .nm-breadcrumb-title {
+    font-size: 35px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .nm-breadcrumb-title {
+    font-size: 40px;
+  }
+}
+.nm-breadcrumb-list {
+  display: inline-block;
+}
+.nm-breadcrumb-list a, .nm-breadcrumb-list span {
+  font-weight: 500;
+  font-size: 18px;
+  font-family: var(--nm-font-1);
+  line-height: 28px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+}
+.nm-breadcrumb-list a {
+  padding-right: 30px;
+  position: relative;
+  transition: 300ms;
+  margin-right: 5px;
+}
+.nm-breadcrumb-list a:hover {
+  color: var(--nm-clr-pr-1);
+}
+.nm-breadcrumb-list a::after {
+  content: "";
+  position: absolute;
+  right: 3px;
+  top: 13px;
+  transform: translateY(-50%);
+  background-image: url(../img/breadcrumb/icon.svg);
+  width: 18px;
+  height: 18px;
+}
+.nm-breadcrumb-list span {
+  opacity: 60%;
+}
+.nm-breadcrumb-list-shape {
+  position: absolute;
+  bottom: 220%;
+  right: 113%;
+  z-index: -1;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .nm-breadcrumb-list-shape {
+    display: none;
+  }
+}
+
+/* 
+    breadcrumb-end
+*/
+/* 
     contact-1-start
 */
 .nm-contact-1-area {
