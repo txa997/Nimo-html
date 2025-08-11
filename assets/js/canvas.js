@@ -3740,7 +3740,7 @@ Here's the new load parameter for your <code>GUI</code>'s constructor:
                           f
                       )
               }),
-              (f.src = o),
+
               a
           )
       }
