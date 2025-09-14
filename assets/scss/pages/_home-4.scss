@@ -19,6 +19,20 @@
     background-color: #F5F5F5;
 }
 
+.nm-split2-1 {
+    .split-line { 
+        overflow: hidden;
+        padding-bottom: 12px;
+        &:not(:first-child) {
+            margin-top: -12px;
+        }
+    }
+}
+.wa-split-up2 {
+    perspective: 2000px;
+    transform-style: preserve-3d;
+}
+
 .nm-pr-btn-1 {
     &:is(.has-v4) {
         font-family: var(--nm-font-3);
@@ -390,6 +404,8 @@
         width: 100%;
         text-align: center;
         z-index: -1;
+                    transform: translateY(100%);
+            transition: all 0.8s var(--nm-cube-1);
 
         @media #{$lg,$md,$xs} {
             text-align: right;
@@ -417,10 +433,24 @@
                 width: 70%;
             }
         }
+
+
     }
     
     
 }
+
+.nm-hero-4-area {
+    &:is(.active) {
+        .nm-hero-4-bg-img  {
+            transform: translateY(0%);
+            transition-delay: .8s;
+        }
+
+    }
+}
+
+
 /* 
     hero-4-end
 */
