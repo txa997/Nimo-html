@@ -1,9 +1,4 @@
 {
-    "cSpell.words": [
-        "Jamia",
-        "Monder",
-        "Nimo",
-        "Rando",
-        "Rivo"
-    ]
+  "cSpell.words": ["Jamia", "Monder", "Nimo", "Rando", "Rivo"],
+  "liveServer.settings.port": 5501
 }
