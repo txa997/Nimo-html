@@ -4776,7 +4776,7 @@ input:focus::placeholder, textarea:focus::placeholder {
     hero-2-start
 */
 .nm-hero-2-area {
-  background-color: #f3f3f3;
+  background-color: #E0E0E0;
   position: relative;
 }
 .nm-hero-2-area::after {
@@ -4925,11 +4925,9 @@ input:focus::placeholder, textarea:focus::placeholder {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -2;
+  z-index: -6;
   text-align: center;
-  transition: all 1s var(--nm-cube-1);
-  transform: translateY(100%);
-  opacity: 0;
+  background-color: #E0E0E0;
 }
 .nm-hero-2-bg-img img {
   margin-top: -50px;
@@ -4938,6 +4936,11 @@ input:focus::placeholder, textarea:focus::placeholder {
   .nm-hero-2-bg-img {
     display: none;
   }
+}
+.nm-hero-2-bg-img-ani {
+  transition: all 1s var(--nm-cube-1);
+  transform: translateY(100%);
+  opacity: 0;
 }
 .nm-hero-2-img {
   width: 275px;
@@ -5034,9 +5037,14 @@ input:focus::placeholder, textarea:focus::placeholder {
   left: 0;
   width: 100%;
   transform: translateY(-50%);
-  z-index: -3;
+  z-index: 1;
   padding-bottom: 20px;
   overflow: hidden;
+}
+@media (min-width: 1800px), only screen and (min-width: 1600px) and (max-width: 1799px), only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .nm-hero-2-marquee {
+    mix-blend-mode: exclusion;
+  }
 }
 @media (max-width: 767px) {
   .nm-hero-2-marquee {
@@ -5052,6 +5060,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   z-index: 2;
   padding-bottom: 20px;
   overflow: hidden;
+  display: none;
 }
 @media (max-width: 767px) {
   .nm-hero-2-marquee-2 {
@@ -5073,13 +5082,18 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .nm-hero-2-marquee-text {
   font-family: var(--nm-font-1);
-  color: #141414;
+  color: #fff;
   font-size: 272px;
   flex: 0 0 auto;
   font-weight: 700;
   letter-spacing: -0.075em;
   margin-bottom: 0;
   line-height: 1;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .nm-hero-2-marquee-text {
+    color: #000;
+  }
 }
 @media only screen and (min-width: 1600px) and (max-width: 1799px) {
   .nm-hero-2-marquee-text {
@@ -5121,7 +5135,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   transform: translateY(0);
   transition-delay: 0.5s;
 }
-.nm-hero-2-area:is(.active) .nm-hero-2-bg-img {
+.nm-hero-2-area:is(.active) .nm-hero-2-bg-img-ani {
   transform: translateY(0%);
   transition-delay: 0.8s;
   opacity: 1;

@@ -534,7 +534,7 @@
 
 .nm-hero-2 {
     &-area {
-        background-color: #f3f3f3;
+        background-color: #E0E0E0;
         position: relative;
         &::after {
             content: "";
@@ -590,6 +590,7 @@
         background: #000;
         opacity: .05;
         z-index: -4;
+        
 
         &.has-line-1 {
             top: 0;
@@ -681,11 +682,9 @@
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: -2;
+        z-index: -6;
         text-align: center;
-        transition: all 1s var(--nm-cube-1);
-        transform:  translateY(100%);
-        opacity: 0;
+        background-color: #E0E0E0;
 
         img {
             margin-top: -50px;
@@ -694,6 +693,12 @@
         
         @media #{$lg,$md,$xs} {
             display: none;
+        }
+
+        &-ani {
+            transition: all 1s var(--nm-cube-1);
+            transform:  translateY(100%);
+            opacity: 0;
         }
     }
 
@@ -801,7 +806,7 @@
         left: 0;
         width: 100%;
         transform: translateY(-50%);
-        z-index: -3;
+        z-index: 1;
         padding-bottom: 20px;
         overflow: hidden;
         // background-image: url(../img/hero/text-img.png);
@@ -809,6 +814,10 @@
         // background-position: center;
         // background-clip: text;
         // -webkit-text-fill-color: transparent;
+
+        @media #{$over,$xxxl,$xxl,$xl} {
+                    mix-blend-mode: exclusion;
+        }
 
         @media #{$xs} {
             top: 70%;
@@ -823,6 +832,7 @@
             z-index: 2;
             padding-bottom: 20px;
             overflow: hidden;
+            display: none;
 
             @media #{$xs} {
                 top: 70%;
@@ -848,13 +858,17 @@
 
         &-text {
             font-family: var(--nm-font-1);
-            color: #141414;
+            color: #fff;
             font-size: 272px;
             flex: 0 0 auto;
             font-weight: 700;
             letter-spacing: -0.075em;
             margin-bottom: 0;
             line-height: 1;
+
+            @media #{$lg,$md,$xs} {
+                    color: #000;
+            }
 
 
 
@@ -901,7 +915,7 @@
                 transform: translateY(0);
                   transition-delay: .5s;
             }
-            &-bg-img {
+            &-bg-img-ani {
                 transform: translateY(0%);
                 transition-delay: .8s;
                 opacity: 1;
