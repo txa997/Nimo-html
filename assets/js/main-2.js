@@ -131,9 +131,9 @@ document.addEventListener("DOMContentLoaded", function () {
 					},
 					opacity: 1,
 					scaleY: 1, 
-					duration: .4,
+					duration: .6,
 					ease: "ease1",
-					stagger: -0.05,
+					stagger: -0.08,
 					delay: delayValue, 
 				});
 
@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", function () {
 					scaleY: 1, 
 					duration: .4,
 					ease: "ease1",
-					stagger: -0.05,
+					stagger: -0.1,
 					delay: delayValue, 
 				});
 
@@ -182,6 +182,30 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 
+/* 
+	services-19-slider-activation
+*/
+if($(".t4_slider_active").length) {
+	var t4_slider_active = new Swiper(".t4_slider_active", {
+		loop: true,
+		slidesPerView: "auto",
+		spaceBetween: 24,
+
+		autoplay: {
+            delay: 5000,
+        },
+
+		navigation: {
+			nextEl: ".t4_btn_next",
+			prevEl: ".t4_btn_prev",
+		},
+
+		pagination: {
+			el: ".t4_slider_pagi",
+			clickable: true,
+		},
+	});
+}
 
 
 
