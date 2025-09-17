@@ -7766,248 +7766,6 @@ input:focus::placeholder, textarea:focus::placeholder {
     portfolio-3-end
 */
 /* 
-    portfolio-4-start
-*/
-.nm-portfolio-4-title-1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-.nm-portfolio-4-title-1-video {
-  border-radius: 8px;
-  max-width: 256px;
-  height: 104px;
-  width: 100%;
-}
-.nm-portfolio-4-title-1-text {
-  font-size: 92px;
-  color: #666666;
-  letter-spacing: -0.01em;
-  opacity: 28%;
-  line-height: 1.2 !important;
-}
-@media only screen and (min-width: 1400px) and (max-width: 1599px) {
-  .nm-portfolio-4-title-1-text {
-    font-size: 85px;
-  }
-}
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
-  .nm-portfolio-4-title-1-text {
-    font-size: 80px;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .nm-portfolio-4-title-1-text {
-    font-size: 75px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .nm-portfolio-4-title-1-text {
-    font-size: 70px;
-  }
-}
-@media (max-width: 767px) {
-  .nm-portfolio-4-title-1-text {
-    font-size: 50px;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .nm-portfolio-4-title-1-text {
-    font-size: 65px;
-  }
-}
-.nm-portfolio-4-title-2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-.nm-portfolio-4-title-2-text {
-  font-size: 92px;
-  letter-spacing: -0.01em;
-  line-height: 1.2 !important;
-}
-@media only screen and (min-width: 1400px) and (max-width: 1599px) {
-  .nm-portfolio-4-title-2-text {
-    font-size: 85px;
-  }
-}
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
-  .nm-portfolio-4-title-2-text {
-    font-size: 80px;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .nm-portfolio-4-title-2-text {
-    font-size: 75px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .nm-portfolio-4-title-2-text {
-    font-size: 70px;
-  }
-}
-@media (max-width: 767px) {
-  .nm-portfolio-4-title-2-text {
-    font-size: 50px;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .nm-portfolio-4-title-2-text {
-    font-size: 65px;
-  }
-}
-.nm-portfolio-4-bg {
-  padding: 16px;
-  border-radius: 16px;
-  background: white;
-  margin-left: -184px;
-  margin-right: -184px;
-}
-@media only screen and (min-width: 1600px) and (max-width: 1799px), only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-  .nm-portfolio-4-bg {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-.nm-portfolio-4-wrap-1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-  .nm-portfolio-4-wrap-1 {
-    grid-template-columns: 1fr;
-  }
-}
-.nm-portfolio-4-wrap-3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 16px;
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .nm-portfolio-4-wrap-3 {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-  .nm-portfolio-4-wrap-3 {
-    grid-template-columns: 1fr;
-  }
-}
-.nm-portfolio-4-item {
-  height: 600px;
-  border-radius: 12px;
-  position: relative;
-  z-index: 1;
-}
-@media only screen and (min-width: 1600px) and (max-width: 1799px), only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-  .nm-portfolio-4-item {
-    height: 400px;
-  }
-}
-.nm-portfolio-4-item .item-img {
-  width: 100%;
-  height: 100%;
-}
-.nm-portfolio-4-item .item-img::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background: rgba(10, 10, 10, 0.14);
-  backdrop-filter: blur(16px);
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: all 0.5s var(--nm-cube-1);
-}
-.nm-portfolio-4-item .item-img img {
-  transform: scale(1.1);
-}
-.nm-portfolio-4-item .item-logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  transition: all 0.5s var(--nm-cube-1);
-  opacity: 0;
-}
-.nm-portfolio-4-item .item-btn {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  z-index: 1;
-  width: 64px;
-  height: 64px;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
-  border-radius: 10px;
-  transition: all 0.5s var(--nm-cube-1);
-  transform: translate(100%, -100%);
-  opacity: 0;
-}
-.nm-portfolio-4-item .item-title {
-  position: absolute;
-  bottom: 16px;
-  left: 16px;
-  background: #F5F5F5;
-  z-index: 1;
-  width: calc(100% - 32px);
-  padding: 24px 24px;
-  border-radius: 8px;
-  display: flex;
-  font-size: 24px;
-  align-items: center;
-  transition: all 0.5s var(--nm-cube-1);
-  transform: translateY(100%);
-  opacity: 0;
-}
-@media only screen and (min-width: 1600px) and (max-width: 1799px), only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-  .nm-portfolio-4-item .item-title {
-    font-size: 20px;
-  }
-}
-.nm-portfolio-4-item .item-title span {
-  background: #E4E4E4;
-  font-size: 16px;
-  border-radius: 6px;
-  font-weight: 400;
-  padding: 9px 23px;
-  margin-left: auto;
-}
-.nm-portfolio-4-item:hover .item-title {
-  transform: translateY(0);
-  opacity: 1;
-}
-.nm-portfolio-4-item:hover .item-title:hover {
-  color: var(--nm-clr-pr-3);
-}
-.nm-portfolio-4-item:hover .item-logo {
-  opacity: 1;
-}
-.nm-portfolio-4-item:hover .item-img::after {
-  opacity: 1;
-}
-.nm-portfolio-4-item:hover .item-btn {
-  transform: translate(0);
-  opacity: 1;
-}
-.nm-portfolio-4-item:hover .item-btn:hover {
-  background: var(--nm-clr-pr-1);
-}
-
-/* 
-    portfolio-4-end
-*/
-/* 
     testimonial-1-start
 */
 .nm-testimonial-1-sec-title {
@@ -11302,6 +11060,26 @@ input:focus::placeholder, textarea:focus::placeholder {
   opacity: 0.4;
 }
 
+@keyframes fadeInLeft2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+.fadeInLeft2 {
+  -webkit-animation-name: fadeInLeft2;
+  animation-name: fadeInLeft2;
+  animation-duration: 600ms;
+  animation-timing-function: var(--nm-cube-1);
+}
+
 .nm-split2-1 .split-line {
   overflow: hidden;
   padding-bottom: 12px;
@@ -11336,7 +11114,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   font-weight: 500;
   font-size: 16px;
   color: #141414;
-  background: #fffbf5;
+  background: #fff;
   display: inline-flex;
   align-items: center;
   gap: 12px;
@@ -11358,20 +11136,14 @@ input:focus::placeholder, textarea:focus::placeholder {
   color: #fff;
   border-radius: 50%;
   overflow: hidden;
-  transition: all 0.6s var(--nm-cube-1);
   position: absolute;
   top: 50%;
   left: calc(3% - 0px);
   transform: translateY(-50%);
+  will-change: transform;
 }
 .nm-pr-btn-4 .text {
-  transition: all 0.6s var(--nm-cube-1);
-}
-.nm-pr-btn-4:hover .icon {
-  left: calc(100% - 44px);
-}
-.nm-pr-btn-4:hover .text {
-  transform: translateX(-35px);
+  will-change: transform;
 }
 
 .nm-h-4 {
@@ -11578,7 +11350,9 @@ input:focus::placeholder, textarea:focus::placeholder {
 .nm-hero-4-bg-svg path {
   stroke-dasharray: 6000;
   stroke-dashoffset: 6000;
-  animation: drawLine 5s ease forwards;
+}
+.nm-hero-4-bg-svg:is(.active) path {
+  animation: drawLine 5s linear forwards;
 }
 @keyframes drawLine {
   to {
@@ -11587,6 +11361,12 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .nm-hero-4-content {
   max-width: 420px;
+}
+@media (min-width: 1800px), only screen and (min-width: 1600px) and (max-width: 1799px), only screen and (min-width: 1400px) and (max-width: 1599px) {
+  .nm-hero-4-content {
+    padding-left: 30px;
+    margin-left: -30px;
+  }
 }
 .nm-hero-4-content .hero-disc {
   font-weight: 500;
@@ -11772,7 +11552,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 .nm-hero-4-area:is(.active) .nm-hero-4-bg-img {
   transform: translateY(0%);
-  transition-delay: 0.8s;
+  transition-delay: 1s;
 }
 
 /* 
@@ -12033,8 +11813,13 @@ input:focus::placeholder, textarea:focus::placeholder {
     margin-top: 30px;
   }
 }
-.nm-services-4-sec-title .nm-pr-btn-1 {
+.nm-services-4-sec-title .nm-pr-btn-4 {
   background: #2F2F2F;
+  color: #fff;
+}
+.nm-services-4-sec-title .nm-pr-btn-4 .icon {
+  background: #fff;
+  color: var(--nm-clr-h-4);
 }
 .nm-services-4-item {
   display: grid;
@@ -12128,8 +11913,14 @@ input:focus::placeholder, textarea:focus::placeholder {
 .nm-services-4-item .features-list li:not(:last-child) {
   margin-bottom: 10px;
 }
-.nm-services-4-item .nm-pr-btn-1 {
+.nm-services-4-item .nm-pr-btn-4 {
   border: 1px solid #666666;
+  background: transparent;
+  color: #fff;
+}
+.nm-services-4-item .nm-pr-btn-4 .icon {
+  background: #fff;
+  color: var(--nm-clr-h-4);
 }
 .nm-services-4-item .btn-wrap {
   margin-top: 33px;
@@ -12405,6 +12196,252 @@ input:focus::placeholder, textarea:focus::placeholder {
     price-4-end
 */
 /* 
+    portfolio-4-start
+*/
+.nm-portfolio-4-title-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.nm-portfolio-4-title-1-video {
+  border-radius: 8px;
+  max-width: 256px;
+  height: 104px;
+  width: 100%;
+}
+.nm-portfolio-4-title-1-text {
+  font-size: 92px;
+  color: #666666;
+  letter-spacing: -0.01em;
+  opacity: 28%;
+  line-height: 1.2 !important;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+  .nm-portfolio-4-title-1-text {
+    font-size: 85px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .nm-portfolio-4-title-1-text {
+    font-size: 80px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .nm-portfolio-4-title-1-text {
+    font-size: 75px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .nm-portfolio-4-title-1-text {
+    font-size: 70px;
+  }
+}
+@media (max-width: 767px) {
+  .nm-portfolio-4-title-1-text {
+    font-size: 50px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .nm-portfolio-4-title-1-text {
+    font-size: 65px;
+  }
+}
+.nm-portfolio-4-title-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.nm-portfolio-4-title-2-text {
+  font-size: 92px;
+  letter-spacing: -0.01em;
+  line-height: 1.2 !important;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+  .nm-portfolio-4-title-2-text {
+    font-size: 85px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .nm-portfolio-4-title-2-text {
+    font-size: 80px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .nm-portfolio-4-title-2-text {
+    font-size: 75px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .nm-portfolio-4-title-2-text {
+    font-size: 70px;
+  }
+}
+@media (max-width: 767px) {
+  .nm-portfolio-4-title-2-text {
+    font-size: 50px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .nm-portfolio-4-title-2-text {
+    font-size: 65px;
+  }
+}
+.nm-portfolio-4-bg {
+  padding: 16px;
+  border-radius: 16px;
+  background: white;
+  margin-left: -184px;
+  margin-right: -184px;
+}
+@media only screen and (min-width: 1600px) and (max-width: 1799px), only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .nm-portfolio-4-bg {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.nm-portfolio-4-wrap-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .nm-portfolio-4-wrap-1 {
+    grid-template-columns: 1fr;
+  }
+}
+.nm-portfolio-4-wrap-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .nm-portfolio-4-wrap-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .nm-portfolio-4-wrap-3 {
+    grid-template-columns: 1fr;
+  }
+}
+.nm-portfolio-4-item {
+  height: 600px;
+  border-radius: 12px;
+  position: relative;
+  z-index: 1;
+}
+@media only screen and (min-width: 1600px) and (max-width: 1799px), only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .nm-portfolio-4-item {
+    height: 400px;
+  }
+}
+.nm-portfolio-4-item .item-img {
+  width: 100%;
+  height: 100%;
+}
+.nm-portfolio-4-item .item-img::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.14);
+  backdrop-filter: blur(16px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.5s var(--nm-cube-1);
+}
+.nm-portfolio-4-item .item-img img {
+  transform: scale(1.1);
+}
+.nm-portfolio-4-item .item-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  transition: all 0.5s var(--nm-cube-1);
+  opacity: 0;
+}
+.nm-portfolio-4-item .item-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 1;
+  width: 64px;
+  height: 64px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  border-radius: 10px;
+  transition: all 0.5s var(--nm-cube-1);
+  transform: translate(100%, -100%);
+  opacity: 0;
+}
+.nm-portfolio-4-item .item-title {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: #F5F5F5;
+  z-index: 1;
+  width: calc(100% - 32px);
+  padding: 24px 24px;
+  border-radius: 8px;
+  display: flex;
+  font-size: 24px;
+  align-items: center;
+  transition: all 0.5s var(--nm-cube-1);
+  transform: translateY(100%);
+  opacity: 0;
+}
+@media only screen and (min-width: 1600px) and (max-width: 1799px), only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .nm-portfolio-4-item .item-title {
+    font-size: 20px;
+  }
+}
+.nm-portfolio-4-item .item-title span {
+  background: #E4E4E4;
+  font-size: 16px;
+  border-radius: 6px;
+  font-weight: 400;
+  padding: 9px 23px;
+  margin-left: auto;
+}
+.nm-portfolio-4-item .item-title a {
+  transition: all 0.4s var(--nm-cube-1);
+}
+.nm-portfolio-4-item .item-title a:hover {
+  transform: translateX(3px);
+}
+.nm-portfolio-4-item:hover .item-title {
+  transform: translateY(0);
+  opacity: 1;
+}
+.nm-portfolio-4-item:hover .item-logo {
+  opacity: 1;
+}
+.nm-portfolio-4-item:hover .item-img::after {
+  opacity: 1;
+}
+.nm-portfolio-4-item:hover .item-btn {
+  transform: translate(0);
+  opacity: 1;
+}
+.nm-portfolio-4-item:hover .item-btn:hover {
+  background: var(--nm-clr-h-4);
+  color: #fff;
+}
+
+/* 
+    portfolio-4-end
+*/
+/* 
     award-4-start
 */
 .nm-award-4-sec-title {
@@ -12422,6 +12459,14 @@ input:focus::placeholder, textarea:focus::placeholder {
 .nm-award-4-sec-title .btn-wrap {
   align-self: center;
 }
+.nm-award-4-sec-title .nm-pr-btn-4 {
+  background: var(--nm-clr-h-4);
+  color: #fff;
+}
+.nm-award-4-sec-title .nm-pr-btn-4 .icon {
+  color: var(--nm-clr-h-4);
+  background: #fff;
+}
 .nm-award-4-wrap {
   display: grid;
   grid-template-columns: 1fr 3.3fr;
@@ -12438,6 +12483,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   border: 4px solid #fff;
   margin-top: -170px;
   height: 350px;
+  will-change: transform;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .nm-award-4-img {
