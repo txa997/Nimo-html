@@ -1717,7 +1717,8 @@
             font-size: 160px;
             margin-left: -205px;
             line-height: 1;
-            margin-top: -55px;
+            margin-top: -23px;
+
 
             @media #{$xxxl} {
                 margin-left: 0px;
@@ -1726,7 +1727,6 @@
             @media #{$xxl} {
                 font-size: 140px;
                 margin-left: 0;
-                margin-top: -45px;
             }
             @media #{$xl} {
                 font-size: 120px;
@@ -1841,11 +1841,21 @@
         .name {
             font-size: 22px;
             font-weight: 600;
-
-            transition: all .3s var(--nm-cube-1);
-
-            &:hover {
-                color: var(--nm-clr-pr-3);
+            a {
+                width: 100%;
+                display: inline !important;
+                background-position-y: 0px;
+                background-repeat: no-repeat;
+                background-size: 0 100%;
+                backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
+                background-image: linear-gradient(transparent calc(100% - 1px), currentColor 2px);
+                -webkit-transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+                transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+                &:hover {
+                    color: inherit;
+                    background-size: 100% 100%;
+                }
             }
         }
 
@@ -1876,7 +1886,7 @@
             }
         }
 
-        &:hover {
+        &:is(.active) {
             z-index: 2;
             .content-wrap-posi {
                 opacity: 1;
@@ -2227,6 +2237,8 @@
         padding: 80px 0;
         position: relative;
         z-index: 1;
+        border-left: 5px solid #fff;
+        border-right: 5px solid #fff;
     }
     
     &-item {
@@ -2847,6 +2859,39 @@
                 color: #42A6BA;
                 i {
                     color: #42A6BA; 
+                }
+            }
+
+            &:nth-child(1) {
+                &:hover {
+                    color: #0963F7;
+                    i {
+                        color: #0963F7; 
+                    }
+                }
+            }
+            &:nth-child(2) {
+                &:hover {
+                    color: #B92896;
+                    i {
+                        color: #B92896; 
+                    }
+                }
+            }
+            &:nth-child(3) {
+                &:hover {
+                    color: #1C9CEA;
+                    i {
+                        color: #1C9CEA; 
+                    }
+                }
+            }
+            &:nth-child(4) {
+                &:hover {
+                    color: #006EAB;
+                    i {
+                        color: #006EAB; 
+                    }
                 }
             }
         }

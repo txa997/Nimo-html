@@ -16,6 +16,15 @@ $(".nm-services-4-item").on("mouseover", function(){
 	current_class[0].className = current_class[0].className.replace(" active", "");
 	this.className += " active";
 });
+    
+/* 
+	team-4-hover-active
+*/
+$(".nm-team-4-member").on("mouseover", function(){
+	var current_class = document.getElementsByClassName("nm-team-4-member active");
+	current_class[0].className = current_class[0].className.replace(" active", "");
+	this.className += " active";
+});
 
 /* 
 	price-4-toggle-class
