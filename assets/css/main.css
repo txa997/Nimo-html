@@ -11141,6 +11141,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   left: calc(3% - 0px);
   transform: translateY(-50%);
   will-change: transform;
+  z-index: 1;
 }
 .nm-pr-btn-4 .text {
   will-change: transform;
@@ -12912,10 +12913,12 @@ input:focus::placeholder, textarea:focus::placeholder {
 .nm-experience-4-demo .demo-ss-single {
   border-radius: 2px;
   box-shadow: 15px -16px 16px rgba(136, 136, 136, 0.32);
+  transition: all 1s var(--nm-cube-1);
+  transition-delay: 0.3s;
 }
 .nm-experience-4-demo .demo-ss-single:nth-child(1) {
   margin-right: -40px;
-  transform: rotate(-9deg);
+  transform: translateX(55px) rotate(0deg);
 }
 .nm-experience-4-demo .demo-ss-single:nth-child(2) {
   position: relative;
@@ -12923,7 +12926,13 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .nm-experience-4-demo .demo-ss-single:nth-child(3) {
   margin-left: -40px;
-  transform: rotate(9deg);
+  transform: translateX(-55px) rotate(0deg);
+}
+.nm-experience-4-demo .demo-ss:is(.active) .demo-ss-single:nth-child(1) {
+  transform: translateX(0px) rotate(-9deg);
+}
+.nm-experience-4-demo .demo-ss:is(.active) .demo-ss-single:nth-child(3) {
+  transform: translateX(0px) rotate(9deg);
 }
 .nm-experience-4-demo .disc {
   color: #fff;
@@ -12996,6 +13005,8 @@ input:focus::placeholder, textarea:focus::placeholder {
   background: #fff;
   border-radius: 12px;
   padding: 80px 0;
+  position: relative;
+  z-index: 1;
 }
 .nm-testimonial-4-item {
   background-color: #F5F5F5;
@@ -13173,6 +13184,14 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .nm-blog-4-sec-title .btn-wrap {
   align-self: center;
+}
+.nm-blog-4-sec-title .nm-pr-btn-4 {
+  background: var(--nm-clr-h-4);
+  color: #fff;
+}
+.nm-blog-4-sec-title .nm-pr-btn-4 .icon {
+  background: #fff;
+  color: var(--nm-clr-h-4);
 }
 .nm-blog-4-wrap {
   display: grid;
@@ -13556,6 +13575,14 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .nm-footer-4-copyright a:hover {
   color: #42A6BA;
+}
+.nm-footer-4-btn {
+  background: #2F2F2F;
+  color: #fff;
+}
+.nm-footer-4-btn .icon {
+  color: var(--nm-clr-h-4);
+  background: #fff;
 }
 
 /* 
