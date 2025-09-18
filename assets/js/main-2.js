@@ -77,7 +77,7 @@ if ($(".wa_magnetic_btn_v2-1").length) {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function () { 
+window.addEventListener('load', function(){
 		// section-title-8
 		if($(".nm-split2-1").length) {
 			var split8 = $(".nm-split2-1");
