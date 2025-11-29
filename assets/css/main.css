@@ -9865,6 +9865,11 @@ input:focus::placeholder, textarea:focus::placeholder {
   max-width: 680px;
   flex: 0 0 auto;
 }
+@media (max-width: 767px) {
+  .nm-price-2-sec-title .left {
+    width: 100%;
+  }
+}
 .nm-price-2-btn-wrap {
   display: flex;
   align-items: center;

@@ -31,7 +31,14 @@
             flex-wrap: wrap;
         }
 
-        .left {max-width: 680px;flex: 0 0 auto;}
+        .left {
+            max-width: 680px;
+            flex: 0 0 auto;
+            @media #{$xs} {
+                width: 100%;
+            }
+        }
+
     }
 
     &-btn {
