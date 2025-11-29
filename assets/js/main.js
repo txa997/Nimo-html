@@ -655,14 +655,17 @@ if ($('.nm_t1_preview_slider_active').length) {
 	  speed: 500,
 	  slidesPerView: "auto",
 	  spaceBetween: 20,
-
+	  allowTouchMove: false, 
 	});
   
 	const nm_t1_main_slider_active = new Swiper('.nm_t1_main_slider_active', {
 	  speed: 500,
 	  slidesPerView: "auto",
+	  allowTouchMove: false, 
+
 	  effect: "fade",
 	  fadeEffect: { crossFade: true },
+	  
 	  navigation: {
 		nextEl: ".kk_t1_next",
 		prevEl: ".kk_t1_prev",
