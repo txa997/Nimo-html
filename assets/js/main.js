@@ -677,39 +677,42 @@ if ($('.nm_t1_preview_slider_active').length) {
   
 }
   
+if (window.matchMedia("(min-width: 768px)").matches) {  
 
-if($('.nm-testimonial-1-preview-slider').length) { 
-	const slides = document.querySelectorAll(".nm-testimonial-1-preview-slider .swiper-slide");
-	const wrapper = document.querySelector(".nm-testimonial-1-preview-slider .swiper-wrapper");
-  
-	const radius = 450; 
-	const centerX = wrapper.clientWidth / 2;
-	const centerY = wrapper.clientHeight / 2;
-	const total = slides.length;
-	const angleStep = (2 * Math.PI) / total;
-  
-	slides.forEach((slide, index) => {
-	  const angle = index * angleStep;
-	  const x = centerX + radius * Math.cos(angle) - slide.clientWidth / 2;
-	  const y = centerY + radius * Math.sin(angle) - slide.clientHeight / 2;
-  
-	  slide.style.left = `${x}px`;
-	  slide.style.top = `${y}px`;
-	});
+	if($('.nm-testimonial-1-preview-slider').length) { 
+		const slides = document.querySelectorAll(".nm-testimonial-1-preview-slider .swiper-slide");
+		const wrapper = document.querySelector(".nm-testimonial-1-preview-slider .swiper-wrapper");
+	  
+		const radius = 450; 
+		const centerX = wrapper.clientWidth / 2;
+		const centerY = wrapper.clientHeight / 2;
+		const total = slides.length;
+		const angleStep = (2 * Math.PI) / total;
+	  
+		slides.forEach((slide, index) => {
+		  const angle = index * angleStep;
+		  const x = centerX + radius * Math.cos(angle) - slide.clientWidth / 2;
+		  const y = centerY + radius * Math.sin(angle) - slide.clientHeight / 2;
+	  
+		  slide.style.left = `${x}px`;
+		  slide.style.top = `${y}px`;
+		});
+	}
+	
+	
+	var t1scrollAni = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".nm-testimonial-1-preview-slider",
+				toggleActions: "play none none reverse",
+				scrub: true,
+				markers: false,
+			},
+		});
+	
+	t1scrollAni.fromTo(".nm-testimonial-1-preview-slider .swiper-wrapper", {
+		rotation: 40,
+	},{rotation: -40});
 }
-
-var t1scrollAni = gsap.timeline({
-		scrollTrigger: {
-			trigger: ".nm-testimonial-1-preview-slider",
-			toggleActions: "play none none reverse",
-			scrub: true,
-			markers: false,
-		},
-	});
-
-t1scrollAni.fromTo(".nm-testimonial-1-preview-slider .swiper-wrapper", {
-	rotation: 40,
-},{rotation: -40});
 
 
 

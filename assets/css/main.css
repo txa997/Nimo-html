@@ -7923,6 +7923,37 @@ input:focus::placeholder, textarea:focus::placeholder {
   mask-image: linear-gradient(to top, #000 10%, rgba(0, 0, 0, 0) 100%);
 }
 
+@media (max-width: 767px) {
+  .nm-testimonial-1-wrap {
+    height: auto;
+    margin-bottom: 100px;
+  }
+  .nm-testimonial-1-preview {
+    margin-top: 50px;
+  }
+  .nm-testimonial-1-preview-slider .swiper-wrapper {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 6px;
+    justify-content: center;
+  }
+  .nm-testimonial-1-preview-slider .swiper-wrapper .swiper-slide {
+    position: unset;
+    width: 80px;
+    height: 80px;
+  }
+  .nm-testimonial-1-preview-slider-item {
+    width: 80px;
+    height: 80px;
+  }
+  .nm-testimonial-1-main-slider {
+    position: unset;
+    transform: unset;
+    margin-top: 50px;
+  }
+}
 /* 
     testimonial-1-start
 */
